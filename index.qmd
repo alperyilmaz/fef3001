@@ -11,21 +11,39 @@
 
 ## Ders1
 
-*Tarih*
+*3 Ekim 2024 16:00*
 
 **İçerik**: İlk derste, ChatGPT ve benzeri büyük dil modelleri tanıtıldı. OpenAI Playground üzerinde "cümle tamamlama" kavramı ve "temparature" ayarı gösterildi. Daha iyi çıktı almak için Prompt ayarları anlatıldı. Dökümandan sorgu/chat yapmak için Gemini ve Claude örnekleri verildi. Yine Claude üzerinden kod yazdırma örneği işlendi. [İngilizce Sunum linki](ders1.ipynb)
 
 ## Ders2
 
-*Tarih*
+*10 Ekim 2024 16:00*
 
-**İçerik**: Veri türleri ve verilerin işlenmesine dair bilgi verildi.
+**İçerik**: ChatGPT ve ötesi. [İngilizce Sunum linki](ders1.ipynb)
 
 ## Ders3
 
-*Tarih*
+*17 Ekim 2024 16:00*
 
-**İçerik**: Veri türleri ve verilerin işlenmesine dair bilgi verildi.  [Sunum linki](ders2.qmd)
+**İçerik**: Veri türleri ve verilerin işlenmesine dair bilgi verildi. Performans ölçütleri konusuna başlandı. [Sunum linki1](files/Hafta_3_1.pdf) (slayt 24'e kadar) ve [Sunum link2](ders3.qmd)
+
+## Ders4
+
+*24 Ekim 2024 16:00*
+
+**İçerik**: Performans ölçütleri konusuna devam edildi. Optimizasyon konusunda başlandı. [Performans sunum link](ders3.qmd) [Optimizasyon sunum link](files/Hafta_4.pdf)
+
+## Ders5
+
+*31 Ekim 2024 16:00*
+
+**İçerik**: Optimizasyon konusuna devam edildi. [Optimizasyon sunum link](files/Hafta_5.pdf)
+
+## Ders6
+
+*7 Kasım 2024 16:00*
+
+**İçerik**: Genetik algoritmalar [sunum link](files/Hafta_6.pdf)
 
 ## Ders7
 
