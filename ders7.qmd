@@ -62,6 +62,14 @@ An ANN consists of five parts
 4. Activation function
 5. Output
 
+## ANN neuron cell
+
+![](images/Perceptron-model_1731592944.jpeg)
+
+:::footer
+[image source](https://k21academy.com/datascience-blog/deep-learning/artificial-neural-network/)
+:::
+
 ## Common Combination Functions
 
 | Function | Equation | Description |
@@ -71,7 +79,6 @@ An ANN consists of five parts
 | Maximum | NET = Max(xᵢwᵢ) | NET value is obtained from the largest of the products of input and weight values |
 | Minimum | NET = Min(xᵢwᵢ) | NET value is obtained from the smallest of the products of input and weight values |
 | Sign | NET = Sgn(xᵢwᵢ) | The number of positive and negative values from the products of input and weight values is found, and the larger value is accepted as the NET value |
-| Addition with Previous | NET = NETₒₗd + Σᵢ₌₁ⁿ xᵢwᵢ | NET value is obtained by adding the products of input and weight values to the old NET value |
 
 ## Common Activation Functions
 
@@ -85,10 +92,21 @@ An ANN consists of five parts
 #### Step Function
 
 - Generally used in single-layer networks
-- g(x) = { b if x ≥ c
-          a if x < c }
+- g(x) = { 
+  - b if x ≥ c<br>
+  - a if x < c }
 - Where c = 0, a = 0, b = 1 or
 - c = 0, a = -1, b = 1 are preferred
+
+##
+
+Step function for c=0, b=1 and a=-1
+
+![](images/clipboard_image_1731596011.png)
+
+:::footer
+[image source](https://www.researchgate.net/figure/A-unit-step-function-sign-t_fig14_302218545)
+:::
 
 ## Common Activation Functions
 
@@ -100,6 +118,15 @@ An ANN consists of five parts
 - Sigmoid function output is in [0,1] range
 - g(x) = 1/(1 + e⁻ˣ/ᵗ)
 
+
+## 
+
+![](images/1_2ABe3Bhz0BA-NgZIYqRVZtug_1731596203.gif)
+
+:::footer
+[image source](https://dev.to/espoir/what-ive-learned-from-my-udacity-deep-learning-course-sigmoid-function-vs-softmax-function-cfo)
+:::
+
 ## Common Activation Functions
 
 #### Hyperbolic Tangent Function
@@ -108,3 +135,44 @@ An ANN consists of five parts
 - Keeps the value nᵢ in a cell within [-1,1] range
 - g(x) = (eˣ/ᵗ - e⁻ˣ/ᵗ)/(eˣ/ᵗ + e⁻ˣ/ᵗ)
 
+## 
+
+![](images/TanhFunction_1731596385.jpg)
+
+:::footer
+[image source](https://www.ml-science.com/tanh-activation-function)
+:::
+
+## Summary of activation functions
+
+see the next slide
+
+:::footer
+[image source](https://towardsdatascience.com/activation-functions-neural-networks-1cbd9f8d91d6)
+:::
+
+
+## {background-image="images/1_p_hyqAtyI8pbt2kEl6siOQ_1731596518.png" background-size=contain}
+
+
+## Perceptron
+
+![](images/perceptron-weight-updates_1731613812.png)
+
+:::footer
+[image source](https://k21academy.com/datascience-blog/deep-learning/artificial-neural-network/)
+:::
+
+## ANN
+
+![](images/backpropagation-training-algorithm_1731613852.jpg)
+
+:::footer
+[image source](https://k21academy.com/datascience-blog/deep-learning/artificial-neural-network/)
+:::
+
+## Interactive demos
+
+[ML Playground](https://ml-playground.com/)
+
+[Neural Network Playground](https://akarzazi.github.io/neural-network-playground/)

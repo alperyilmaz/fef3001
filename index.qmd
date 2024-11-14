@@ -49,4 +49,4 @@
 
 *14 Kasım Perşembe 16:00*
 
-**İçerik**: Yapay sinir ağları [Sunum linki](ders7.qmd). Derste kullanılan yapay sinir ağı demo sayfaları için [link1](https://ml-playground.com/) ve [link2](https://akarzazi.github.io/neural-network-playground/)
+**İçerik**: Yapay sinir ağları [Sunum linki](ders7.qmd). 
