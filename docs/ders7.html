@@ -393,6 +393,13 @@ Alper Yılmaz
 <li>Output</li>
 </ol>
 </section>
+<section id="ann-neuron-cell" class="slide level2">
+<h2>ANN neuron cell</h2>
+
+<img data-src="images/Perceptron-model_1731592944.jpeg" class="r-stretch"><div class="footer">
+<p><a href="https://k21academy.com/datascience-blog/deep-learning/artificial-neural-network/">image source</a></p>
+</div>
+</section>
 <section id="common-combination-functions" class="slide level2">
 <h2>Common Combination Functions</h2>
 <table class="caption-top">
@@ -434,11 +441,6 @@ Alper Yılmaz
 <td>NET = Sgn(xᵢwᵢ)</td>
 <td>The number of positive and negative values from the products of input and weight values is found, and the larger value is accepted as the NET value</td>
 </tr>
-<tr class="even">
-<td>Addition with Previous</td>
-<td>NET = NETₒₗd + Σᵢ₌₁ⁿ xᵢwᵢ</td>
-<td>NET value is obtained by adding the products of input and weight values to the old NET value</td>
-</tr>
 </tbody>
 </table>
 </section>
@@ -455,10 +457,22 @@ Alper Yılmaz
 <h4 id="step-function">Step Function</h4>
 <ul>
 <li>Generally used in single-layer networks</li>
-<li>g(x) = { b if x ≥ c a if x &lt; c }</li>
+<li>g(x) = {
+<ul>
+<li>b if x ≥ c<br></li>
+<li>a if x &lt; c }</li>
+</ul></li>
 <li>Where c = 0, a = 0, b = 1 or</li>
 <li>c = 0, a = -1, b = 1 are preferred</li>
 </ul>
+</section>
+<section id="section" class="slide level2">
+<h2></h2>
+<p>Step function for c=0, b=1 and a=-1</p>
+
+<img data-src="images/clipboard_image_1731596011.png" class="r-stretch"><div class="footer">
+<p><a href="https://www.researchgate.net/figure/A-unit-step-function-sign-t_fig14_302218545">image source</a></p>
+</div>
 </section>
 <section id="common-activation-functions-2" class="slide level2">
 <h2>Common Activation Functions</h2>
@@ -471,6 +485,13 @@ Alper Yılmaz
 <li>g(x) = 1/(1 + e⁻ˣ/ᵗ)</li>
 </ul>
 </section>
+<section id="section-1" class="slide level2">
+<h2></h2>
+
+<img data-src="images/1_2ABe3Bhz0BA-NgZIYqRVZtug_1731596203.gif" class="r-stretch"><div class="footer">
+<p><a href="https://dev.to/espoir/what-ive-learned-from-my-udacity-deep-learning-course-sigmoid-function-vs-softmax-function-cfo">image source</a></p>
+</div>
+</section>
 <section id="common-activation-functions-3" class="slide level2">
 <h2>Common Activation Functions</h2>
 <h4 id="hyperbolic-tangent-function">Hyperbolic Tangent Function</h4>
@@ -479,6 +500,42 @@ Alper Yılmaz
 <li>Keeps the value nᵢ in a cell within [-1,1] range</li>
 <li>g(x) = (eˣ/ᵗ - e⁻ˣ/ᵗ)/(eˣ/ᵗ + e⁻ˣ/ᵗ)</li>
 </ul>
+</section>
+<section id="section-2" class="slide level2">
+<h2></h2>
+
+<img data-src="images/TanhFunction_1731596385.jpg" class="r-stretch"><div class="footer">
+<p><a href="https://www.ml-science.com/tanh-activation-function">image source</a></p>
+</div>
+</section>
+<section id="summary-of-activation-functions" class="slide level2">
+<h2>Summary of activation functions</h2>
+<p>see the next slide</p>
+<div class="footer">
+<p><a href="https://towardsdatascience.com/activation-functions-neural-networks-1cbd9f8d91d6">image source</a></p>
+</div>
+</section>
+<section id="section-3" class="slide level2" data-background-image="images/1_p_hyqAtyI8pbt2kEl6siOQ_1731596518.png" data-background-size="contain">
+<h2></h2>
+</section>
+<section id="perceptron" class="slide level2">
+<h2>Perceptron</h2>
+
+<img data-src="images/perceptron-weight-updates_1731613812.png" class="r-stretch"><div class="footer">
+<p><a href="https://k21academy.com/datascience-blog/deep-learning/artificial-neural-network/">image source</a></p>
+</div>
+</section>
+<section id="ann" class="slide level2">
+<h2>ANN</h2>
+
+<img data-src="images/backpropagation-training-algorithm_1731613852.jpg" class="r-stretch"><div class="footer">
+<p><a href="https://k21academy.com/datascience-blog/deep-learning/artificial-neural-network/">image source</a></p>
+</div>
+</section>
+<section id="interactive-demos" class="slide level2">
+<h2>Interactive demos</h2>
+<p><a href="https://ml-playground.com/">ML Playground</a></p>
+<p><a href="https://akarzazi.github.io/neural-network-playground/">Neural Network Playground</a></p>
 
 <div class="quarto-auto-generated-content">
 <div class="footer footer-default">

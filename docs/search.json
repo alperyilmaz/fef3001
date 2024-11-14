@@ -4,7 +4,7 @@
     "href": "index.html",
     "title": "FEF3001 Yapay Zekaya Giriş",
     "section": "",
-    "text": "Makine Öğrenmesinde Sınıflandırma Yöntemleri ve R Uygulamaları, Ersoy Öz & Selçuk Alp, Nobel Akademik Yayıncılık, 2020.\nVeri Madenciliği ve Makine Öğrenmesi İle Farklı Alanlarda Uygulamalar, Şenol Çelik, Nilay Köleoğlu, & Fatih Çemrek, Holistence Publications, 2022\nSağlık Bilimlerinde Yapay Zeka, Ahmet Rıza Şahin, Kamil Doğan, & Süleyman Sivri, Akademisyen Kitabevi A.Ş., 2020\nYapay Zeka, Atınç Yılmaz, Kodlab Yayın Dağıtım Yazılım Ltd. Şti., 2022\nMachine Learning Algorithms, Giuseppe Bonaccorso, Packt Publishing, 2017.\nOptimizasyon Modelleme ve Yapay Zeka Algoritmaları, Bayram Köse, Bahar Demirtürk, Efe Akademi Yayınları, 2023\n\n\n\n\n3 Ekim 2024 16:00\nİçerik: İlk derste, ChatGPT ve benzeri büyük dil modelleri tanıtıldı. OpenAI Playground üzerinde “cümle tamamlama” kavramı ve “temparature” ayarı gösterildi. Daha iyi çıktı almak için Prompt ayarları anlatıldı. Dökümandan sorgu/chat yapmak için Gemini ve Claude örnekleri verildi. Yine Claude üzerinden kod yazdırma örneği işlendi. İngilizce Sunum linki\n\n\n\n10 Ekim 2024 16:00\nİçerik: ChatGPT ve ötesi. İngilizce Sunum linki\n\n\n\n17 Ekim 2024 16:00\nİçerik: Veri türleri ve verilerin işlenmesine dair bilgi verildi. Performans ölçütleri konusuna başlandı. Sunum linki1 (slayt 24’e kadar) ve Sunum link2\n\n\n\n24 Ekim 2024 16:00\nİçerik: Performans ölçütleri konusuna devam edildi. Optimizasyon konusunda başlandı. Performans sunum link Optimizasyon sunum link\n\n\n\n31 Ekim 2024 16:00\nİçerik: Optimizasyon konusuna devam edildi. Optimizasyon sunum link\n\n\n\n7 Kasım 2024 16:00\nİçerik: Genetik algoritmalar sunum link\n\n\n\n14 Kasım Perşembe 16:00\nİçerik: Yapay sinir ağları Sunum linki. Derste kullanılan yapay sinir ağı demo sayfaları için link1 ve link2"
+    "text": "Makine Öğrenmesinde Sınıflandırma Yöntemleri ve R Uygulamaları, Ersoy Öz & Selçuk Alp, Nobel Akademik Yayıncılık, 2020.\nVeri Madenciliği ve Makine Öğrenmesi İle Farklı Alanlarda Uygulamalar, Şenol Çelik, Nilay Köleoğlu, & Fatih Çemrek, Holistence Publications, 2022\nSağlık Bilimlerinde Yapay Zeka, Ahmet Rıza Şahin, Kamil Doğan, & Süleyman Sivri, Akademisyen Kitabevi A.Ş., 2020\nYapay Zeka, Atınç Yılmaz, Kodlab Yayın Dağıtım Yazılım Ltd. Şti., 2022\nMachine Learning Algorithms, Giuseppe Bonaccorso, Packt Publishing, 2017.\nOptimizasyon Modelleme ve Yapay Zeka Algoritmaları, Bayram Köse, Bahar Demirtürk, Efe Akademi Yayınları, 2023\n\n\n\n\n3 Ekim 2024 16:00\nİçerik: İlk derste, ChatGPT ve benzeri büyük dil modelleri tanıtıldı. OpenAI Playground üzerinde “cümle tamamlama” kavramı ve “temparature” ayarı gösterildi. Daha iyi çıktı almak için Prompt ayarları anlatıldı. Dökümandan sorgu/chat yapmak için Gemini ve Claude örnekleri verildi. Yine Claude üzerinden kod yazdırma örneği işlendi. İngilizce Sunum linki\n\n\n\n10 Ekim 2024 16:00\nİçerik: ChatGPT ve ötesi. İngilizce Sunum linki\n\n\n\n17 Ekim 2024 16:00\nİçerik: Veri türleri ve verilerin işlenmesine dair bilgi verildi. Performans ölçütleri konusuna başlandı. Sunum linki1 (slayt 24’e kadar) ve Sunum link2\n\n\n\n24 Ekim 2024 16:00\nİçerik: Performans ölçütleri konusuna devam edildi. Optimizasyon konusunda başlandı. Performans sunum link Optimizasyon sunum link\n\n\n\n31 Ekim 2024 16:00\nİçerik: Optimizasyon konusuna devam edildi. Optimizasyon sunum link\n\n\n\n7 Kasım 2024 16:00\nİçerik: Genetik algoritmalar sunum link\n\n\n\n14 Kasım Perşembe 16:00\nİçerik: Yapay sinir ağları Sunum linki."
   },
   {
     "objectID": "index.html#kaynaklar",
@@ -60,7 +60,7 @@
     "href": "index.html#ders7",
     "title": "FEF3001 Yapay Zekaya Giriş",
     "section": "",
-    "text": "14 Kasım Perşembe 16:00\nİçerik: Yapay sinir ağları Sunum linki. Derste kullanılan yapay sinir ağı demo sayfaları için link1 ve link2"
+    "text": "14 Kasım Perşembe 16:00\nİçerik: Yapay sinir ağları Sunum linki."
   },
   {
     "objectID": "ders3.html#değerlendirme-ölçütleri-performance-metrics",
@@ -385,11 +385,18 @@
     "text": "Neural Cell Structure\nAn ANN consists of five parts\n\nInputs (x₁, x₂, …, xₙ)\nWeights (w₁, w₂, …, wₙ)\nCombination (summation) function\nActivation function\nOutput"
   },
   {
+    "objectID": "ders7.html#ann-neuron-cell",
+    "href": "ders7.html#ann-neuron-cell",
+    "title": "Artificial Neural Networks",
+    "section": "ANN neuron cell",
+    "text": "ANN neuron cell\n\n\nimage source"
+  },
+  {
     "objectID": "ders7.html#common-combination-functions",
     "href": "ders7.html#common-combination-functions",
     "title": "Artificial Neural Networks",
     "section": "Common Combination Functions",
-    "text": "Common Combination Functions\n\n\n\n\n\n\n\n\nFunction\nEquation\nDescription\n\n\n\n\nAddition\nNET = Σᵢ₌₁ⁿ xᵢwᵢ\nNET value is obtained by summing the products of input and weight values\n\n\nMultiplication\nNET = ∏ᵢ₌₁ⁿ xᵢwᵢ\nNET value is obtained by multiplying the products of input and weight values\n\n\nMaximum\nNET = Max(xᵢwᵢ)\nNET value is obtained from the largest of the products of input and weight values\n\n\nMinimum\nNET = Min(xᵢwᵢ)\nNET value is obtained from the smallest of the products of input and weight values\n\n\nSign\nNET = Sgn(xᵢwᵢ)\nThe number of positive and negative values from the products of input and weight values is found, and the larger value is accepted as the NET value\n\n\nAddition with Previous\nNET = NETₒₗd + Σᵢ₌₁ⁿ xᵢwᵢ\nNET value is obtained by adding the products of input and weight values to the old NET value"
+    "text": "Common Combination Functions\n\n\n\n\n\n\n\n\nFunction\nEquation\nDescription\n\n\n\n\nAddition\nNET = Σᵢ₌₁ⁿ xᵢwᵢ\nNET value is obtained by summing the products of input and weight values\n\n\nMultiplication\nNET = ∏ᵢ₌₁ⁿ xᵢwᵢ\nNET value is obtained by multiplying the products of input and weight values\n\n\nMaximum\nNET = Max(xᵢwᵢ)\nNET value is obtained from the largest of the products of input and weight values\n\n\nMinimum\nNET = Min(xᵢwᵢ)\nNET value is obtained from the smallest of the products of input and weight values\n\n\nSign\nNET = Sgn(xᵢwᵢ)\nThe number of positive and negative values from the products of input and weight values is found, and the larger value is accepted as the NET value"
   },
   {
     "objectID": "ders7.html#common-activation-functions",
@@ -403,7 +410,14 @@
     "href": "ders7.html#common-activation-functions-1",
     "title": "Artificial Neural Networks",
     "section": "Common Activation Functions",
-    "text": "Common Activation Functions\nStep Function\n\nGenerally used in single-layer networks\ng(x) = { b if x ≥ c a if x &lt; c }\nWhere c = 0, a = 0, b = 1 or\nc = 0, a = -1, b = 1 are preferred"
+    "text": "Common Activation Functions\nStep Function\n\nGenerally used in single-layer networks\ng(x) = {\n\nb if x ≥ c\na if x &lt; c }\n\nWhere c = 0, a = 0, b = 1 or\nc = 0, a = -1, b = 1 are preferred"
+  },
+  {
+    "objectID": "ders7.html#section",
+    "href": "ders7.html#section",
+    "title": "Artificial Neural Networks",
+    "section": "",
+    "text": "Step function for c=0, b=1 and a=-1\n\n\nimage source"
   },
   {
     "objectID": "ders7.html#common-activation-functions-2",
@@ -413,11 +427,53 @@
     "text": "Common Activation Functions\nSigmoid (Logistic) Function\n\nKeeps the value nᵢ in a cell within [0,1] range\nThe t parameter is used as a type of sensitivity level\nParticularly advantageous in networks trained with backpropagation\nSigmoid function output is in [0,1] range\ng(x) = 1/(1 + e⁻ˣ/ᵗ)"
   },
   {
+    "objectID": "ders7.html#section-1",
+    "href": "ders7.html#section-1",
+    "title": "Artificial Neural Networks",
+    "section": "",
+    "text": "image source"
+  },
+  {
     "objectID": "ders7.html#common-activation-functions-3",
     "href": "ders7.html#common-activation-functions-3",
     "title": "Artificial Neural Networks",
     "section": "Common Activation Functions",
     "text": "Common Activation Functions\nHyperbolic Tangent Function\n\nSimilar to logistic activation function\nKeeps the value nᵢ in a cell within [-1,1] range\ng(x) = (eˣ/ᵗ - e⁻ˣ/ᵗ)/(eˣ/ᵗ + e⁻ˣ/ᵗ)"
+  },
+  {
+    "objectID": "ders7.html#section-2",
+    "href": "ders7.html#section-2",
+    "title": "Artificial Neural Networks",
+    "section": "",
+    "text": "image source"
+  },
+  {
+    "objectID": "ders7.html#summary-of-activation-functions",
+    "href": "ders7.html#summary-of-activation-functions",
+    "title": "Artificial Neural Networks",
+    "section": "Summary of activation functions",
+    "text": "Summary of activation functions\nsee the next slide\n\nimage source"
+  },
+  {
+    "objectID": "ders7.html#perceptron",
+    "href": "ders7.html#perceptron",
+    "title": "Artificial Neural Networks",
+    "section": "Perceptron",
+    "text": "Perceptron\n\n\nimage source"
+  },
+  {
+    "objectID": "ders7.html#ann",
+    "href": "ders7.html#ann",
+    "title": "Artificial Neural Networks",
+    "section": "ANN",
+    "text": "ANN\n\n\nimage source"
+  },
+  {
+    "objectID": "ders7.html#interactive-demos",
+    "href": "ders7.html#interactive-demos",
+    "title": "Artificial Neural Networks",
+    "section": "Interactive demos",
+    "text": "Interactive demos\nML Playground\nNeural Network Playground"
   },
   {
     "objectID": "about.html",
