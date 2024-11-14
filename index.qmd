@@ -1,0 +1,34 @@
+# FEF3001 Yapay Zekaya Giriş
+
+## Kaynaklar
+
+- *Makine Öğrenmesinde Sınıflandırma Yöntemleri ve R Uygulamaları*, Ersoy Öz & Selçuk Alp, Nobel Akademik Yayıncılık, 2020.
+- *Veri Madenciliği ve Makine Öğrenmesi İle Farklı Alanlarda Uygulamalar*, Şenol Çelik, Nilay Köleoğlu, & Fatih Çemrek, Holistence Publications, 2022
+- *Sağlık Bilimlerinde Yapay Zeka*, Ahmet Rıza Şahin, Kamil Doğan, & Süleyman Sivri, Akademisyen Kitabevi A.Ş., 2020
+- *Yapay Zeka*, Atınç Yılmaz, Kodlab Yayın Dağıtım Yazılım Ltd. Şti., 2022
+- *Machine Learning Algorithms*, Giuseppe Bonaccorso, Packt Publishing, 2017.
+- *Optimizasyon Modelleme ve Yapay Zeka Algoritmaları*, Bayram Köse, Bahar Demirtürk, Efe Akademi Yayınları, 2023
+
+## Ders1
+
+*Tarih*
+
+**İçerik**: İlk derste, ChatGPT ve benzeri büyük dil modelleri tanıtıldı. OpenAI Playground üzerinde "cümle tamamlama" kavramı ve "temparature" ayarı gösterildi. Daha iyi çıktı almak için Prompt ayarları anlatıldı. Dökümandan sorgu/chat yapmak için Gemini ve Claude örnekleri verildi. Yine Claude üzerinden kod yazdırma örneği işlendi. [İngilizce Sunum linki](ders1.ipynb)
+
+## Ders2
+
+*Tarih*
+
+**İçerik**: Veri türleri ve verilerin işlenmesine dair bilgi verildi.
+
+## Ders3
+
+*Tarih*
+
+**İçerik**: Veri türleri ve verilerin işlenmesine dair bilgi verildi.  [Sunum linki](ders2.qmd)
+
+## Ders7
+
+*14 Kasım Perşembe 16:00*
+
+**İçerik**: Yapay sinir ağları [Sunum linki](ders7.qmd). Derste kullanılan yapay sinir ağı demo sayfaları için [link1](https://ml-playground.com/) ve [link2](https://akarzazi.github.io/neural-network-playground/)

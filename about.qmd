@@ -1,0 +1,11 @@
+# FEF3001 Yapay Zekaya Giriş Ders Notları
+
+YTÜ Fen Fakültesinde 2024 Güz döneminde verilen FEF3001 kodlu dersin içerikleri  sayfasıdır.
+
+## Sıkça Sorulan Sorular
+
+1. Vize yüz yüze mi? *Cevap: Evet*
+2. Vize konuları nelerdir? *Cevap: Yapay sinir ağı konusunun sonuna kadar*
+3. Yüklenen sunumlar dışında bir kaynaktan soru sorulacak mıdır? *Cevap: Temel olarak sunumlar kullanılacaktır fakat derste anlatılanlardan da sorumluyuz, ders video kaydı ve derste aldığınız notlarınızı da çalışınız*
+4. Vize test şeklinde mi ve kaç soru sorulur? *Cevap: Test şeklinde 20-30 soru planlanmaktadır*
+5. Yorum soruları sorulacak mı? *Cevap: Genelde bilgi ölçen sorular tercih edilecektir*
