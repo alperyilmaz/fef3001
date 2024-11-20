@@ -1,0 +1,250 @@
+---
+title: "Data Types and Preprocessing Data"
+subtitle: "FEF3001 Intoduction to Artificial Intelligence - Lecture3 - Part1"
+author: "Alper Yılmaz"
+date: 2024-10-17
+format:
+  revealjs:
+    chalkboard: true
+    css: custom.css
+    smaller: true
+    scrollable: true
+    controls: true
+    touch: true
+    history: false
+    progress: true
+    slide-number: c/t
+typora-copy-images-to: images
+---
+
+## Sample data
+
+| No. | Profession | Marital Status | Income | Education Level |
+|-----|------------|----------------|---------|-----------------|
+| 1 | Teacher | Single | 8000 | Postgraduate |
+| 2 | Nurse | Single | 6000 | Bachelor's |
+| 3 | Worker | Married | 5000 | High School |
+| 4 | Worker | Single | 7200 | High School |
+| 5 | Police | Married | 8500 | Bachelor's |
+| 6 | Teacher | Married | 8500 | Bachelor's |
+| 7 | Doctor | Married | 12000 | Postgraduate |
+| 8 | Worker | Single | 5500 | High School |
+| 9 | Police | Married | 8250 | Bachelor's |
+| 10 | Lawyer | Married | 12500 | Bachelor's |
+
+## Data Types
+
+- Nominal (Categorical) Data: Data type consisting of categories. Not used with 'more than' expressions.
+  * Binary (Two-Category) Data: Marital Status {Married, Single}
+  * Multi-Category Data: Profession {Teacher, Nurse, Worker, Police, Doctor, Lawyer}
+- Ordinal Data: Data type consisting of categories where categories indicate rank (importance, priority). Can be used with 'more than' expressions. Example: Education Level {High School, Bachelor's, Postgraduate}
+- Interval Data: Data type measured on a scale divided into equal parts. Example: Income [5000,12500]
+- Ratio Data: Data type consisting of continuous values within a certain range. Example: Weight {65.2, 68.1, 73.5, ...}
+
+## Data Descriptive Characteristics
+
+**Purpose**: Better understanding of data.
+
+ * Measures of Central Tendency (Arithmetic Mean, Median, Mode)
+ * Measures of Dispersion (Variance, Standard Deviation, Quartiles)
+
+## Measures of Central Tendency
+
+### Arithmetic Mean
+
+
+Arithmetic Mean is defined as
+
+ $$\frac{\sum_{i=1}^n x_i}{n}$$
+
+
+Where:
+
+-  $x_i$ are the individual data points.
+-  n  is the total number of data points.
+
+Sample data: 5 7 4 6 8 16 11 7 \
+Arithmetic Mean: 8
+
+## Median
+
+The value that remains in the middle when data is arranged in ascending or descending order.
+
+Sample data: 5 7 4 6 8 16 11 7 \
+Ordered: 4 5 6 7 7 8 11 16 \
+Median: 7 7 -> 7
+
+## Mode
+
+The most frequently occurring value.
+
+Sample data: 5 7 4 6 8 16 11 7
+
+In the sample data, 7 is the mode, occurring twice
+
+## Measures of Dispersion
+
+###  Variance
+
+Variance measures the spread of a set of data points around their mean. It quantifies how much the values differ from the average (mean). A higher variance indicates greater spread, while a lower variance suggests the data points are closer to the mean.
+
+$$ \sigma^2 = \frac{\sum_{i=1}^N (x_i - \mu)^2}{N} $$
+
+* $\mu$ : average or mean of the sample
+
+## 
+
+### Standard deviation
+
+Standard deviation is a measure of how much individual data points deviate, on average, from the mean of the dataset. It provides a sense of the spread of the data in the same units as the original data, making it easier to interpret compared to variance (which is in squared units).
+
+Relation with Variance:
+
+The standard deviation is simply the square root of the variance. Mathematically:
+
+$$ std.dev = \sqrt{\sigma^2} $$
+
+## Unclean data
+
+- Data collected in real applications:
+   - Can be missing: Some attribute values may not be entered for some objects.
+     - Profession = ' '
+   - Can be noisy: May contain errors.
+     - Salary = -10
+   - Can be inconsistent: Attribute values or attribute names may be incompatible.
+     - Age = 35 while Date of Birth = 03/10/2004
+
+## Data Preprocessing
+
+- Data Cleaning: Completing missing attribute values, correcting erroneous data, detecting and cleaning outliers, resolving inconsistencies
+- Data Integration: Combining data from different data sources
+- Data Reduction: Excluding data while maintaining same results as original data
+- Data Transformation: Normalization
+
+## Data Cleaning
+
+Refers to identifying, correcting, or deleting missing, noisy (erroneous), or inconsistent data.
+
+:::: {.columns}
+
+::: {.column width="50%"}
+Causes of missing data records:
+
+- Inability to obtain or unknown attribute value when collecting data
+- Failure to recognize necessity of certain attributes during data collection
+- Human, software, or hardware problems
+
+\
+\
+
+:::{.highlight}
+It is the most difficult type of error to identify and correct -->
+:::
+
+:::
+
+::: {.column width="50%"}
+
+Causes of noisy (erroneous) data records:
+
+- Faulty data collection tools
+- Data entry problems
+- Data transmission problems
+- Technological limitations
+- Inconsistency in attribute names
+
+:::{.red}
+Causes of inconsistent data records:
+
+- Data stored in different data sources
+- Non-compliance with functional dependency rules
+:::
+
+:::
+::::
+
+## Data preprocessing
+
+How to handle missing data?
+
+- Exclude data records with missing attribute values
+- Fill missing attribute values manually
+- Use a global variable for missing attribute values (Null, unknown, ...)
+- Fill missing attribute values with the mean value of that attribute
+- Fill with the average of attribute values from records belonging to the same class
+- Fill with the most probable attribute values
+
+## Data preprocessing
+
+How to correct noisy data?
+
+- Binning: Data is sorted and divided into equal intervals. Each bin is represented by mean, median, and boundary values.
+- Regression: Data is fitted to regression functions.
+- Clustering: Data is grouped based on similarity. Outliers and extreme values are identified and deleted.
+- Manual detection of erroneous data: Suspicious values are found and checked by humans.
+
+## Data Transformation
+
+Creating new attributes from given attributes.
+
+- Generalization: Summarizing the data.
+- Normalization (Statistical Normalization):
+  - Useful when there are significant differences between data, helps bring data into a single format. Enables reducing data to smaller ranges.
+  - Allows comparison of data from different scaling systems by bringing them into a similar format. The goal here is to transfer data from different systems into a common system and make them comparable using mathematical functions.
+
+## Types of Normalization
+
+- Z-Score Normalization
+- Min-Max Normalization
+
+## Z-score normalization
+
+Z-score normalization (or standardization) transforms data to have a mean of 0 and a standard deviation of 1. This technique is useful for comparing data points from different distributions or preparing data for machine learning algorithms sensitive to scale.
+
+The Z-score of a data point xx is calculated as:
+
+$$ z = \frac{x - \mu}{\sigma} $$
+
+Where:
+
+- $x$: The data point.
+- $\mu$: The mean of the dataset.
+- $\sigma$: The standard deviation of the dataset.
+
+## Min-max normalization
+
+Min-Max Normalization scales data to a specified range, typically [0,1][0,1], by adjusting the values proportionally within the given range. It is useful for ensuring that all features contribute equally to analyses or machine learning models.
+
+The Min-Max Normalization formula is:
+
+$$ x' = \frac{x - x_{min}}{x_{max} - x_{min}} $$
+
+## 
+
+Min-max example: Sample data {10,20,30,40,50}
+
+- Step 1: identify min and max, 10 and 50, respectively.
+- Step 2: Apply min-max formula to each value
+  - 10: (10 - 10)/(50 -10) = 0
+  - 20: (20 - 10)/(50 -10) = 0.25
+  - 30: (30 - 10)/(50 -10) = 0.50
+  - 40: (40 - 10)/(50 -10) = 0.75
+  - 50: (50 - 10)/(50 -10) = 1
+
+Min-max normalized data: {0.00, 0.25, 0.50, 0.75, 1.00}
+
+## Example
+
+In the table below, we have two different attributes with unrelated scales. We applied z-score normaliation to *Experience* and min-max normaliation to *savings* data. 
+
+Notice that both features are now between (-0.97, 1.79) and (0, 1)
+
+| Experience (Years) | Savings (TL) | zscore_experience | minmax_savings |
+|:-------------------:|:--------------:|:------------------:|:----------------:|
+| 6 | 100,000 | -0.97 | 0.00 |
+| 7 | 250,000 | -0.87 | 0.23 |
+| 15 | 750,000 | -0.08 | 1.00 |
+| 15 | 150,000 | -0.08 | 0.08 |
+| 18 | 400,000 | 0.21 | 0.46 |
+| 34 | 650,000 | 1.79 | 0.85 |
+

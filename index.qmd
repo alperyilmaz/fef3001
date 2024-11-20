@@ -25,7 +25,7 @@
 
 *17 Ekim 2024 16:00*
 
-**İçerik**: Veri türleri ve verilerin işlenmesine dair bilgi verildi. Performans ölçütleri konusuna başlandı. [Sunum linki1](files/Hafta_3_1.pdf) (slayt 24'e kadar) ve [Sunum link2](ders3.qmd)
+**İçerik**: Veri türleri ve verilerin işlenmesine dair bilgi verildi. Performans ölçütleri konusuna başlandı. [Sunum linki1](ders3_1.qmd) ve [Sunum link2](ders3.qmd)
 
 ## Ders4
 
