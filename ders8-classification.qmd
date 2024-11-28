@@ -159,6 +159,9 @@ In case of *Imbalance*
 - Down sampling
 - Up sampling
 
+![](images/clipboard_image_1732805944.png)
+
+
 ## ML Flow
 
 ![](images/clipboard_image_1732799151.png)
@@ -169,6 +172,22 @@ In case of *Imbalance*
 Decision Trees are a classification method that uses a tree-like model of decisions and their possible consequences. The algorithm learns a series of if-then-else decision rules that split the data based on feature values, creating a structure that resembles a flowchart. Each internal node represents a "test" on an attribute, each branch represents the outcome of the test, and each leaf node represents a class label or decision.
 
 **branch**, **test**, **leaf**
+
+## Example Data
+
+![](images/clipboard_image_1732806933.png)
+
+:::footer
+[image source](https://medium.com/@dilmihirdil123/learn-decision-tree-from-predicting-whether-a-cricket-match-will-be-played-or-not-and-code-by-bc603213d50d)
+:::
+
+## Resulting decision tree
+
+![](images/clipboard_image_1732806816.png)
+
+:::footer
+[image source](https://madhuramiah.medium.com/an-introduction-to-decision-trees-ee8ac4eceab)
+:::
 
 ## Example
 
