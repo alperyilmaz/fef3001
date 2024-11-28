@@ -630,6 +630,20 @@
     "text": "Decision Trees\nDecision Trees are a classification method that uses a tree-like model of decisions and their possible consequences. The algorithm learns a series of if-then-else decision rules that split the data based on feature values, creating a structure that resembles a flowchart. Each internal node represents a “test” on an attribute, each branch represents the outcome of the test, and each leaf node represents a class label or decision.\nbranch, test, leaf"
   },
   {
+    "objectID": "ders8-classification.html#example-data",
+    "href": "ders8-classification.html#example-data",
+    "title": "Classification Methods",
+    "section": "Example Data",
+    "text": "Example Data\n\n\nimage source"
+  },
+  {
+    "objectID": "ders8-classification.html#resulting-decision-tree",
+    "href": "ders8-classification.html#resulting-decision-tree",
+    "title": "Classification Methods",
+    "section": "Resulting decision tree",
+    "text": "Resulting decision tree\n\n\nimage source"
+  },
+  {
     "objectID": "ders8-classification.html#example",
     "href": "ders8-classification.html#example",
     "title": "Classification Methods",
