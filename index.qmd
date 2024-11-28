@@ -50,3 +50,11 @@
 *14 Kasım Perşembe 16:00*
 
 **İçerik**: Yapay sinir ağları [Sunum linki](ders7.qmd). 
+
+## Ders8
+
+*28 Kasım Perşembe 16:00*
+
+**İçerik**: Sınıflandırma [Sunum linki](ders8-classification.qmd). 
+
+
