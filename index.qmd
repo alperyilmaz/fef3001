@@ -57,4 +57,15 @@
 
 **İçerik**: Sınıflandırma [Sunum linki](ders8-classification.qmd). 
 
+## Ders9
 
+*5 Aralık Perşembe 16:00*
+
+**İçerik**: Sınıflandırma devam [Sunum linki](ders8-classification.qmd). 
+
+
+## Ders10
+
+*12 Aralılk Perşembe 16:00*
+
+**İçerik**: Regresyon [Sunum linki](ders10-regression.qmd). 
