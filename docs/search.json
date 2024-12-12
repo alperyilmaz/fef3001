@@ -70,6 +70,20 @@
     "text": "28 Kasım Perşembe 16:00\nİçerik: Sınıflandırma Sunum linki."
   },
   {
+    "objectID": "index.html#ders9",
+    "href": "index.html#ders9",
+    "title": "FEF3001 Yapay Zekaya Giriş",
+    "section": "",
+    "text": "5 Aralık Perşembe 16:00\nİçerik: Sınıflandırma devam Sunum linki."
+  },
+  {
+    "objectID": "index.html#ders10",
+    "href": "index.html#ders10",
+    "title": "FEF3001 Yapay Zekaya Giriş",
+    "section": "",
+    "text": "12 Aralılk Perşembe 16:00\nİçerik: Regresyon Sunum linki."
+  },
+  {
     "objectID": "ders3.html#değerlendirme-ölçütleri-performance-metrics",
     "href": "ders3.html#değerlendirme-ölçütleri-performance-metrics",
     "title": "Değerlendirme Ölçütleri",
@@ -357,165 +371,109 @@
     "text": "Example\nIn the table below, we have two different attributes with unrelated scales. We applied z-score normaliation to Experience and min-max normaliation to savings data.\nNotice that both features are now between (-0.97, 1.79) and (0, 1)\n\n\n\n\n\n\n\n\n\nExperience (Years)\nSavings (TL)\nzscore_experience\nminmax_savings\n\n\n\n\n6\n100,000\n-0.97\n0.00\n\n\n7\n250,000\n-0.87\n0.23\n\n\n15\n750,000\n-0.08\n1.00\n\n\n15\n150,000\n-0.08\n0.08\n\n\n18\n400,000\n0.21\n0.46\n\n\n34\n650,000\n1.79\n0.85"
   },
   {
-    "objectID": "id3-decision-tree.html",
-    "href": "id3-decision-tree.html",
-    "title": "Decision Tree Algoritm",
+    "objectID": "ders1.html",
+    "href": "ders1.html",
+    "title": "GPT models",
     "section": "",
-    "text": "Taken from https://medium.datadriveninvestor.com/decision-tree-algorithm-with-hands-on-example-e6c2afb40d38\nEntropy\nIn machine learning, entropy is a measure of the randomness in the information being processed. The higher the entropy, the harder it is to draw any conclusions from that information.\n\nInformation Gain\nInformation gain can be defined as the amount of information gained about a random variable or signal from observing another random variable.It can be considered as the difference between the entropy of parent node and weighted average entropy of child nodes.\n\nGini Impurity\nGini impurity is a measure of how often a randomly chosen element from the set would be incorrectly labeled if it was randomly labeled according to the distribution of labels in the subset.\n\nGini impurity is lower bounded by 0, with 0 occurring if the data set contains only one class.\n\nThere are many algorithms there to build a decision tree. They are\n\nCART (Classification and Regression Trees) — This makes use of Gini impurity as the metric.\nID3 (Iterative Dichotomiser 3) — This uses entropy and information gain as metric.\n\nIn this article, I will go through ID3. Once you got it it is easy to implement the same using CART.\n\nClassification using the ID3 algorithm\nConsider whether a dataset based on which we will determine whether to play football or not.\n\nHere There are for independent variables to determine the dependent variable. The independent variables are Outlook, Temperature, Humidity, and Wind. The dependent variable is whether to play football or not.\nAs the first step, we have to find the parent node for our decision tree. For that follow the steps:\n*Find the entropy of the class variable.*\nE(S) = -[(9/14)log(9/14) + (5/14)log(5/14)] = 0.94\nnote: Here typically we will take log to base 2.Here total there are 14 yes/no. Out of which 9 yes and 5 no.Based on it we calculated probability above.\nFrom the above data for outlook we can arrive at the following table easily\n\n*Now we have to calculate average weighted entropy*. ie, we have found the total of weights of each feature multiplied by probabilities.\nE(S, outlook) = (5/14)E(3,2) + (4/14)E(4,0) + (5/14)*E(2,3) = (5/14)(-(3/5)log(3/5)-(2/5)log(2/5))+ (4/14)(0) + (5/14)((2/5)log(2/5)-(3/5)log(3/5)) = 0.693\n*The next step is to find the information gain*. It is the difference between parent entropy and average weighted entropy we found above.\nIG(S, outlook) = 0.94 - 0.693 = 0.247\nSimilarly find Information gain for Temperature, Humidity, and Windy.\nIG(S, Temperature) = 0.940 - 0.911 = 0.029\nIG(S, Humidity) = 0.940 - 0.788 = 0.152\nIG(S, Windy) = 0.940 - 0.8932 = 0.048\n*Now select the feature having the largest entropy gain*. Here it is Outlook. So it forms the first node(root node) of our decision tree.\nNow our data look as follows\n\n\n\nSince overcast contains only examples of class ‘Yes’ we can set it as yes. That means If outlook is overcast football will be played. Now our decision tree looks as follows.\n\nThe next step is to find the next node in our decision tree. Now we will find one under sunny. We have to determine which of the following Temperature, Humidity or Wind has higher information gain.\n\nCalculate parent entropy E(sunny)\nE(sunny) = (-(3/5)log(3/5)-(2/5)log(2/5)) = 0.971.\nNow Calculate the information gain of Temperature. IG(sunny, Temperature)\n\nE(sunny, Temperature) = (2/5)E(0,2) + (2/5)E(1,1) + (1/5)*E(1,0)=2/5=0.4\nNow calculate information gain.\nIG(sunny, Temperature) = 0.971–0.4 =0.571\nSimilarly we get\nIG(sunny, Humidity) = 0.971\nIG(sunny, Windy) = 0.020\nHere IG(sunny, Humidity) is the largest value. So Humidity is the node that comes under sunny.\n\nFor humidity from the above table, we can say that play will occur if humidity is normal and will not occur if it is high. Similarly, find the nodes under rainy.\n*Note: A branch with entropy more than 0 needs further splitting.*\nFinally, our decision tree will look as below:\n\n\n\nClassification using CART algorithm\nClassification using CART is similar to it. But instead of entropy, we use Gini impurity.\nSo as the first step we will find the root node of our decision tree. For that Calculate the Gini index of the class variable\nGini(S) = 1 - [(9/14)² + (5/14)²] = 0.4591\nAs the next step, we will calculate the Gini gain. For that first, we will find the average weighted Gini impurity of Outlook, Temperature, Humidity, and Windy.\nFirst, consider case of Outlook\n\nGini(S, outlook) = (5/14)gini(3,2) + (4/14)gini(4,0)+ (5/14)gini(2,3) = (5/14)(1 - (3/5)² - (2/5)²) + (4/14)*0 + (5/14)(1 - (2/5)² - (3/5)²)= 0.171+0+0.171 = 0.342\nGini gain (S, outlook) = 0.459 - 0.342 = 0.117\nGini gain(S, Temperature) = 0.459 - 0.4405 = 0.0185\nGini gain(S, Humidity) = 0.459 - 0.3674 = 0.0916\nGini gain(S, windy) = 0.459 - 0.4286 = 0.0304\nChoose one that has a higher Gini gain. Gini gain is higher for outlook. So we can choose it as our root node."
+    "text": "GPT1, GPT2 abd GPT3 were released couple years before ChatGPT and it was able to complete sentences. Please visit “How Does ChatGPT Work?” site for more information. After ChatGPT was released, large language models got “conversational”\nPlease visit OpenAI Playground completion site and select “gpt-3.5-turbo” as model. Type a incomplete sentence and then press Submit button.\nYou’ll see that the model will complete your sentence. If you turn on the “Show probabilities” option on right menu, you’ll get a glimpse of how GPT works.\nIf you complete the sentence and then hover over the words, you’ll see that the model had many words to chose from with certain probabilities. In this example, “my” is the 4th most probable word after Today is and “birthday” is most probable word after Today is my.\nOne of key settings of GPT models is temperature. If you decrease the temperature the model will choose the most probably words. If temperature is high, the model will be picking words with low probabalities, which will bring creative and diverse output.\nIf you decrease the temperature to zero, the output will be always same."
   },
   {
-    "objectID": "ders7.html#artificial-neural-networks",
-    "href": "ders7.html#artificial-neural-networks",
-    "title": "Artificial Neural Networks",
-    "section": "Artificial Neural Networks",
-    "text": "Artificial Neural Networks\nArtificial Neural Networks (ANN) are systems developed to automatically perform capabilities such as learning through new information, creating new information, and making discoveries - similar to characteristics of the human brain - without any external assistance.\nThe most basic task of an ANN is to determine an output set corresponding to an input set presented to it. To achieve this, the network is trained with examples of the relevant event (learning) to acquire generalization ability. Through this generalization, output sets corresponding to similar events are determined."
+    "objectID": "ders1.html#chatgpt-writes-code-for-us",
+    "href": "ders1.html#chatgpt-writes-code-for-us",
+    "title": "GPT models",
+    "section": "ChatGPT writes code for us",
+    "text": "ChatGPT writes code for us\nLet’s ask ChatGPT for a fast prime number function in Python\n\n\n\nimage.png\n\n\n\n\n\nimage.png\n\n\nDid you see what just happened! It provided code tailored for us and it also explained bits of the code. Have you noticed that the code contains the tricks we have learned during our lecture: * early stop: if a condition is met, return immediately True or False * instead of checking until N, we should check numbers until \\(\\sqrt{N}\\) (n  0.5** in Python)\nYou can continue the conversation. Let’s ask for memoization.\n\n\n\nimage.png\n\n\n\n\n\nimage.png\n\n\nLet’s get the code and test it here:\n\ndef is_prime(n, memo={}):\n    if n in memo:\n        return memo[n]\n    if n in (2, 3):\n        result = True\n    elif n == 1 or n % 2 == 0:\n        result = False\n    else:\n        result = True\n        for i in range(3, int(n ** 0.5) + 1, 2):\n            if n % i == 0:\n                result = False\n                break\n    memo[n] = result\n    return result\n\n\n# is_prime(100000000003)\n\n\n&lt;i class=\"fas fa-fw fa-exclamation-circle mr-3 align-self-center\"&gt;&lt;/i&gt;\n&lt;b&gt;Warning:&lt;/b&gt; At the time of writing this note (January 2023) chatGPT is known to provide results which are not exactly true!&lt;br&gt;So, be aware and don't use code or information you got from chatGPT as is without checking or confirming."
   },
   {
-    "objectID": "ders7.html#biological-connection",
-    "href": "ders7.html#biological-connection",
-    "title": "Artificial Neural Networks",
-    "section": "Biological Connection",
-    "text": "Biological Connection\nA biological nerve cell is the fundamental building block that enables the human brain to function. A neural network is formed by billions of nerve cells coming together. An Artificial Neural Cell (ANC) mimics biological nerve cells to achieve learning and uncover relationships between phenomena. Information is transmitted between nerve cells in a manner similar to a real neural network."
+    "objectID": "ders1.html#chatgpt-can-fix-or-modify-the-code",
+    "href": "ders1.html#chatgpt-can-fix-or-modify-the-code",
+    "title": "GPT models",
+    "section": "ChatGPT can fix or modify the code",
+    "text": "ChatGPT can fix or modify the code\nYou have a piece of code and it does not work as intended? Then you can ask ChatGPT to fix the code.\nLet’s provide a code with error and ask chatGPT to debug it:\n\n\n\nimage.png\n\n\n\n\n\nimage.png\n\n\nSo, ChatGPT can fix code! By the way, did you know that I used ChatGPT to prepare that example ;)\n\n\n\nimage.png\n\n\n\n\n\nimage.png"
   },
   {
-    "objectID": "ders7.html#application-areas-of-anns",
-    "href": "ders7.html#application-areas-of-anns",
-    "title": "Artificial Neural Networks",
-    "section": "Application Areas of ANNs",
-    "text": "Application Areas of ANNs\n\nFunction Approximation\nTime Series Analysis\nRegression\nClassification"
+    "objectID": "ders1.html#is-it-the-end-of-programming",
+    "href": "ders1.html#is-it-the-end-of-programming",
+    "title": "GPT models",
+    "section": "Is it the end of programming?",
+    "text": "Is it the end of programming?\nYou might think, “we learned Python for a semester and but now there’s ChatGPT, no need to learn coding at all!”. You might find content online which are exploring similar concerns. But more sane approach is “AI tools will increase speed and efficiency of developers also will decresase barriers to entry for new languages.\nThe section below is taken from Github Copilot’s page:"
   },
   {
-    "objectID": "ders7.html#function-approximation",
-    "href": "ders7.html#function-approximation",
-    "title": "Artificial Neural Networks",
-    "section": "Function Approximation",
-    "text": "Function Approximation\nLet x = {x₁, x₂, …, xₙ} be a vector and y = f(x) be a function associated with it. Although the function is unknown, there are x vectors and corresponding y values. Thus, to find the y value according to a given xₙₑw, the function needs to be estimated (approximated). As seen, in an ANN, input neurons will be n in number representing x, while output neurons will be one in number representing y."
+    "objectID": "ders1.html#thanks-for-showing-us-chatgpt-i-can-now-prepare-my-homeworks-easily",
+    "href": "ders1.html#thanks-for-showing-us-chatgpt-i-can-now-prepare-my-homeworks-easily",
+    "title": "GPT models",
+    "section": "Thanks for showing us ChatGPT, I can now prepare my homeworks easily!",
+    "text": "Thanks for showing us ChatGPT, I can now prepare my homeworks easily!\nSeeing the capabilities of ChatGPT might give some hint about misuse. First of all, a homework is for you to learn a concept (remember the playing the guitar analogy?) so being involved in AI-assisted plagiarism is still a plagiarism and a loss on your side. (please also check the file 00-academic-integrity.ipynb for adverse effects of plagiarism)\nSecond of all, OpenAI and others are working on tools and ways to include watermarks in ChatGPT output so that it can be spotted easily.\nSo, please be inspired by this tool, use it to augment your learning but do not use it for plagiarism."
   },
   {
-    "objectID": "ders7.html#time-series-analysis",
-    "href": "ders7.html#time-series-analysis",
-    "title": "Artificial Neural Networks",
-    "section": "Time Series Analysis",
-    "text": "Time Series Analysis\nTime series future value prediction is a very general problem. There are various statistical approaches for such a problem. When time is represented by t, the function xᵗ = f(xᵗ⁻¹, xᵗ⁻², xᵗ⁻³, …) can be estimated to predict future values. Many business and economic time series analyses show seasonal and trend-based variations."
+    "objectID": "ders1.html#closed-and-open-models",
+    "href": "ders1.html#closed-and-open-models",
+    "title": "GPT models",
+    "section": "Closed and Open models",
+    "text": "Closed and Open models\nCurrently there are several closed-source large language models which are developed by major corparations each took hundreds of millions to train * GPT3.5 (ChatGPT) and GPT4 by OpenAI * PaLM and Bard by Google * Claude by Anthropics"
   },
   {
-    "objectID": "ders7.html#regression",
-    "href": "ders7.html#regression",
-    "title": "Artificial Neural Networks",
-    "section": "Regression",
-    "text": "Regression\nRegression is the process of creating a prediction function between independent variables and the dependent variable. For ANN, independent variables are represented by input neurons, while dependent variables are represented by output neurons. While the number of independent variables is insignificant in regression analysis, the dependent variable can only be one. However, in ANNs, since both input and output neurons can be determined as desired, both the number of independent variables and dependent variables become insignificant."
+    "objectID": "ders1.html#claude-3.5-sonnet-by-antropic",
+    "href": "ders1.html#claude-3.5-sonnet-by-antropic",
+    "title": "GPT models",
+    "section": "Claude 3.5 Sonnet by Antropic",
+    "text": "Claude 3.5 Sonnet by Antropic\nClaude 3.5 is the latest version of Claude model. Antropic releases Claude in three sizes Haiku (smallest), Sonnet (medium) and Opus (largest). Currently, Claude 3.5 Sonnest is the best LLM. Generally Claude is good at creative writing but with the latest release it excels at coding as well. Also, Claude allows preview of the code (web-based) on right panel.\nBelow is as example where Claude 3.5 Sonnet was prompted “Please write game of snake in HTML, CSS and JS”. You can actually play the game!\n\nClaude also allows uploading documents (e.g. PDF) and asking questions about the document.\nYou can use Claude (with some limitations) at https://claude.ai/chat after registering an account for free."
   },
   {
-    "objectID": "ders7.html#classification",
-    "href": "ders7.html#classification",
-    "title": "Artificial Neural Networks",
-    "section": "Classification",
-    "text": "Classification\nClassification can be defined as determining which group an object belongs to based on its characteristics. For example, in a bank, it’s possible to divide loan applicants into two classes such as “can be given credit” or “cannot be given credit” based on various characteristics like monthly income, assets, and education level. For this purpose, the ANN’s input neurons will represent the objects’ characteristics, while output neurons will represent the class it belongs to. In this example, there are two classes, and this situation is called binary decision. Assume that either logistic transformation function or hyperbolic tangent transformation function is used in the output neuron."
+    "objectID": "ders1.html#gemini-by-google",
+    "href": "ders1.html#gemini-by-google",
+    "title": "GPT models",
+    "section": "Gemini by Google",
+    "text": "Gemini by Google\nGemini is actually an LLM with online search capacity. Also, you can download documents (via Google Drive) or point to YouTube videos to ask questions. Finally, Gemini has the longest context window of 1 million tokens (will fit around 10 books at once)."
   },
   {
-    "objectID": "ders7.html#classification-contd",
-    "href": "ders7.html#classification-contd",
-    "title": "Artificial Neural Networks",
-    "section": "Classification (cont’d)",
-    "text": "Classification (cont’d)\nIn cases where the number of classes increases, multiple cells may need to be used in the output layer. For example, in a situation with four classes, four cells can be used in the output layer, and each cell corresponds to one class. When using the logistic transformation function in each neuron, neurons with values close to 0 represent not belonging to the relevant class, while those close to 1 represent belonging to the relevant class."
+    "objectID": "ders1.html#running-models-locally",
+    "href": "ders1.html#running-models-locally",
+    "title": "GPT models",
+    "section": "Running models locally",
+    "text": "Running models locally\nSince developers share the model weights, it’s possible to download and run the models locally. There are various sizes of models. 7B (7 billion) models require around 4Gb memory, so you can run them in your laptop.\nYou can run the models by installing PyTorch and some other libraries for Python and then writing some Python code. Or you can install Ollama and then run any compatible model with it.\nAdvantages of running a model locally: 1. Less Censorship 2. Better Data Privacy 3. Offline Usage 4. Cost Savings 5. Better Customization\nDisadvantages of running a model locally: 1. Resource Intensive 2. Slower Responses and Inferior Performance 3. Complex Setup\n\nRunning a model locally using Jupyter notebook or Google Colab\nYou can actually run LLM models in Jupyter notebooks. However the process will require you to install lots of Python packages, downloading the model weights and then writing some Python code to ask questions to the model and then capturing the answer in a dictionary. Although there are some solutions for “chat-like” experience, the experince is more like “one-shot question and answer”.\nPlease check the Youtube video which describes the process in Google Colab, where Google provides GPU (or TPU) to run the model in a Jupyter notebook environment.\n\n\nRunning a model locally with Ollama\n\nPlease visit the list of models page to have an idea about specialized models. With Ollama, you can download and use any of those models.\nIn the terminal, let’s list available models\n$ ollama list\n\nNAME                ID              SIZE    MODIFIED\ndeepseek-coder:6.7b 72be2442d736    3.8 GB  5 weeks ago     \nneural-chat:latest  73940af9fe02    4.1 GB  5 weeks ago     \norca2:7b            ea98cc422de3    3.8 GB  5 weeks ago     \nphi:latest          c651b7a89d73    1.6 GB  14 hours ago    \nsolar:latest        059fdabbe6e6    6.1 GB  2 hours ago     \nstablelm-zephyr:3b  7c596e78b1fc    1.6 GB  3 weeks ago\nLet’s run Phi-2 by Microsoft. Here’s info about Phi-2:\n\na 2.7 billion-parameter language model that demonstrates outstanding reasoning and language understanding capabilities, showcasing state-of-the-art performance among base language models with less than 13 billion parameters. On complex benchmarks Phi-2 matches or outperforms models up to 25x larger, thanks to new innovations in model scaling and training data curation.\n\n$ ollama run phi:latest\n\n&gt;&gt;&gt; why sky is blue?\n\n The sky appears blue due to a phenomenon called Rayleigh scattering. When sunlight enters the Earth's atmosphere,\nit collides with molecules and tiny particles in the air, such as oxygen and nitrogen atoms. These collisions cause\nthe shorter wavelengths of light (blue) to scatter more than the longer wavelengths (red, orange, yellow, green, and\nviolet). As a result, our eyes perceive the scattered blue light to be dominant, which is why the sky appears blue to us.\nAs you can see, a small model, which can answer questions, help coding can be run locally.\n\n\nRunning a model locally with user interface\n\nOllama Web UI\n\n\n\nLLM Studio\nYou can install LM Studio and then interact with local models with its user interface"
   },
   {
-    "objectID": "ders7.html#neural-cell-structure",
-    "href": "ders7.html#neural-cell-structure",
-    "title": "Artificial Neural Networks",
-    "section": "Neural Cell Structure",
-    "text": "Neural Cell Structure\nAn ANN consists of five parts\n\nInputs (x₁, x₂, …, xₙ)\nWeights (w₁, w₂, …, wₙ)\nCombination (summation) function\nActivation function\nOutput"
+    "objectID": "ders1.html#github-copilot",
+    "href": "ders1.html#github-copilot",
+    "title": "GPT models",
+    "section": "Github CoPilot",
+    "text": "Github CoPilot\n\n%%HTML\n&lt;iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/ZapdeEJ7xJw?si=3DYWvMa7uudDhUnj\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" allowfullscreen&gt;&lt;/iframe&gt;"
   },
   {
-    "objectID": "ders7.html#ann-neuron-cell",
-    "href": "ders7.html#ann-neuron-cell",
-    "title": "Artificial Neural Networks",
-    "section": "ANN neuron cell",
-    "text": "ANN neuron cell\n\n\nimage source"
+    "objectID": "ders1.html#free-github-copilot-alternative",
+    "href": "ders1.html#free-github-copilot-alternative",
+    "title": "GPT models",
+    "section": "Free Github CoPilot alternative",
+    "text": "Free Github CoPilot alternative\nCody is Sourcegraph’s AI coding assistant, and it has a couple of features that no other assistant has to make you a 10x developer. You can check it out here: https://sourcegraph.com/cody"
   },
   {
-    "objectID": "ders7.html#common-combination-functions",
-    "href": "ders7.html#common-combination-functions",
-    "title": "Artificial Neural Networks",
-    "section": "Common Combination Functions",
-    "text": "Common Combination Functions\n\n\n\n\n\n\n\n\nFunction\nEquation\nDescription\n\n\n\n\nAddition\nNET = Σᵢ₌₁ⁿ xᵢwᵢ\nNET value is obtained by summing the products of input and weight values\n\n\nMultiplication\nNET = ∏ᵢ₌₁ⁿ xᵢwᵢ\nNET value is obtained by multiplying the products of input and weight values\n\n\nMaximum\nNET = Max(xᵢwᵢ)\nNET value is obtained from the largest of the products of input and weight values\n\n\nMinimum\nNET = Min(xᵢwᵢ)\nNET value is obtained from the smallest of the products of input and weight values\n\n\nSign\nNET = Sgn(xᵢwᵢ)\nThe number of positive and negative values from the products of input and weight values is found, and the larger value is accepted as the NET value"
+    "objectID": "ders1.html#open-source-local-alternatives",
+    "href": "ders1.html#open-source-local-alternatives",
+    "title": "GPT models",
+    "section": "Open source local alternatives",
+    "text": "Open source local alternatives\nPlease visit https://tabby.tabbyml.com/ for more information"
   },
   {
-    "objectID": "ders7.html#common-activation-functions",
-    "href": "ders7.html#common-activation-functions",
-    "title": "Artificial Neural Networks",
-    "section": "Common Activation Functions",
-    "text": "Common Activation Functions\nIdentity Function\n\nA commonly used linear function\ng(x) = x"
+    "objectID": "ders1.html#image-generation",
+    "href": "ders1.html#image-generation",
+    "title": "GPT models",
+    "section": "Image generation",
+    "text": "Image generation\n\nDALL-E 3 by OpenAI\nPrompt: “a dna strand with istanbul city as silhoutte in background”\nRevised prompt: “Imagine a detailed science meets architecture illustration. In the foreground, there’s a strand of DNA, magnified and glowing against a dark backdrop. This helix structure is precisely depicted, its familiar double-helix shape twisting majestically. Intertwining with this scientific image, in the background, there’s a silhouette representation of Istanbul city. The skyline shows off its marvelous historical architecture, including its domed mosques and towering minarets. The cityscape sits against a dusky eveningsky, the setting sun casting an orange glow on the horizon behind the buildings. The combination results in a fascinating juxtapositionof science and urban beauty.”\nResult:\n\n\n\nMidjourney v6\nMidjourney announced v6 in December 2023. It can generate photorealistic images. Normally, you need to use their Discord channel to generate images free. Also, you can generate images using getimg.ai. I tried generating images using the following prompts\n\nMolecular biology lab with lots of students.\nBeautiful sea side with white sand beach and tropical trees on shore. The sea looks greenish blue\n\nThe results are great:\n\n\n\nDisinformation\nBe aware of deepfake or AI-generated fake photos\nFake Trump Photo\n\nFake Pope Photo"
   },
   {
-    "objectID": "ders7.html#common-activation-functions-1",
-    "href": "ders7.html#common-activation-functions-1",
-    "title": "Artificial Neural Networks",
-    "section": "Common Activation Functions",
-    "text": "Common Activation Functions\nStep Function\n\nGenerally used in single-layer networks\ng(x) = {\n\nb if x ≥ c\na if x &lt; c }\n\nWhere c = 0, a = 0, b = 1 or\nc = 0, a = -1, b = 1 are preferred"
+    "objectID": "ders1.html#video-generation",
+    "href": "ders1.html#video-generation",
+    "title": "GPT models",
+    "section": "Video generation",
+    "text": "Video generation\n\nPrompt to video\n\nRunwayML Gen-2\nPika\nStable Video Diffusion by Stable Diffusion\nGENMO\n\n\n\nImage to video\n\nGENMO"
   },
   {
-    "objectID": "ders7.html#section",
-    "href": "ders7.html#section",
-    "title": "Artificial Neural Networks",
-    "section": "",
-    "text": "Step function for c=0, b=1 and a=-1\n\n\nimage source"
-  },
-  {
-    "objectID": "ders7.html#common-activation-functions-2",
-    "href": "ders7.html#common-activation-functions-2",
-    "title": "Artificial Neural Networks",
-    "section": "Common Activation Functions",
-    "text": "Common Activation Functions\nSigmoid (Logistic) Function\n\nKeeps the value nᵢ in a cell within [0,1] range\nThe t parameter is used as a type of sensitivity level\nParticularly advantageous in networks trained with backpropagation\nSigmoid function output is in [0,1] range\ng(x) = 1/(1 + e⁻ˣ/ᵗ)"
-  },
-  {
-    "objectID": "ders7.html#section-1",
-    "href": "ders7.html#section-1",
-    "title": "Artificial Neural Networks",
-    "section": "",
-    "text": "image source"
-  },
-  {
-    "objectID": "ders7.html#common-activation-functions-3",
-    "href": "ders7.html#common-activation-functions-3",
-    "title": "Artificial Neural Networks",
-    "section": "Common Activation Functions",
-    "text": "Common Activation Functions\nHyperbolic Tangent Function\n\nSimilar to logistic activation function\nKeeps the value nᵢ in a cell within [-1,1] range\ng(x) = (eˣ/ᵗ - e⁻ˣ/ᵗ)/(eˣ/ᵗ + e⁻ˣ/ᵗ)"
-  },
-  {
-    "objectID": "ders7.html#section-2",
-    "href": "ders7.html#section-2",
-    "title": "Artificial Neural Networks",
-    "section": "",
-    "text": "image source"
-  },
-  {
-    "objectID": "ders7.html#summary-of-activation-functions",
-    "href": "ders7.html#summary-of-activation-functions",
-    "title": "Artificial Neural Networks",
-    "section": "Summary of activation functions",
-    "text": "Summary of activation functions\nsee the next slide\n\nimage source"
-  },
-  {
-    "objectID": "ders7.html#perceptron",
-    "href": "ders7.html#perceptron",
-    "title": "Artificial Neural Networks",
-    "section": "Perceptron",
-    "text": "Perceptron\n\n\nimage source"
-  },
-  {
-    "objectID": "ders7.html#ann",
-    "href": "ders7.html#ann",
-    "title": "Artificial Neural Networks",
-    "section": "ANN",
-    "text": "ANN\n\n\nimage source"
-  },
-  {
-    "objectID": "ders7.html#interactive-demos",
-    "href": "ders7.html#interactive-demos",
-    "title": "Artificial Neural Networks",
-    "section": "Interactive demos",
-    "text": "Interactive demos\nML Playground\nNeural Network Playground"
+    "objectID": "ders1.html#music-or-sound-generation",
+    "href": "ders1.html#music-or-sound-generation",
+    "title": "GPT models",
+    "section": "Music or sound generation",
+    "text": "Music or sound generation\n\nElevenlabs can convert text to speech online for free with our AI voice generator"
   },
   {
     "objectID": "ders8-classification.html#contents",
@@ -798,137 +756,193 @@
     "text": "Why Logistic Regression is Useful\nLogistic Regression is a popular algorithm because it:\n\nIs easy to implement and interpret\nCan handle multiple input variables\nProvides a probability estimate for each prediction\nIs widely used in many fields, such as medicine, finance, and marketing"
   },
   {
-    "objectID": "ders1.html",
-    "href": "ders1.html",
-    "title": "GPT models",
+    "objectID": "ders7.html#artificial-neural-networks",
+    "href": "ders7.html#artificial-neural-networks",
+    "title": "Artificial Neural Networks",
+    "section": "Artificial Neural Networks",
+    "text": "Artificial Neural Networks\nArtificial Neural Networks (ANN) are systems developed to automatically perform capabilities such as learning through new information, creating new information, and making discoveries - similar to characteristics of the human brain - without any external assistance.\nThe most basic task of an ANN is to determine an output set corresponding to an input set presented to it. To achieve this, the network is trained with examples of the relevant event (learning) to acquire generalization ability. Through this generalization, output sets corresponding to similar events are determined."
+  },
+  {
+    "objectID": "ders7.html#biological-connection",
+    "href": "ders7.html#biological-connection",
+    "title": "Artificial Neural Networks",
+    "section": "Biological Connection",
+    "text": "Biological Connection\nA biological nerve cell is the fundamental building block that enables the human brain to function. A neural network is formed by billions of nerve cells coming together. An Artificial Neural Cell (ANC) mimics biological nerve cells to achieve learning and uncover relationships between phenomena. Information is transmitted between nerve cells in a manner similar to a real neural network."
+  },
+  {
+    "objectID": "ders7.html#application-areas-of-anns",
+    "href": "ders7.html#application-areas-of-anns",
+    "title": "Artificial Neural Networks",
+    "section": "Application Areas of ANNs",
+    "text": "Application Areas of ANNs\n\nFunction Approximation\nTime Series Analysis\nRegression\nClassification"
+  },
+  {
+    "objectID": "ders7.html#function-approximation",
+    "href": "ders7.html#function-approximation",
+    "title": "Artificial Neural Networks",
+    "section": "Function Approximation",
+    "text": "Function Approximation\nLet x = {x₁, x₂, …, xₙ} be a vector and y = f(x) be a function associated with it. Although the function is unknown, there are x vectors and corresponding y values. Thus, to find the y value according to a given xₙₑw, the function needs to be estimated (approximated). As seen, in an ANN, input neurons will be n in number representing x, while output neurons will be one in number representing y."
+  },
+  {
+    "objectID": "ders7.html#time-series-analysis",
+    "href": "ders7.html#time-series-analysis",
+    "title": "Artificial Neural Networks",
+    "section": "Time Series Analysis",
+    "text": "Time Series Analysis\nTime series future value prediction is a very general problem. There are various statistical approaches for such a problem. When time is represented by t, the function xᵗ = f(xᵗ⁻¹, xᵗ⁻², xᵗ⁻³, …) can be estimated to predict future values. Many business and economic time series analyses show seasonal and trend-based variations."
+  },
+  {
+    "objectID": "ders7.html#regression",
+    "href": "ders7.html#regression",
+    "title": "Artificial Neural Networks",
+    "section": "Regression",
+    "text": "Regression\nRegression is the process of creating a prediction function between independent variables and the dependent variable. For ANN, independent variables are represented by input neurons, while dependent variables are represented by output neurons. While the number of independent variables is insignificant in regression analysis, the dependent variable can only be one. However, in ANNs, since both input and output neurons can be determined as desired, both the number of independent variables and dependent variables become insignificant."
+  },
+  {
+    "objectID": "ders7.html#classification",
+    "href": "ders7.html#classification",
+    "title": "Artificial Neural Networks",
+    "section": "Classification",
+    "text": "Classification\nClassification can be defined as determining which group an object belongs to based on its characteristics. For example, in a bank, it’s possible to divide loan applicants into two classes such as “can be given credit” or “cannot be given credit” based on various characteristics like monthly income, assets, and education level. For this purpose, the ANN’s input neurons will represent the objects’ characteristics, while output neurons will represent the class it belongs to. In this example, there are two classes, and this situation is called binary decision. Assume that either logistic transformation function or hyperbolic tangent transformation function is used in the output neuron."
+  },
+  {
+    "objectID": "ders7.html#classification-contd",
+    "href": "ders7.html#classification-contd",
+    "title": "Artificial Neural Networks",
+    "section": "Classification (cont’d)",
+    "text": "Classification (cont’d)\nIn cases where the number of classes increases, multiple cells may need to be used in the output layer. For example, in a situation with four classes, four cells can be used in the output layer, and each cell corresponds to one class. When using the logistic transformation function in each neuron, neurons with values close to 0 represent not belonging to the relevant class, while those close to 1 represent belonging to the relevant class."
+  },
+  {
+    "objectID": "ders7.html#neural-cell-structure",
+    "href": "ders7.html#neural-cell-structure",
+    "title": "Artificial Neural Networks",
+    "section": "Neural Cell Structure",
+    "text": "Neural Cell Structure\nAn ANN consists of five parts\n\nInputs (x₁, x₂, …, xₙ)\nWeights (w₁, w₂, …, wₙ)\nCombination (summation) function\nActivation function\nOutput"
+  },
+  {
+    "objectID": "ders7.html#ann-neuron-cell",
+    "href": "ders7.html#ann-neuron-cell",
+    "title": "Artificial Neural Networks",
+    "section": "ANN neuron cell",
+    "text": "ANN neuron cell\n\n\nimage source"
+  },
+  {
+    "objectID": "ders7.html#common-combination-functions",
+    "href": "ders7.html#common-combination-functions",
+    "title": "Artificial Neural Networks",
+    "section": "Common Combination Functions",
+    "text": "Common Combination Functions\n\n\n\n\n\n\n\n\nFunction\nEquation\nDescription\n\n\n\n\nAddition\nNET = Σᵢ₌₁ⁿ xᵢwᵢ\nNET value is obtained by summing the products of input and weight values\n\n\nMultiplication\nNET = ∏ᵢ₌₁ⁿ xᵢwᵢ\nNET value is obtained by multiplying the products of input and weight values\n\n\nMaximum\nNET = Max(xᵢwᵢ)\nNET value is obtained from the largest of the products of input and weight values\n\n\nMinimum\nNET = Min(xᵢwᵢ)\nNET value is obtained from the smallest of the products of input and weight values\n\n\nSign\nNET = Sgn(xᵢwᵢ)\nThe number of positive and negative values from the products of input and weight values is found, and the larger value is accepted as the NET value"
+  },
+  {
+    "objectID": "ders7.html#common-activation-functions",
+    "href": "ders7.html#common-activation-functions",
+    "title": "Artificial Neural Networks",
+    "section": "Common Activation Functions",
+    "text": "Common Activation Functions\nIdentity Function\n\nA commonly used linear function\ng(x) = x"
+  },
+  {
+    "objectID": "ders7.html#common-activation-functions-1",
+    "href": "ders7.html#common-activation-functions-1",
+    "title": "Artificial Neural Networks",
+    "section": "Common Activation Functions",
+    "text": "Common Activation Functions\nStep Function\n\nGenerally used in single-layer networks\ng(x) = {\n\nb if x ≥ c\na if x &lt; c }\n\nWhere c = 0, a = 0, b = 1 or\nc = 0, a = -1, b = 1 are preferred"
+  },
+  {
+    "objectID": "ders7.html#section",
+    "href": "ders7.html#section",
+    "title": "Artificial Neural Networks",
     "section": "",
-    "text": "GPT1, GPT2 abd GPT3 were released couple years before ChatGPT and it was able to complete sentences. Please visit “How Does ChatGPT Work?” site for more information. After ChatGPT was released, large language models got “conversational”\nPlease visit OpenAI Playground completion site and select “gpt-3.5-turbo” as model. Type a incomplete sentence and then press Submit button.\nYou’ll see that the model will complete your sentence. If you turn on the “Show probabilities” option on right menu, you’ll get a glimpse of how GPT works.\nIf you complete the sentence and then hover over the words, you’ll see that the model had many words to chose from with certain probabilities. In this example, “my” is the 4th most probable word after Today is and “birthday” is most probable word after Today is my.\nOne of key settings of GPT models is temperature. If you decrease the temperature the model will choose the most probably words. If temperature is high, the model will be picking words with low probabalities, which will bring creative and diverse output.\nIf you decrease the temperature to zero, the output will be always same."
+    "text": "Step function for c=0, b=1 and a=-1\n\n\nimage source"
   },
   {
-    "objectID": "ders1.html#chatgpt-writes-code-for-us",
-    "href": "ders1.html#chatgpt-writes-code-for-us",
-    "title": "GPT models",
-    "section": "ChatGPT writes code for us",
-    "text": "ChatGPT writes code for us\nLet’s ask ChatGPT for a fast prime number function in Python\n\n\n\nimage.png\n\n\n\n\n\nimage.png\n\n\nDid you see what just happened! It provided code tailored for us and it also explained bits of the code. Have you noticed that the code contains the tricks we have learned during our lecture: * early stop: if a condition is met, return immediately True or False * instead of checking until N, we should check numbers until \\(\\sqrt{N}\\) (n  0.5** in Python)\nYou can continue the conversation. Let’s ask for memoization.\n\n\n\nimage.png\n\n\n\n\n\nimage.png\n\n\nLet’s get the code and test it here:\n\ndef is_prime(n, memo={}):\n    if n in memo:\n        return memo[n]\n    if n in (2, 3):\n        result = True\n    elif n == 1 or n % 2 == 0:\n        result = False\n    else:\n        result = True\n        for i in range(3, int(n ** 0.5) + 1, 2):\n            if n % i == 0:\n                result = False\n                break\n    memo[n] = result\n    return result\n\n\n# is_prime(100000000003)\n\n\n&lt;i class=\"fas fa-fw fa-exclamation-circle mr-3 align-self-center\"&gt;&lt;/i&gt;\n&lt;b&gt;Warning:&lt;/b&gt; At the time of writing this note (January 2023) chatGPT is known to provide results which are not exactly true!&lt;br&gt;So, be aware and don't use code or information you got from chatGPT as is without checking or confirming."
+    "objectID": "ders7.html#common-activation-functions-2",
+    "href": "ders7.html#common-activation-functions-2",
+    "title": "Artificial Neural Networks",
+    "section": "Common Activation Functions",
+    "text": "Common Activation Functions\nSigmoid (Logistic) Function\n\nKeeps the value nᵢ in a cell within [0,1] range\nThe t parameter is used as a type of sensitivity level\nParticularly advantageous in networks trained with backpropagation\nSigmoid function output is in [0,1] range\ng(x) = 1/(1 + e⁻ˣ/ᵗ)"
   },
   {
-    "objectID": "ders1.html#chatgpt-can-fix-or-modify-the-code",
-    "href": "ders1.html#chatgpt-can-fix-or-modify-the-code",
-    "title": "GPT models",
-    "section": "ChatGPT can fix or modify the code",
-    "text": "ChatGPT can fix or modify the code\nYou have a piece of code and it does not work as intended? Then you can ask ChatGPT to fix the code.\nLet’s provide a code with error and ask chatGPT to debug it:\n\n\n\nimage.png\n\n\n\n\n\nimage.png\n\n\nSo, ChatGPT can fix code! By the way, did you know that I used ChatGPT to prepare that example ;)\n\n\n\nimage.png\n\n\n\n\n\nimage.png"
-  },
-  {
-    "objectID": "ders1.html#is-it-the-end-of-programming",
-    "href": "ders1.html#is-it-the-end-of-programming",
-    "title": "GPT models",
-    "section": "Is it the end of programming?",
-    "text": "Is it the end of programming?\nYou might think, “we learned Python for a semester and but now there’s ChatGPT, no need to learn coding at all!”. You might find content online which are exploring similar concerns. But more sane approach is “AI tools will increase speed and efficiency of developers also will decresase barriers to entry for new languages.\nThe section below is taken from Github Copilot’s page:"
-  },
-  {
-    "objectID": "ders1.html#thanks-for-showing-us-chatgpt-i-can-now-prepare-my-homeworks-easily",
-    "href": "ders1.html#thanks-for-showing-us-chatgpt-i-can-now-prepare-my-homeworks-easily",
-    "title": "GPT models",
-    "section": "Thanks for showing us ChatGPT, I can now prepare my homeworks easily!",
-    "text": "Thanks for showing us ChatGPT, I can now prepare my homeworks easily!\nSeeing the capabilities of ChatGPT might give some hint about misuse. First of all, a homework is for you to learn a concept (remember the playing the guitar analogy?) so being involved in AI-assisted plagiarism is still a plagiarism and a loss on your side. (please also check the file 00-academic-integrity.ipynb for adverse effects of plagiarism)\nSecond of all, OpenAI and others are working on tools and ways to include watermarks in ChatGPT output so that it can be spotted easily.\nSo, please be inspired by this tool, use it to augment your learning but do not use it for plagiarism."
-  },
-  {
-    "objectID": "ders1.html#closed-and-open-models",
-    "href": "ders1.html#closed-and-open-models",
-    "title": "GPT models",
-    "section": "Closed and Open models",
-    "text": "Closed and Open models\nCurrently there are several closed-source large language models which are developed by major corparations each took hundreds of millions to train * GPT3.5 (ChatGPT) and GPT4 by OpenAI * PaLM and Bard by Google * Claude by Anthropics"
-  },
-  {
-    "objectID": "ders1.html#claude-3.5-sonnet-by-antropic",
-    "href": "ders1.html#claude-3.5-sonnet-by-antropic",
-    "title": "GPT models",
-    "section": "Claude 3.5 Sonnet by Antropic",
-    "text": "Claude 3.5 Sonnet by Antropic\nClaude 3.5 is the latest version of Claude model. Antropic releases Claude in three sizes Haiku (smallest), Sonnet (medium) and Opus (largest). Currently, Claude 3.5 Sonnest is the best LLM. Generally Claude is good at creative writing but with the latest release it excels at coding as well. Also, Claude allows preview of the code (web-based) on right panel.\nBelow is as example where Claude 3.5 Sonnet was prompted “Please write game of snake in HTML, CSS and JS”. You can actually play the game!\n\nClaude also allows uploading documents (e.g. PDF) and asking questions about the document.\nYou can use Claude (with some limitations) at https://claude.ai/chat after registering an account for free."
-  },
-  {
-    "objectID": "ders1.html#gemini-by-google",
-    "href": "ders1.html#gemini-by-google",
-    "title": "GPT models",
-    "section": "Gemini by Google",
-    "text": "Gemini by Google\nGemini is actually an LLM with online search capacity. Also, you can download documents (via Google Drive) or point to YouTube videos to ask questions. Finally, Gemini has the longest context window of 1 million tokens (will fit around 10 books at once)."
-  },
-  {
-    "objectID": "ders1.html#running-models-locally",
-    "href": "ders1.html#running-models-locally",
-    "title": "GPT models",
-    "section": "Running models locally",
-    "text": "Running models locally\nSince developers share the model weights, it’s possible to download and run the models locally. There are various sizes of models. 7B (7 billion) models require around 4Gb memory, so you can run them in your laptop.\nYou can run the models by installing PyTorch and some other libraries for Python and then writing some Python code. Or you can install Ollama and then run any compatible model with it.\nAdvantages of running a model locally: 1. Less Censorship 2. Better Data Privacy 3. Offline Usage 4. Cost Savings 5. Better Customization\nDisadvantages of running a model locally: 1. Resource Intensive 2. Slower Responses and Inferior Performance 3. Complex Setup\n\nRunning a model locally using Jupyter notebook or Google Colab\nYou can actually run LLM models in Jupyter notebooks. However the process will require you to install lots of Python packages, downloading the model weights and then writing some Python code to ask questions to the model and then capturing the answer in a dictionary. Although there are some solutions for “chat-like” experience, the experince is more like “one-shot question and answer”.\nPlease check the Youtube video which describes the process in Google Colab, where Google provides GPU (or TPU) to run the model in a Jupyter notebook environment.\n\n\nRunning a model locally with Ollama\n\nPlease visit the list of models page to have an idea about specialized models. With Ollama, you can download and use any of those models.\nIn the terminal, let’s list available models\n$ ollama list\n\nNAME                ID              SIZE    MODIFIED\ndeepseek-coder:6.7b 72be2442d736    3.8 GB  5 weeks ago     \nneural-chat:latest  73940af9fe02    4.1 GB  5 weeks ago     \norca2:7b            ea98cc422de3    3.8 GB  5 weeks ago     \nphi:latest          c651b7a89d73    1.6 GB  14 hours ago    \nsolar:latest        059fdabbe6e6    6.1 GB  2 hours ago     \nstablelm-zephyr:3b  7c596e78b1fc    1.6 GB  3 weeks ago\nLet’s run Phi-2 by Microsoft. Here’s info about Phi-2:\n\na 2.7 billion-parameter language model that demonstrates outstanding reasoning and language understanding capabilities, showcasing state-of-the-art performance among base language models with less than 13 billion parameters. On complex benchmarks Phi-2 matches or outperforms models up to 25x larger, thanks to new innovations in model scaling and training data curation.\n\n$ ollama run phi:latest\n\n&gt;&gt;&gt; why sky is blue?\n\n The sky appears blue due to a phenomenon called Rayleigh scattering. When sunlight enters the Earth's atmosphere,\nit collides with molecules and tiny particles in the air, such as oxygen and nitrogen atoms. These collisions cause\nthe shorter wavelengths of light (blue) to scatter more than the longer wavelengths (red, orange, yellow, green, and\nviolet). As a result, our eyes perceive the scattered blue light to be dominant, which is why the sky appears blue to us.\nAs you can see, a small model, which can answer questions, help coding can be run locally.\n\n\nRunning a model locally with user interface\n\nOllama Web UI\n\n\n\nLLM Studio\nYou can install LM Studio and then interact with local models with its user interface"
-  },
-  {
-    "objectID": "ders1.html#github-copilot",
-    "href": "ders1.html#github-copilot",
-    "title": "GPT models",
-    "section": "Github CoPilot",
-    "text": "Github CoPilot\n\n%%HTML\n&lt;iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/ZapdeEJ7xJw?si=3DYWvMa7uudDhUnj\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" allowfullscreen&gt;&lt;/iframe&gt;"
-  },
-  {
-    "objectID": "ders1.html#free-github-copilot-alternative",
-    "href": "ders1.html#free-github-copilot-alternative",
-    "title": "GPT models",
-    "section": "Free Github CoPilot alternative",
-    "text": "Free Github CoPilot alternative\nCody is Sourcegraph’s AI coding assistant, and it has a couple of features that no other assistant has to make you a 10x developer. You can check it out here: https://sourcegraph.com/cody"
-  },
-  {
-    "objectID": "ders1.html#open-source-local-alternatives",
-    "href": "ders1.html#open-source-local-alternatives",
-    "title": "GPT models",
-    "section": "Open source local alternatives",
-    "text": "Open source local alternatives\nPlease visit https://tabby.tabbyml.com/ for more information"
-  },
-  {
-    "objectID": "ders1.html#image-generation",
-    "href": "ders1.html#image-generation",
-    "title": "GPT models",
-    "section": "Image generation",
-    "text": "Image generation\n\nDALL-E 3 by OpenAI\nPrompt: “a dna strand with istanbul city as silhoutte in background”\nRevised prompt: “Imagine a detailed science meets architecture illustration. In the foreground, there’s a strand of DNA, magnified and glowing against a dark backdrop. This helix structure is precisely depicted, its familiar double-helix shape twisting majestically. Intertwining with this scientific image, in the background, there’s a silhouette representation of Istanbul city. The skyline shows off its marvelous historical architecture, including its domed mosques and towering minarets. The cityscape sits against a dusky eveningsky, the setting sun casting an orange glow on the horizon behind the buildings. The combination results in a fascinating juxtapositionof science and urban beauty.”\nResult:\n\n\n\nMidjourney v6\nMidjourney announced v6 in December 2023. It can generate photorealistic images. Normally, you need to use their Discord channel to generate images free. Also, you can generate images using getimg.ai. I tried generating images using the following prompts\n\nMolecular biology lab with lots of students.\nBeautiful sea side with white sand beach and tropical trees on shore. The sea looks greenish blue\n\nThe results are great:\n\n\n\nDisinformation\nBe aware of deepfake or AI-generated fake photos\nFake Trump Photo\n\nFake Pope Photo"
-  },
-  {
-    "objectID": "ders1.html#video-generation",
-    "href": "ders1.html#video-generation",
-    "title": "GPT models",
-    "section": "Video generation",
-    "text": "Video generation\n\nPrompt to video\n\nRunwayML Gen-2\nPika\nStable Video Diffusion by Stable Diffusion\nGENMO\n\n\n\nImage to video\n\nGENMO"
-  },
-  {
-    "objectID": "ders1.html#music-or-sound-generation",
-    "href": "ders1.html#music-or-sound-generation",
-    "title": "GPT models",
-    "section": "Music or sound generation",
-    "text": "Music or sound generation\n\nElevenlabs can convert text to speech online for free with our AI voice generator"
-  },
-  {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "FEF3001 Yapay Zekaya Giriş Ders Notları",
+    "objectID": "ders7.html#section-1",
+    "href": "ders7.html#section-1",
+    "title": "Artificial Neural Networks",
     "section": "",
-    "text": "YTÜ Fen Fakültesinde 2024 Güz döneminde verilen FEF3001 kodlu dersin içerikleri sayfasıdır.\n\n\n\nVize yüz yüze mi? Cevap: Evet\nVize konuları nelerdir? Cevap: Yapay sinir ağı konusunun sonuna kadar\nYüklenen sunumlar dışında bir kaynaktan soru sorulacak mıdır? Cevap: Temel olarak sunumlar kullanılacaktır fakat derste anlatılanlardan da sorumluyuz, ders video kaydı ve derste aldığınız notlarınızı da çalışınız\nVize test şeklinde mi ve kaç soru sorulur? Cevap: Test şeklinde 20-30 soru planlanmaktadır\nYorum soruları sorulacak mı? Cevap: Genelde bilgi ölçen sorular tercih edilecektir"
+    "text": "image source"
   },
   {
-    "objectID": "about.html#sıkça-sorulan-sorular",
-    "href": "about.html#sıkça-sorulan-sorular",
-    "title": "FEF3001 Yapay Zekaya Giriş Ders Notları",
-    "section": "",
-    "text": "Vize yüz yüze mi? Cevap: Evet\nVize konuları nelerdir? Cevap: Yapay sinir ağı konusunun sonuna kadar\nYüklenen sunumlar dışında bir kaynaktan soru sorulacak mıdır? Cevap: Temel olarak sunumlar kullanılacaktır fakat derste anlatılanlardan da sorumluyuz, ders video kaydı ve derste aldığınız notlarınızı da çalışınız\nVize test şeklinde mi ve kaç soru sorulur? Cevap: Test şeklinde 20-30 soru planlanmaktadır\nYorum soruları sorulacak mı? Cevap: Genelde bilgi ölçen sorular tercih edilecektir"
+    "objectID": "ders7.html#common-activation-functions-3",
+    "href": "ders7.html#common-activation-functions-3",
+    "title": "Artificial Neural Networks",
+    "section": "Common Activation Functions",
+    "text": "Common Activation Functions\nHyperbolic Tangent Function\n\nSimilar to logistic activation function\nKeeps the value nᵢ in a cell within [-1,1] range\ng(x) = (eˣ/ᵗ - e⁻ˣ/ᵗ)/(eˣ/ᵗ + e⁻ˣ/ᵗ)"
   },
   {
-    "objectID": "index.html#ders9",
-    "href": "index.html#ders9",
-    "title": "FEF3001 Yapay Zekaya Giriş",
+    "objectID": "ders7.html#section-2",
+    "href": "ders7.html#section-2",
+    "title": "Artificial Neural Networks",
     "section": "",
-    "text": "5 Aralık Perşembe 16:00\nİçerik: Sınıflandırma devam Sunum linki."
+    "text": "image source"
   },
   {
-    "objectID": "index.html#ders10",
-    "href": "index.html#ders10",
-    "title": "FEF3001 Yapay Zekaya Giriş",
+    "objectID": "ders7.html#summary-of-activation-functions",
+    "href": "ders7.html#summary-of-activation-functions",
+    "title": "Artificial Neural Networks",
+    "section": "Summary of activation functions",
+    "text": "Summary of activation functions\nsee the next slide\n\nimage source"
+  },
+  {
+    "objectID": "ders7.html#perceptron",
+    "href": "ders7.html#perceptron",
+    "title": "Artificial Neural Networks",
+    "section": "Perceptron",
+    "text": "Perceptron\n\n\nimage source"
+  },
+  {
+    "objectID": "ders7.html#ann",
+    "href": "ders7.html#ann",
+    "title": "Artificial Neural Networks",
+    "section": "ANN",
+    "text": "ANN\n\n\nimage source"
+  },
+  {
+    "objectID": "ders7.html#interactive-demos",
+    "href": "ders7.html#interactive-demos",
+    "title": "Artificial Neural Networks",
+    "section": "Interactive demos",
+    "text": "Interactive demos\nML Playground\nNeural Network Playground"
+  },
+  {
+    "objectID": "rf-regression-R.html",
+    "href": "rf-regression-R.html",
+    "title": "Random Forest Regression with R",
     "section": "",
-    "text": "12 Aralılk Perşembe 16:00\nİçerik: Regresyon Sunum linki."
+    "text": "# Load required libraries\nlibrary(randomForest)\n\nrandomForest 4.7-1.1\n\n\nType rfNews() to see new features/changes/bug fixes.\n\nlibrary(ggplot2)\n\n\nAttaching package: 'ggplot2'\n\n\nThe following object is masked from 'package:randomForest':\n\n    margin\n\n# Set seed for reproducibility\nset.seed(123)\n\ndata &lt;- mtcars\n\n\nSplit data into training and testing sets\n\ntrain_indices &lt;- sample(1:nrow(data), 0.7 * nrow(data))\ntrain_data &lt;- data[train_indices, ]\ntest_data &lt;- data[-train_indices, ]\n\n\n\nTrain Random Forest model and make predictions\n\nrf_model &lt;- randomForest(mpg ~ ., data = train_data, ntree = 500)\n\npredictions &lt;- predict(rf_model, newdata = test_data)\n\n\n\nCalculate RMSE\n\nrmse &lt;- sqrt(mean((test_data$mpg - predictions)^2))\ncat(\"Root Mean Square Error:\", rmse, \"\\n\")\n\nRoot Mean Square Error: 2.00452 \n\n\n\n\nPlot actual vs predicted values\n\nggplot(data.frame(actual = test_data$mpg, predicted = predictions), aes(x = actual, y = predicted)) +\n  geom_point(alpha = 0.5) +\n  geom_abline(intercept = 0, slope = 1, color = \"red\", linetype = \"dashed\") +\n  labs(x = \"Actual Values\", y = \"Predicted Values\", title = \"Random Forest Regression: Actual vs Predicted\")\n\n\n\n\n\n\n\n\n\n\nPrint feature importance\n\nimportance &lt;- importance(rf_model)\nprint(importance)\n\n     IncNodePurity\ncyl      152.64821\ndisp     224.33387\nhp       158.42647\ndrat      43.37372\nwt       178.44424\nqsec      34.05620\nvs        25.67666\nam        19.73485\ngear      10.54314\ncarb      21.62506\n\n\n\n\nPlot feature importance\n\nimportance_df &lt;- data.frame(feature = rownames(importance), importance = importance[, 1])\nggplot(importance_df, aes(x = reorder(feature, importance), y = importance)) +\n  geom_bar(stat = \"identity\") +\n  coord_flip() +\n  labs(x = \"Features\", y = \"Importance\", title = \"Random Forest: Feature Importance\")\n\n\n\n\n\n\n\n\nalternative at https://hackernoon.com/random-forest-regression-in-r-code-and-interpretation"
+  },
+  {
+    "objectID": "r-linear-regression.html",
+    "href": "r-linear-regression.html",
+    "title": "Linear Regression with R",
+    "section": "",
+    "text": "Here we have a data mtcars {datasets} that was extracted from the 1974 Motor Trend US magazine, and comprises fuel consumption and 10 aspects of automobile design and performance for 32 automobiles (1973-74 models). We will find a mathematical model between Weight (wt) and Displacement (disp) parameters. So let’s find the most suitable model. Please draw the plot, determine the degree of equation (first, second of third) and draw the curve.\n\nmtcars\n\n                   mpg cyl  disp  hp drat    wt  qsec vs am gear carb\nMazda RX4         21.0   6 160.0 110 3.90 2.620 16.46  0  1    4    4\nMazda RX4 Wag     21.0   6 160.0 110 3.90 2.875 17.02  0  1    4    4\nDatsun 710        22.8   4 108.0  93 3.85 2.320 18.61  1  1    4    1\nHornet 4 Drive    21.4   6 258.0 110 3.08 3.215 19.44  1  0    3    1\nHornet Sportabout 18.7   8 360.0 175 3.15 3.440 17.02  0  0    3    2\nValiant           18.1   6 225.0 105 2.76 3.460 20.22  1  0    3    1\nDuster 360        14.3   8 360.0 245 3.21 3.570 15.84  0  0    3    4\nMerc 240D         24.4   4 146.7  62 3.69 3.190 20.00  1  0    4    2\nMerc 230          22.8   4 140.8  95 3.92 3.150 22.90  1  0    4    2\n [ reached 'max' / getOption(\"max.print\") -- omitted 23 rows ]\n\n\n\nplot(mtcars)\n\n\n\n\n\n\n\n\n\nplot(mtcars$disp, mtcars$wt)\n\n\n\n\n\n\n\n\n\nfirst_wd &lt;- lm(wt ~ disp, data=mtcars)\nsummary(first_wd)\n\n\nCall:\nlm(formula = wt ~ disp, data = mtcars)\n\nResiduals:\n     Min       1Q   Median       3Q      Max \n-0.89044 -0.29775 -0.00684  0.33428  0.66525 \n\nCoefficients:\n             Estimate Std. Error t value Pr(&gt;|t|)    \n(Intercept) 1.5998146  0.1729964   9.248 2.74e-10 ***\ndisp        0.0070103  0.0006629  10.576 1.22e-11 ***\n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\nResidual standard error: 0.4574 on 30 degrees of freedom\nMultiple R-squared:  0.7885,    Adjusted R-squared:  0.7815 \nF-statistic: 111.8 on 1 and 30 DF,  p-value: 1.222e-11\n\n\n\nsecond_wd &lt;- lm(wt ~ disp + I(disp^2), data=mtcars)\nsummary(second_wd)\n\n\nCall:\nlm(formula = wt ~ disp + I(disp^2), data = mtcars)\n\nResiduals:\n     Min       1Q   Median       3Q      Max \n-0.88654 -0.29136 -0.00961  0.32389  0.67010 \n\nCoefficients:\n             Estimate Std. Error t value Pr(&gt;|t|)    \n(Intercept) 1.631e+00  3.622e-01   4.502 0.000101 ***\ndisp        6.694e-03  3.325e-03   2.013 0.053448 .  \nI(disp^2)   6.206e-07  6.380e-06   0.097 0.923178    \n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\nResidual standard error: 0.4652 on 29 degrees of freedom\nMultiple R-squared:  0.7886,    Adjusted R-squared:  0.774 \nF-statistic: 54.08 on 2 and 29 DF,  p-value: 1.639e-10\n\n\n\nthird_wd &lt;- lm(wt ~ disp + I(disp^2) + I(disp^3), data = mtcars)\nsummary(third_wd)\n\n\nCall:\nlm(formula = wt ~ disp + I(disp^2) + I(disp^3), data = mtcars)\n\nResiduals:\n     Min       1Q   Median       3Q      Max \n-0.63764 -0.22785  0.00307  0.24614  0.58333 \n\nCoefficients:\n              Estimate Std. Error t value Pr(&gt;|t|)    \n(Intercept) -1.111e+00  5.651e-01  -1.966   0.0593 .  \ndisp         4.945e-02  8.198e-03   6.032 1.68e-06 ***\nI(disp^2)   -1.807e-04  3.361e-05  -5.378 9.88e-06 ***\nI(disp^3)    2.243e-07  4.119e-08   5.446 8.21e-06 ***\n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\nResidual standard error: 0.3299 on 28 degrees of freedom\nMultiple R-squared:  0.8973,    Adjusted R-squared:  0.8863 \nF-statistic: 81.57 on 3 and 28 DF,  p-value: 5.959e-14\n\n\n\nplot(mtcars$disp,mtcars$wt)\ncurve(2.243e-07*x^3 -1.807e-04*x^2 +4.945e-02*x -1.111e+00,add=TRUE)\n\n\n\n\n\n\n\n\n\nbest_model &lt;- lm(wt ~ poly(disp,15), data=mtcars)\nsummary(best_model)\n\n\nCall:\nlm(formula = wt ~ poly(disp, 15), data = mtcars)\n\nResiduals:\n     Min       1Q   Median       3Q      Max \n-0.43800 -0.11202 -0.00364  0.16319  0.37783 \n\nCoefficients:\n                   Estimate Std. Error t value Pr(&gt;|t|)    \n(Intercept)       3.2172500  0.0509709  63.119  &lt; 2e-16 ***\npoly(disp, 15)1   4.8375552  0.2883350  16.778 1.41e-11 ***\npoly(disp, 15)2   0.0452475  0.2883350   0.157   0.8773    \npoly(disp, 15)3   1.7965723  0.2883350   6.231 1.20e-05 ***\npoly(disp, 15)4   0.4463962  0.2883350   1.548   0.1411    \npoly(disp, 15)5  -0.6866393  0.2883350  -2.381   0.0300 *  \npoly(disp, 15)6  -0.3384161  0.2883350  -1.174   0.2577    \npoly(disp, 15)7  -0.6134397  0.2883350  -2.128   0.0493 *  \npoly(disp, 15)8   0.0528245  0.2883350   0.183   0.8569    \npoly(disp, 15)9   0.0814084  0.2883350   0.282   0.7813    \npoly(disp, 15)10 -0.0654665  0.2883350  -0.227   0.8233    \npoly(disp, 15)11  0.2853853  0.2883350   0.990   0.3370    \npoly(disp, 15)12 -0.0007108  0.2883350  -0.002   0.9981    \npoly(disp, 15)13  0.4495723  0.2883350   1.559   0.1385    \npoly(disp, 15)14 -0.0699728  0.2883350  -0.243   0.8113    \npoly(disp, 15)15 -0.5031480  0.2883350  -1.745   0.1002    \n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\nResidual standard error: 0.2883 on 16 degrees of freedom\nMultiple R-squared:  0.9552,    Adjusted R-squared:  0.9132 \nF-statistic: 22.73 on 15 and 16 DF,  p-value: 5.551e-08\n\n\n\npred &lt;- predict(best_model, data.frame(disp=50:500))\nplot(mtcars$disp, mtcars$wt)\npoints(50:500, pred, type=\"l\")\n\n\n\n\n\n\n\n\n\npredict(third_wd, data.frame(disp=420))\n\n       1 \n4.397246 \n\n\n\npredict(best_model, data.frame(disp=420))\n\n       1 \n7.329183 \n\n\n\npredict(best_model, data.frame(disp=c(20,420, 500)))\n\n           1            2            3 \n 3865.329736     7.329183 -1513.538298 \n\n\n\nSo, the “best” model is not best at all.."
+  },
+  {
+    "objectID": "r-linear-regression.html#a-polynomial-model",
+    "href": "r-linear-regression.html#a-polynomial-model",
+    "title": "Linear Regression with R",
+    "section": "",
+    "text": "Here we have a data mtcars {datasets} that was extracted from the 1974 Motor Trend US magazine, and comprises fuel consumption and 10 aspects of automobile design and performance for 32 automobiles (1973-74 models). We will find a mathematical model between Weight (wt) and Displacement (disp) parameters. So let’s find the most suitable model. Please draw the plot, determine the degree of equation (first, second of third) and draw the curve.\n\nmtcars\n\n                   mpg cyl  disp  hp drat    wt  qsec vs am gear carb\nMazda RX4         21.0   6 160.0 110 3.90 2.620 16.46  0  1    4    4\nMazda RX4 Wag     21.0   6 160.0 110 3.90 2.875 17.02  0  1    4    4\nDatsun 710        22.8   4 108.0  93 3.85 2.320 18.61  1  1    4    1\nHornet 4 Drive    21.4   6 258.0 110 3.08 3.215 19.44  1  0    3    1\nHornet Sportabout 18.7   8 360.0 175 3.15 3.440 17.02  0  0    3    2\nValiant           18.1   6 225.0 105 2.76 3.460 20.22  1  0    3    1\nDuster 360        14.3   8 360.0 245 3.21 3.570 15.84  0  0    3    4\nMerc 240D         24.4   4 146.7  62 3.69 3.190 20.00  1  0    4    2\nMerc 230          22.8   4 140.8  95 3.92 3.150 22.90  1  0    4    2\n [ reached 'max' / getOption(\"max.print\") -- omitted 23 rows ]\n\n\n\nplot(mtcars)\n\n\n\n\n\n\n\n\n\nplot(mtcars$disp, mtcars$wt)\n\n\n\n\n\n\n\n\n\nfirst_wd &lt;- lm(wt ~ disp, data=mtcars)\nsummary(first_wd)\n\n\nCall:\nlm(formula = wt ~ disp, data = mtcars)\n\nResiduals:\n     Min       1Q   Median       3Q      Max \n-0.89044 -0.29775 -0.00684  0.33428  0.66525 \n\nCoefficients:\n             Estimate Std. Error t value Pr(&gt;|t|)    \n(Intercept) 1.5998146  0.1729964   9.248 2.74e-10 ***\ndisp        0.0070103  0.0006629  10.576 1.22e-11 ***\n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\nResidual standard error: 0.4574 on 30 degrees of freedom\nMultiple R-squared:  0.7885,    Adjusted R-squared:  0.7815 \nF-statistic: 111.8 on 1 and 30 DF,  p-value: 1.222e-11\n\n\n\nsecond_wd &lt;- lm(wt ~ disp + I(disp^2), data=mtcars)\nsummary(second_wd)\n\n\nCall:\nlm(formula = wt ~ disp + I(disp^2), data = mtcars)\n\nResiduals:\n     Min       1Q   Median       3Q      Max \n-0.88654 -0.29136 -0.00961  0.32389  0.67010 \n\nCoefficients:\n             Estimate Std. Error t value Pr(&gt;|t|)    \n(Intercept) 1.631e+00  3.622e-01   4.502 0.000101 ***\ndisp        6.694e-03  3.325e-03   2.013 0.053448 .  \nI(disp^2)   6.206e-07  6.380e-06   0.097 0.923178    \n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\nResidual standard error: 0.4652 on 29 degrees of freedom\nMultiple R-squared:  0.7886,    Adjusted R-squared:  0.774 \nF-statistic: 54.08 on 2 and 29 DF,  p-value: 1.639e-10\n\n\n\nthird_wd &lt;- lm(wt ~ disp + I(disp^2) + I(disp^3), data = mtcars)\nsummary(third_wd)\n\n\nCall:\nlm(formula = wt ~ disp + I(disp^2) + I(disp^3), data = mtcars)\n\nResiduals:\n     Min       1Q   Median       3Q      Max \n-0.63764 -0.22785  0.00307  0.24614  0.58333 \n\nCoefficients:\n              Estimate Std. Error t value Pr(&gt;|t|)    \n(Intercept) -1.111e+00  5.651e-01  -1.966   0.0593 .  \ndisp         4.945e-02  8.198e-03   6.032 1.68e-06 ***\nI(disp^2)   -1.807e-04  3.361e-05  -5.378 9.88e-06 ***\nI(disp^3)    2.243e-07  4.119e-08   5.446 8.21e-06 ***\n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\nResidual standard error: 0.3299 on 28 degrees of freedom\nMultiple R-squared:  0.8973,    Adjusted R-squared:  0.8863 \nF-statistic: 81.57 on 3 and 28 DF,  p-value: 5.959e-14\n\n\n\nplot(mtcars$disp,mtcars$wt)\ncurve(2.243e-07*x^3 -1.807e-04*x^2 +4.945e-02*x -1.111e+00,add=TRUE)\n\n\n\n\n\n\n\n\n\nbest_model &lt;- lm(wt ~ poly(disp,15), data=mtcars)\nsummary(best_model)\n\n\nCall:\nlm(formula = wt ~ poly(disp, 15), data = mtcars)\n\nResiduals:\n     Min       1Q   Median       3Q      Max \n-0.43800 -0.11202 -0.00364  0.16319  0.37783 \n\nCoefficients:\n                   Estimate Std. Error t value Pr(&gt;|t|)    \n(Intercept)       3.2172500  0.0509709  63.119  &lt; 2e-16 ***\npoly(disp, 15)1   4.8375552  0.2883350  16.778 1.41e-11 ***\npoly(disp, 15)2   0.0452475  0.2883350   0.157   0.8773    \npoly(disp, 15)3   1.7965723  0.2883350   6.231 1.20e-05 ***\npoly(disp, 15)4   0.4463962  0.2883350   1.548   0.1411    \npoly(disp, 15)5  -0.6866393  0.2883350  -2.381   0.0300 *  \npoly(disp, 15)6  -0.3384161  0.2883350  -1.174   0.2577    \npoly(disp, 15)7  -0.6134397  0.2883350  -2.128   0.0493 *  \npoly(disp, 15)8   0.0528245  0.2883350   0.183   0.8569    \npoly(disp, 15)9   0.0814084  0.2883350   0.282   0.7813    \npoly(disp, 15)10 -0.0654665  0.2883350  -0.227   0.8233    \npoly(disp, 15)11  0.2853853  0.2883350   0.990   0.3370    \npoly(disp, 15)12 -0.0007108  0.2883350  -0.002   0.9981    \npoly(disp, 15)13  0.4495723  0.2883350   1.559   0.1385    \npoly(disp, 15)14 -0.0699728  0.2883350  -0.243   0.8113    \npoly(disp, 15)15 -0.5031480  0.2883350  -1.745   0.1002    \n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\nResidual standard error: 0.2883 on 16 degrees of freedom\nMultiple R-squared:  0.9552,    Adjusted R-squared:  0.9132 \nF-statistic: 22.73 on 15 and 16 DF,  p-value: 5.551e-08\n\n\n\npred &lt;- predict(best_model, data.frame(disp=50:500))\nplot(mtcars$disp, mtcars$wt)\npoints(50:500, pred, type=\"l\")\n\n\n\n\n\n\n\n\n\npredict(third_wd, data.frame(disp=420))\n\n       1 \n4.397246 \n\n\n\npredict(best_model, data.frame(disp=420))\n\n       1 \n7.329183 \n\n\n\npredict(best_model, data.frame(disp=c(20,420, 500)))\n\n           1            2            3 \n 3865.329736     7.329183 -1513.538298 \n\n\n\nSo, the “best” model is not best at all.."
+  },
+  {
+    "objectID": "r-linear-regression.html#traintest-split",
+    "href": "r-linear-regression.html#traintest-split",
+    "title": "Linear Regression with R",
+    "section": "Train/Test split",
+    "text": "Train/Test split\nLet’s understand the topic of overfitting.\nSplit the data into train and test. Train the model with “training” data. Then predict with “test” data.\n\nsample(1:32, 5, replace=FALSE)\n\n[1]  1 11 22 13 30\n\n\n\nset.seed(2)\nidx &lt;- sample(1:32, 5, replace=FALSE)\nidx\n\n[1] 21 15  6 30  8\n\n\n\ntest &lt;- mtcars[idx,]\n\ntest\n\n                    mpg cyl  disp  hp drat    wt  qsec vs am gear carb\nToyota Corona      21.5   4 120.1  97 3.70 2.465 20.01  1  0    3    1\nCadillac Fleetwood 10.4   8 472.0 205 2.93 5.250 17.98  0  0    3    4\nValiant            18.1   6 225.0 105 2.76 3.460 20.22  1  0    3    1\nFerrari Dino       19.7   6 145.0 175 3.62 2.770 15.50  0  1    5    6\nMerc 240D          24.4   4 146.7  62 3.69 3.190 20.00  1  0    4    2\n\n\n\ntrain &lt;- mtcars[-idx,]\ntrain\n\n                   mpg cyl  disp  hp drat    wt  qsec vs am gear carb\nMazda RX4         21.0   6 160.0 110 3.90 2.620 16.46  0  1    4    4\nMazda RX4 Wag     21.0   6 160.0 110 3.90 2.875 17.02  0  1    4    4\nDatsun 710        22.8   4 108.0  93 3.85 2.320 18.61  1  1    4    1\nHornet 4 Drive    21.4   6 258.0 110 3.08 3.215 19.44  1  0    3    1\nHornet Sportabout 18.7   8 360.0 175 3.15 3.440 17.02  0  0    3    2\nDuster 360        14.3   8 360.0 245 3.21 3.570 15.84  0  0    3    4\nMerc 230          22.8   4 140.8  95 3.92 3.150 22.90  1  0    4    2\nMerc 280          19.2   6 167.6 123 3.92 3.440 18.30  1  0    4    4\nMerc 280C         17.8   6 167.6 123 3.92 3.440 18.90  1  0    4    4\n [ reached 'max' / getOption(\"max.print\") -- omitted 18 rows ]\n\n\n\nthird_deg &lt;- lm(wt ~ poly(disp,3), data = train)\nsummary(third_deg)$r.squared\n\n[1] 0.8879368\n\n\n\npredict(third_deg, test)\n\n     Toyota Corona Cadillac Fleetwood            Valiant       Ferrari Dino \n          2.633774           5.824101           3.418857           2.970499 \n         Merc 240D \n          2.989188 \n\n\n\ntest$third_pred &lt;- predict(third_deg, test)\ntest\n\n                    mpg cyl  disp  hp drat    wt  qsec vs am gear carb\nToyota Corona      21.5   4 120.1  97 3.70 2.465 20.01  1  0    3    1\nCadillac Fleetwood 10.4   8 472.0 205 2.93 5.250 17.98  0  0    3    4\nValiant            18.1   6 225.0 105 2.76 3.460 20.22  1  0    3    1\nFerrari Dino       19.7   6 145.0 175 3.62 2.770 15.50  0  1    5    6\nMerc 240D          24.4   4 146.7  62 3.69 3.190 20.00  1  0    4    2\n                   third_pred\nToyota Corona        2.633774\nCadillac Fleetwood   5.824101\nValiant              3.418857\nFerrari Dino         2.970499\nMerc 240D            2.989188\n\n\n\nfifteen_deg &lt;- lm(wt ~ poly(disp,15), data=train)\nsummary(fifteen_deg)$r.squared\n\n[1] 0.9550231\n\n\n\npredict(fifteen_deg, test)\n\n     Toyota Corona Cadillac Fleetwood            Valiant       Ferrari Dino \n          2.644378        -844.610091           2.784157           2.761685 \n         Merc 240D \n          2.745391 \n\n\n\ntest$fifteen &lt;- predict(fifteen_deg, test)\n\ntest[c(\"disp\",\"wt\",\"third_pred\",\"fifteen\")]\n\n                    disp    wt third_pred     fifteen\nToyota Corona      120.1 2.465   2.633774    2.644378\nCadillac Fleetwood 472.0 5.250   5.824101 -844.610091\nValiant            225.0 3.460   3.418857    2.784157\nFerrari Dino       145.0 2.770   2.970499    2.761685\nMerc 240D          146.7 3.190   2.989188    2.745391\n\n\nAs you can see, “fifteenth degree” model memorized (i.e overfitted) the data and predicts horribly."
+  },
+  {
+    "objectID": "id3-decision-tree.html",
+    "href": "id3-decision-tree.html",
+    "title": "Decision Tree Algoritm",
+    "section": "",
+    "text": "Taken from https://medium.datadriveninvestor.com/decision-tree-algorithm-with-hands-on-example-e6c2afb40d38\nEntropy\nIn machine learning, entropy is a measure of the randomness in the information being processed. The higher the entropy, the harder it is to draw any conclusions from that information.\n\nInformation Gain\nInformation gain can be defined as the amount of information gained about a random variable or signal from observing another random variable.It can be considered as the difference between the entropy of parent node and weighted average entropy of child nodes.\n\nGini Impurity\nGini impurity is a measure of how often a randomly chosen element from the set would be incorrectly labeled if it was randomly labeled according to the distribution of labels in the subset.\n\nGini impurity is lower bounded by 0, with 0 occurring if the data set contains only one class.\n\nThere are many algorithms there to build a decision tree. They are\n\nCART (Classification and Regression Trees) — This makes use of Gini impurity as the metric.\nID3 (Iterative Dichotomiser 3) — This uses entropy and information gain as metric.\n\nIn this article, I will go through ID3. Once you got it it is easy to implement the same using CART.\n\nClassification using the ID3 algorithm\nConsider whether a dataset based on which we will determine whether to play football or not.\n\nHere There are for independent variables to determine the dependent variable. The independent variables are Outlook, Temperature, Humidity, and Wind. The dependent variable is whether to play football or not.\nAs the first step, we have to find the parent node for our decision tree. For that follow the steps:\n*Find the entropy of the class variable.*\nE(S) = -[(9/14)log(9/14) + (5/14)log(5/14)] = 0.94\nnote: Here typically we will take log to base 2.Here total there are 14 yes/no. Out of which 9 yes and 5 no.Based on it we calculated probability above.\nFrom the above data for outlook we can arrive at the following table easily\n\n*Now we have to calculate average weighted entropy*. ie, we have found the total of weights of each feature multiplied by probabilities.\nE(S, outlook) = (5/14)E(3,2) + (4/14)E(4,0) + (5/14)*E(2,3) = (5/14)(-(3/5)log(3/5)-(2/5)log(2/5))+ (4/14)(0) + (5/14)((2/5)log(2/5)-(3/5)log(3/5)) = 0.693\n*The next step is to find the information gain*. It is the difference between parent entropy and average weighted entropy we found above.\nIG(S, outlook) = 0.94 - 0.693 = 0.247\nSimilarly find Information gain for Temperature, Humidity, and Windy.\nIG(S, Temperature) = 0.940 - 0.911 = 0.029\nIG(S, Humidity) = 0.940 - 0.788 = 0.152\nIG(S, Windy) = 0.940 - 0.8932 = 0.048\n*Now select the feature having the largest entropy gain*. Here it is Outlook. So it forms the first node(root node) of our decision tree.\nNow our data look as follows\n\n\n\nSince overcast contains only examples of class ‘Yes’ we can set it as yes. That means If outlook is overcast football will be played. Now our decision tree looks as follows.\n\nThe next step is to find the next node in our decision tree. Now we will find one under sunny. We have to determine which of the following Temperature, Humidity or Wind has higher information gain.\n\nCalculate parent entropy E(sunny)\nE(sunny) = (-(3/5)log(3/5)-(2/5)log(2/5)) = 0.971.\nNow Calculate the information gain of Temperature. IG(sunny, Temperature)\n\nE(sunny, Temperature) = (2/5)E(0,2) + (2/5)E(1,1) + (1/5)*E(1,0)=2/5=0.4\nNow calculate information gain.\nIG(sunny, Temperature) = 0.971–0.4 =0.571\nSimilarly we get\nIG(sunny, Humidity) = 0.971\nIG(sunny, Windy) = 0.020\nHere IG(sunny, Humidity) is the largest value. So Humidity is the node that comes under sunny.\n\nFor humidity from the above table, we can say that play will occur if humidity is normal and will not occur if it is high. Similarly, find the nodes under rainy.\n*Note: A branch with entropy more than 0 needs further splitting.*\nFinally, our decision tree will look as below:\n\n\n\nClassification using CART algorithm\nClassification using CART is similar to it. But instead of entropy, we use Gini impurity.\nSo as the first step we will find the root node of our decision tree. For that Calculate the Gini index of the class variable\nGini(S) = 1 - [(9/14)² + (5/14)²] = 0.4591\nAs the next step, we will calculate the Gini gain. For that first, we will find the average weighted Gini impurity of Outlook, Temperature, Humidity, and Windy.\nFirst, consider case of Outlook\n\nGini(S, outlook) = (5/14)gini(3,2) + (4/14)gini(4,0)+ (5/14)gini(2,3) = (5/14)(1 - (3/5)² - (2/5)²) + (4/14)*0 + (5/14)(1 - (2/5)² - (3/5)²)= 0.171+0+0.171 = 0.342\nGini gain (S, outlook) = 0.459 - 0.342 = 0.117\nGini gain(S, Temperature) = 0.459 - 0.4405 = 0.0185\nGini gain(S, Humidity) = 0.459 - 0.3674 = 0.0916\nGini gain(S, windy) = 0.459 - 0.4286 = 0.0304\nChoose one that has a higher Gini gain. Gini gain is higher for outlook. So we can choose it as our root node."
   },
   {
     "objectID": "ders10-regression.html#contents",
@@ -1015,31 +1029,17 @@
     "text": "Regression with Random Forest\nPlease refer to random forest regression with R document."
   },
   {
-    "objectID": "r-linear-regression.html",
-    "href": "r-linear-regression.html",
-    "title": "Linear Regression with R",
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "FEF3001 Yapay Zekaya Giriş Ders Notları",
     "section": "",
-    "text": "Here we have a data mtcars {datasets} that was extracted from the 1974 Motor Trend US magazine, and comprises fuel consumption and 10 aspects of automobile design and performance for 32 automobiles (1973-74 models). We will find a mathematical model between Weight (wt) and Displacement (disp) parameters. So let’s find the most suitable model. Please draw the plot, determine the degree of equation (first, second of third) and draw the curve.\n\nmtcars\n\n                   mpg cyl  disp  hp drat    wt  qsec vs am gear carb\nMazda RX4         21.0   6 160.0 110 3.90 2.620 16.46  0  1    4    4\nMazda RX4 Wag     21.0   6 160.0 110 3.90 2.875 17.02  0  1    4    4\nDatsun 710        22.8   4 108.0  93 3.85 2.320 18.61  1  1    4    1\nHornet 4 Drive    21.4   6 258.0 110 3.08 3.215 19.44  1  0    3    1\nHornet Sportabout 18.7   8 360.0 175 3.15 3.440 17.02  0  0    3    2\nValiant           18.1   6 225.0 105 2.76 3.460 20.22  1  0    3    1\nDuster 360        14.3   8 360.0 245 3.21 3.570 15.84  0  0    3    4\nMerc 240D         24.4   4 146.7  62 3.69 3.190 20.00  1  0    4    2\nMerc 230          22.8   4 140.8  95 3.92 3.150 22.90  1  0    4    2\n [ reached 'max' / getOption(\"max.print\") -- omitted 23 rows ]\n\n\n\nplot(mtcars)\n\n\n\n\n\n\n\n\n\nplot(mtcars$disp, mtcars$wt)\n\n\n\n\n\n\n\n\n\nfirst_wd &lt;- lm(wt ~ disp, data=mtcars)\nsummary(first_wd)\n\n\nCall:\nlm(formula = wt ~ disp, data = mtcars)\n\nResiduals:\n     Min       1Q   Median       3Q      Max \n-0.89044 -0.29775 -0.00684  0.33428  0.66525 \n\nCoefficients:\n             Estimate Std. Error t value Pr(&gt;|t|)    \n(Intercept) 1.5998146  0.1729964   9.248 2.74e-10 ***\ndisp        0.0070103  0.0006629  10.576 1.22e-11 ***\n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\nResidual standard error: 0.4574 on 30 degrees of freedom\nMultiple R-squared:  0.7885,    Adjusted R-squared:  0.7815 \nF-statistic: 111.8 on 1 and 30 DF,  p-value: 1.222e-11\n\n\n\nsecond_wd &lt;- lm(wt ~ disp + I(disp^2), data=mtcars)\nsummary(second_wd)\n\n\nCall:\nlm(formula = wt ~ disp + I(disp^2), data = mtcars)\n\nResiduals:\n     Min       1Q   Median       3Q      Max \n-0.88654 -0.29136 -0.00961  0.32389  0.67010 \n\nCoefficients:\n             Estimate Std. Error t value Pr(&gt;|t|)    \n(Intercept) 1.631e+00  3.622e-01   4.502 0.000101 ***\ndisp        6.694e-03  3.325e-03   2.013 0.053448 .  \nI(disp^2)   6.206e-07  6.380e-06   0.097 0.923178    \n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\nResidual standard error: 0.4652 on 29 degrees of freedom\nMultiple R-squared:  0.7886,    Adjusted R-squared:  0.774 \nF-statistic: 54.08 on 2 and 29 DF,  p-value: 1.639e-10\n\n\n\nthird_wd &lt;- lm(wt ~ disp + I(disp^2) + I(disp^3), data = mtcars)\nsummary(third_wd)\n\n\nCall:\nlm(formula = wt ~ disp + I(disp^2) + I(disp^3), data = mtcars)\n\nResiduals:\n     Min       1Q   Median       3Q      Max \n-0.63764 -0.22785  0.00307  0.24614  0.58333 \n\nCoefficients:\n              Estimate Std. Error t value Pr(&gt;|t|)    \n(Intercept) -1.111e+00  5.651e-01  -1.966   0.0593 .  \ndisp         4.945e-02  8.198e-03   6.032 1.68e-06 ***\nI(disp^2)   -1.807e-04  3.361e-05  -5.378 9.88e-06 ***\nI(disp^3)    2.243e-07  4.119e-08   5.446 8.21e-06 ***\n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\nResidual standard error: 0.3299 on 28 degrees of freedom\nMultiple R-squared:  0.8973,    Adjusted R-squared:  0.8863 \nF-statistic: 81.57 on 3 and 28 DF,  p-value: 5.959e-14\n\n\n\nplot(mtcars$disp,mtcars$wt)\ncurve(2.243e-07*x^3 -1.807e-04*x^2 +4.945e-02*x -1.111e+00,add=TRUE)\n\n\n\n\n\n\n\n\n\nbest_model &lt;- lm(wt ~ poly(disp,15), data=mtcars)\nsummary(best_model)\n\n\nCall:\nlm(formula = wt ~ poly(disp, 15), data = mtcars)\n\nResiduals:\n     Min       1Q   Median       3Q      Max \n-0.43800 -0.11202 -0.00364  0.16319  0.37783 \n\nCoefficients:\n                   Estimate Std. Error t value Pr(&gt;|t|)    \n(Intercept)       3.2172500  0.0509709  63.119  &lt; 2e-16 ***\npoly(disp, 15)1   4.8375552  0.2883350  16.778 1.41e-11 ***\npoly(disp, 15)2   0.0452475  0.2883350   0.157   0.8773    \npoly(disp, 15)3   1.7965723  0.2883350   6.231 1.20e-05 ***\npoly(disp, 15)4   0.4463962  0.2883350   1.548   0.1411    \npoly(disp, 15)5  -0.6866393  0.2883350  -2.381   0.0300 *  \npoly(disp, 15)6  -0.3384161  0.2883350  -1.174   0.2577    \npoly(disp, 15)7  -0.6134397  0.2883350  -2.128   0.0493 *  \npoly(disp, 15)8   0.0528245  0.2883350   0.183   0.8569    \npoly(disp, 15)9   0.0814084  0.2883350   0.282   0.7813    \npoly(disp, 15)10 -0.0654665  0.2883350  -0.227   0.8233    \npoly(disp, 15)11  0.2853853  0.2883350   0.990   0.3370    \npoly(disp, 15)12 -0.0007108  0.2883350  -0.002   0.9981    \npoly(disp, 15)13  0.4495723  0.2883350   1.559   0.1385    \npoly(disp, 15)14 -0.0699728  0.2883350  -0.243   0.8113    \npoly(disp, 15)15 -0.5031480  0.2883350  -1.745   0.1002    \n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\nResidual standard error: 0.2883 on 16 degrees of freedom\nMultiple R-squared:  0.9552,    Adjusted R-squared:  0.9132 \nF-statistic: 22.73 on 15 and 16 DF,  p-value: 5.551e-08\n\n\n\npred &lt;- predict(best_model, data.frame(disp=50:500))\nplot(mtcars$disp, mtcars$wt)\npoints(50:500, pred, type=\"l\")\n\n\n\n\n\n\n\n\n\npredict(third_wd, data.frame(disp=420))\n\n       1 \n4.397246 \n\n\n\npredict(best_model, data.frame(disp=420))\n\n       1 \n7.329183 \n\n\n\npredict(best_model, data.frame(disp=c(20,420, 500)))\n\n           1            2            3 \n 3865.329736     7.329183 -1513.538298 \n\n\n\nSo, the “best” model is not best at all.."
+    "text": "YTÜ Fen Fakültesinde 2024 Güz döneminde verilen FEF3001 kodlu dersin içerikleri sayfasıdır.\n\n\n\nVize yüz yüze mi? Cevap: Evet\nVize konuları nelerdir? Cevap: Yapay sinir ağı konusunun sonuna kadar\nYüklenen sunumlar dışında bir kaynaktan soru sorulacak mıdır? Cevap: Temel olarak sunumlar kullanılacaktır fakat derste anlatılanlardan da sorumluyuz, ders video kaydı ve derste aldığınız notlarınızı da çalışınız\nVize test şeklinde mi ve kaç soru sorulur? Cevap: Test şeklinde 20-30 soru planlanmaktadır\nYorum soruları sorulacak mı? Cevap: Genelde bilgi ölçen sorular tercih edilecektir"
   },
   {
-    "objectID": "r-linear-regression.html#a-polynomial-model",
-    "href": "r-linear-regression.html#a-polynomial-model",
-    "title": "Linear Regression with R",
+    "objectID": "about.html#sıkça-sorulan-sorular",
+    "href": "about.html#sıkça-sorulan-sorular",
+    "title": "FEF3001 Yapay Zekaya Giriş Ders Notları",
     "section": "",
-    "text": "Here we have a data mtcars {datasets} that was extracted from the 1974 Motor Trend US magazine, and comprises fuel consumption and 10 aspects of automobile design and performance for 32 automobiles (1973-74 models). We will find a mathematical model between Weight (wt) and Displacement (disp) parameters. So let’s find the most suitable model. Please draw the plot, determine the degree of equation (first, second of third) and draw the curve.\n\nmtcars\n\n                   mpg cyl  disp  hp drat    wt  qsec vs am gear carb\nMazda RX4         21.0   6 160.0 110 3.90 2.620 16.46  0  1    4    4\nMazda RX4 Wag     21.0   6 160.0 110 3.90 2.875 17.02  0  1    4    4\nDatsun 710        22.8   4 108.0  93 3.85 2.320 18.61  1  1    4    1\nHornet 4 Drive    21.4   6 258.0 110 3.08 3.215 19.44  1  0    3    1\nHornet Sportabout 18.7   8 360.0 175 3.15 3.440 17.02  0  0    3    2\nValiant           18.1   6 225.0 105 2.76 3.460 20.22  1  0    3    1\nDuster 360        14.3   8 360.0 245 3.21 3.570 15.84  0  0    3    4\nMerc 240D         24.4   4 146.7  62 3.69 3.190 20.00  1  0    4    2\nMerc 230          22.8   4 140.8  95 3.92 3.150 22.90  1  0    4    2\n [ reached 'max' / getOption(\"max.print\") -- omitted 23 rows ]\n\n\n\nplot(mtcars)\n\n\n\n\n\n\n\n\n\nplot(mtcars$disp, mtcars$wt)\n\n\n\n\n\n\n\n\n\nfirst_wd &lt;- lm(wt ~ disp, data=mtcars)\nsummary(first_wd)\n\n\nCall:\nlm(formula = wt ~ disp, data = mtcars)\n\nResiduals:\n     Min       1Q   Median       3Q      Max \n-0.89044 -0.29775 -0.00684  0.33428  0.66525 \n\nCoefficients:\n             Estimate Std. Error t value Pr(&gt;|t|)    \n(Intercept) 1.5998146  0.1729964   9.248 2.74e-10 ***\ndisp        0.0070103  0.0006629  10.576 1.22e-11 ***\n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\nResidual standard error: 0.4574 on 30 degrees of freedom\nMultiple R-squared:  0.7885,    Adjusted R-squared:  0.7815 \nF-statistic: 111.8 on 1 and 30 DF,  p-value: 1.222e-11\n\n\n\nsecond_wd &lt;- lm(wt ~ disp + I(disp^2), data=mtcars)\nsummary(second_wd)\n\n\nCall:\nlm(formula = wt ~ disp + I(disp^2), data = mtcars)\n\nResiduals:\n     Min       1Q   Median       3Q      Max \n-0.88654 -0.29136 -0.00961  0.32389  0.67010 \n\nCoefficients:\n             Estimate Std. Error t value Pr(&gt;|t|)    \n(Intercept) 1.631e+00  3.622e-01   4.502 0.000101 ***\ndisp        6.694e-03  3.325e-03   2.013 0.053448 .  \nI(disp^2)   6.206e-07  6.380e-06   0.097 0.923178    \n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\nResidual standard error: 0.4652 on 29 degrees of freedom\nMultiple R-squared:  0.7886,    Adjusted R-squared:  0.774 \nF-statistic: 54.08 on 2 and 29 DF,  p-value: 1.639e-10\n\n\n\nthird_wd &lt;- lm(wt ~ disp + I(disp^2) + I(disp^3), data = mtcars)\nsummary(third_wd)\n\n\nCall:\nlm(formula = wt ~ disp + I(disp^2) + I(disp^3), data = mtcars)\n\nResiduals:\n     Min       1Q   Median       3Q      Max \n-0.63764 -0.22785  0.00307  0.24614  0.58333 \n\nCoefficients:\n              Estimate Std. Error t value Pr(&gt;|t|)    \n(Intercept) -1.111e+00  5.651e-01  -1.966   0.0593 .  \ndisp         4.945e-02  8.198e-03   6.032 1.68e-06 ***\nI(disp^2)   -1.807e-04  3.361e-05  -5.378 9.88e-06 ***\nI(disp^3)    2.243e-07  4.119e-08   5.446 8.21e-06 ***\n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\nResidual standard error: 0.3299 on 28 degrees of freedom\nMultiple R-squared:  0.8973,    Adjusted R-squared:  0.8863 \nF-statistic: 81.57 on 3 and 28 DF,  p-value: 5.959e-14\n\n\n\nplot(mtcars$disp,mtcars$wt)\ncurve(2.243e-07*x^3 -1.807e-04*x^2 +4.945e-02*x -1.111e+00,add=TRUE)\n\n\n\n\n\n\n\n\n\nbest_model &lt;- lm(wt ~ poly(disp,15), data=mtcars)\nsummary(best_model)\n\n\nCall:\nlm(formula = wt ~ poly(disp, 15), data = mtcars)\n\nResiduals:\n     Min       1Q   Median       3Q      Max \n-0.43800 -0.11202 -0.00364  0.16319  0.37783 \n\nCoefficients:\n                   Estimate Std. Error t value Pr(&gt;|t|)    \n(Intercept)       3.2172500  0.0509709  63.119  &lt; 2e-16 ***\npoly(disp, 15)1   4.8375552  0.2883350  16.778 1.41e-11 ***\npoly(disp, 15)2   0.0452475  0.2883350   0.157   0.8773    \npoly(disp, 15)3   1.7965723  0.2883350   6.231 1.20e-05 ***\npoly(disp, 15)4   0.4463962  0.2883350   1.548   0.1411    \npoly(disp, 15)5  -0.6866393  0.2883350  -2.381   0.0300 *  \npoly(disp, 15)6  -0.3384161  0.2883350  -1.174   0.2577    \npoly(disp, 15)7  -0.6134397  0.2883350  -2.128   0.0493 *  \npoly(disp, 15)8   0.0528245  0.2883350   0.183   0.8569    \npoly(disp, 15)9   0.0814084  0.2883350   0.282   0.7813    \npoly(disp, 15)10 -0.0654665  0.2883350  -0.227   0.8233    \npoly(disp, 15)11  0.2853853  0.2883350   0.990   0.3370    \npoly(disp, 15)12 -0.0007108  0.2883350  -0.002   0.9981    \npoly(disp, 15)13  0.4495723  0.2883350   1.559   0.1385    \npoly(disp, 15)14 -0.0699728  0.2883350  -0.243   0.8113    \npoly(disp, 15)15 -0.5031480  0.2883350  -1.745   0.1002    \n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\nResidual standard error: 0.2883 on 16 degrees of freedom\nMultiple R-squared:  0.9552,    Adjusted R-squared:  0.9132 \nF-statistic: 22.73 on 15 and 16 DF,  p-value: 5.551e-08\n\n\n\npred &lt;- predict(best_model, data.frame(disp=50:500))\nplot(mtcars$disp, mtcars$wt)\npoints(50:500, pred, type=\"l\")\n\n\n\n\n\n\n\n\n\npredict(third_wd, data.frame(disp=420))\n\n       1 \n4.397246 \n\n\n\npredict(best_model, data.frame(disp=420))\n\n       1 \n7.329183 \n\n\n\npredict(best_model, data.frame(disp=c(20,420, 500)))\n\n           1            2            3 \n 3865.329736     7.329183 -1513.538298 \n\n\n\nSo, the “best” model is not best at all.."
-  },
-  {
-    "objectID": "r-linear-regression.html#traintest-split",
-    "href": "r-linear-regression.html#traintest-split",
-    "title": "Linear Regression with R",
-    "section": "Train/Test split",
-    "text": "Train/Test split\nLet’s understand the topic of overfitting.\nSplit the data into train and test. Train the model with “training” data. Then predict with “test” data.\n\nsample(1:32, 5, replace=FALSE)\n\n[1]  1 11 22 13 30\n\n\n\nset.seed(2)\nidx &lt;- sample(1:32, 5, replace=FALSE)\nidx\n\n[1] 21 15  6 30  8\n\n\n\ntest &lt;- mtcars[idx,]\n\ntest\n\n                    mpg cyl  disp  hp drat    wt  qsec vs am gear carb\nToyota Corona      21.5   4 120.1  97 3.70 2.465 20.01  1  0    3    1\nCadillac Fleetwood 10.4   8 472.0 205 2.93 5.250 17.98  0  0    3    4\nValiant            18.1   6 225.0 105 2.76 3.460 20.22  1  0    3    1\nFerrari Dino       19.7   6 145.0 175 3.62 2.770 15.50  0  1    5    6\nMerc 240D          24.4   4 146.7  62 3.69 3.190 20.00  1  0    4    2\n\n\n\ntrain &lt;- mtcars[-idx,]\ntrain\n\n                   mpg cyl  disp  hp drat    wt  qsec vs am gear carb\nMazda RX4         21.0   6 160.0 110 3.90 2.620 16.46  0  1    4    4\nMazda RX4 Wag     21.0   6 160.0 110 3.90 2.875 17.02  0  1    4    4\nDatsun 710        22.8   4 108.0  93 3.85 2.320 18.61  1  1    4    1\nHornet 4 Drive    21.4   6 258.0 110 3.08 3.215 19.44  1  0    3    1\nHornet Sportabout 18.7   8 360.0 175 3.15 3.440 17.02  0  0    3    2\nDuster 360        14.3   8 360.0 245 3.21 3.570 15.84  0  0    3    4\nMerc 230          22.8   4 140.8  95 3.92 3.150 22.90  1  0    4    2\nMerc 280          19.2   6 167.6 123 3.92 3.440 18.30  1  0    4    4\nMerc 280C         17.8   6 167.6 123 3.92 3.440 18.90  1  0    4    4\n [ reached 'max' / getOption(\"max.print\") -- omitted 18 rows ]\n\n\n\nthird_deg &lt;- lm(wt ~ poly(disp,3), data = train)\nsummary(third_deg)$r.squared\n\n[1] 0.8879368\n\n\n\npredict(third_deg, test)\n\n     Toyota Corona Cadillac Fleetwood            Valiant       Ferrari Dino \n          2.633774           5.824101           3.418857           2.970499 \n         Merc 240D \n          2.989188 \n\n\n\ntest$third_pred &lt;- predict(third_deg, test)\ntest\n\n                    mpg cyl  disp  hp drat    wt  qsec vs am gear carb\nToyota Corona      21.5   4 120.1  97 3.70 2.465 20.01  1  0    3    1\nCadillac Fleetwood 10.4   8 472.0 205 2.93 5.250 17.98  0  0    3    4\nValiant            18.1   6 225.0 105 2.76 3.460 20.22  1  0    3    1\nFerrari Dino       19.7   6 145.0 175 3.62 2.770 15.50  0  1    5    6\nMerc 240D          24.4   4 146.7  62 3.69 3.190 20.00  1  0    4    2\n                   third_pred\nToyota Corona        2.633774\nCadillac Fleetwood   5.824101\nValiant              3.418857\nFerrari Dino         2.970499\nMerc 240D            2.989188\n\n\n\nfifteen_deg &lt;- lm(wt ~ poly(disp,15), data=train)\nsummary(fifteen_deg)$r.squared\n\n[1] 0.9550231\n\n\n\npredict(fifteen_deg, test)\n\n     Toyota Corona Cadillac Fleetwood            Valiant       Ferrari Dino \n          2.644378        -844.610091           2.784157           2.761685 \n         Merc 240D \n          2.745391 \n\n\n\ntest$fifteen &lt;- predict(fifteen_deg, test)\n\ntest[c(\"disp\",\"wt\",\"third_pred\",\"fifteen\")]\n\n                    disp    wt third_pred     fifteen\nToyota Corona      120.1 2.465   2.633774    2.644378\nCadillac Fleetwood 472.0 5.250   5.824101 -844.610091\nValiant            225.0 3.460   3.418857    2.784157\nFerrari Dino       145.0 2.770   2.970499    2.761685\nMerc 240D          146.7 3.190   2.989188    2.745391\n\n\nAs you can see, “fifteenth degree” model memorized (i.e overfitted) the data and predicts horribly."
-  },
-  {
-    "objectID": "rf-regression-R.html",
-    "href": "rf-regression-R.html",
-    "title": "Random Forest Regression with R",
-    "section": "",
-    "text": "# Load required libraries\nlibrary(randomForest)\n\nrandomForest 4.7-1.1\n\n\nType rfNews() to see new features/changes/bug fixes.\n\nlibrary(ggplot2)\n\n\nAttaching package: 'ggplot2'\n\n\nThe following object is masked from 'package:randomForest':\n\n    margin\n\n# Set seed for reproducibility\nset.seed(123)\n\ndata &lt;- mtcars\n\n\nSplit data into training and testing sets\n\ntrain_indices &lt;- sample(1:nrow(data), 0.7 * nrow(data))\ntrain_data &lt;- data[train_indices, ]\ntest_data &lt;- data[-train_indices, ]\n\n\n\nTrain Random Forest model and make predictions\n\nrf_model &lt;- randomForest(mpg ~ ., data = train_data, ntree = 500)\n\npredictions &lt;- predict(rf_model, newdata = test_data)\n\n\n\nCalculate RMSE\n\nrmse &lt;- sqrt(mean((test_data$mpg - predictions)^2))\ncat(\"Root Mean Square Error:\", rmse, \"\\n\")\n\nRoot Mean Square Error: 2.00452 \n\n\n\n\nPlot actual vs predicted values\n\nggplot(data.frame(actual = test_data$mpg, predicted = predictions), aes(x = actual, y = predicted)) +\n  geom_point(alpha = 0.5) +\n  geom_abline(intercept = 0, slope = 1, color = \"red\", linetype = \"dashed\") +\n  labs(x = \"Actual Values\", y = \"Predicted Values\", title = \"Random Forest Regression: Actual vs Predicted\")\n\n\n\n\n\n\n\n\n\n\nPrint feature importance\n\nimportance &lt;- importance(rf_model)\nprint(importance)\n\n     IncNodePurity\ncyl      152.64821\ndisp     224.33387\nhp       158.42647\ndrat      43.37372\nwt       178.44424\nqsec      34.05620\nvs        25.67666\nam        19.73485\ngear      10.54314\ncarb      21.62506\n\n\n\n\nPlot feature importance\n\nimportance_df &lt;- data.frame(feature = rownames(importance), importance = importance[, 1])\nggplot(importance_df, aes(x = reorder(feature, importance), y = importance)) +\n  geom_bar(stat = \"identity\") +\n  coord_flip() +\n  labs(x = \"Features\", y = \"Importance\", title = \"Random Forest: Feature Importance\")\n\n\n\n\n\n\n\n\nalternative at https://hackernoon.com/random-forest-regression-in-r-code-and-interpretation"
+    "text": "Vize yüz yüze mi? Cevap: Evet\nVize konuları nelerdir? Cevap: Yapay sinir ağı konusunun sonuna kadar\nYüklenen sunumlar dışında bir kaynaktan soru sorulacak mıdır? Cevap: Temel olarak sunumlar kullanılacaktır fakat derste anlatılanlardan da sorumluyuz, ders video kaydı ve derste aldığınız notlarınızı da çalışınız\nVize test şeklinde mi ve kaç soru sorulur? Cevap: Test şeklinde 20-30 soru planlanmaktadır\nYorum soruları sorulacak mı? Cevap: Genelde bilgi ölçen sorular tercih edilecektir"
   }
 ]
