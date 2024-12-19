@@ -1,8 +1,8 @@
 ---
 title: "Clustering Methods"
-subtitle: "FEF3001 Yapay zekaya giriş - Ders7"
+subtitle: "FEF3001 Yapay zekaya giriş - Ders11"
 author: "Alper Yılmaz"
-date: 2024-07-26
+date: 2024-12-19
 format:
   revealjs:
     chalkboard: true
