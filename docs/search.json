@@ -84,6 +84,174 @@
     "text": "12 Aralılk Perşembe 16:00\nİçerik: Regresyon Sunum linki."
   },
   {
+    "objectID": "ders11-clustering.html#contents",
+    "href": "ders11-clustering.html#contents",
+    "title": "Clustering Methods",
+    "section": "Contents",
+    "text": "Contents\n\n\n\nIntroduction to Clustering\n\nDefinition and purpose, Unsupervised learning concept, Real-world applications in scientific fields\n\nTypes of Clustering Algorithms\n\nPartitioning methods (e.g., K-means)\nHierarchical methods\nDensity-based methods (e.g., DBSCAN)\n\nK-means Clustering\n\nAlgorithm explanation\nChoosing the number of clusters (elbow method)\nAdvantages and limitations\n\n\n\n\nHierarchical Clustering\n\nAgglomerative vs. divisive approaches\nDendrogram interpretation\nLinkage methods (single, complete, average)\n\nDensity-Based Spatial Clustering of Applications with Noise (DBSCAN)\n\nCore concepts: core points, border points, noise\nAlgorithm explanation\nAdvantages\n\nEvaluation Metrics for Clustering\n\nSilhouette score"
+  },
+  {
+    "objectID": "ders11-clustering.html#definition",
+    "href": "ders11-clustering.html#definition",
+    "title": "Clustering Methods",
+    "section": "Definition",
+    "text": "Definition\nClustering is a technique in machine learning and data analysis that involves grouping a set of objects or data points in such a way that objects in the same group (called a cluster) are more similar to each other than to those in other groups. It’s a fundamental task in many data analysis and pattern recognition problems."
+  },
+  {
+    "objectID": "ders11-clustering.html#purpose",
+    "href": "ders11-clustering.html#purpose",
+    "title": "Clustering Methods",
+    "section": "Purpose",
+    "text": "Purpose\nThe purpose of clustering is multifaceted:\nPattern Discovery: Clustering helps in identifying inherent patterns or structures within data that might not be immediately apparent.\nData Summarization: It can be used to compress large datasets by representing many data points with fewer cluster centroids.\nAnomaly Detection: By identifying groups of similar data points, clustering can help in spotting outliers or anomalies that don’t fit into any cluster.\nSegmentation: In fields like marketing, clustering is used to segment customers into groups with similar behaviors or characteristics.\nPreprocessing for Other Algorithms: Clustering can be used as a preprocessing step for other algorithms, reducing the complexity of the data.\nNatural Classification: In scientific fields, clustering can reveal natural groupings in data, such as in biology for grouping similar species or in astronomy for categorizing types of stars."
+  },
+  {
+    "objectID": "ders11-clustering.html#clustering-methods",
+    "href": "ders11-clustering.html#clustering-methods",
+    "title": "Clustering Methods",
+    "section": "Clustering Methods",
+    "text": "Clustering Methods\nPartitioning methods: Divide data into non-overlapping subsets, with each data point belonging to exactly one cluster, often optimizing a specific criterion.\nHierarchical Methods: Create a tree-like structure of clusters, either by merging smaller clusters into larger ones or dividing larger clusters into smaller ones.\nDensity-based Methods: Form clusters in areas of high data point density, separated by regions of low density, allowing for discovery of arbitrarily shaped clusters."
+  },
+  {
+    "objectID": "ders11-clustering.html#applications",
+    "href": "ders11-clustering.html#applications",
+    "title": "Clustering Methods",
+    "section": "Applications",
+    "text": "Applications\n\nBiology\n\n\nGene Expression Analysis: Grouping genes with similar expression patterns across different conditions or time points.\nSpecies Classification: Clustering organisms based on genetic or morphological features.\nProtein Structure Analysis: Identifying structural motifs in proteins.\n\n\nChemistry\n\n\nMolecular Dynamics: Analyzing conformations of molecules during simulations.\nSpectroscopy: Clustering similar spectra for compound identification.\nDrug Discovery: Grouping chemical compounds with similar properties or effects."
+  },
+  {
+    "objectID": "ders11-clustering.html#section",
+    "href": "ders11-clustering.html#section",
+    "title": "Clustering Methods",
+    "section": "",
+    "text": "Physics\n\n\nParticle Physics: Classifying particle collision events in high-energy physics experiments.\nAstrophysics: Clustering stars or galaxies based on their properties (e.g., luminosity, temperature).\nMaterials Science: Analyzing crystal structures and defects in materials."
+  },
+  {
+    "objectID": "ders11-clustering.html#partitioning",
+    "href": "ders11-clustering.html#partitioning",
+    "title": "Clustering Methods",
+    "section": "Partitioning",
+    "text": "Partitioning\n\nImage source"
+  },
+  {
+    "objectID": "ders11-clustering.html#k-means-clustering",
+    "href": "ders11-clustering.html#k-means-clustering",
+    "title": "Clustering Methods",
+    "section": "K-means clustering",
+    "text": "K-means clustering\nK-means clustering is an unsupervised machine learning algorithm used to group similar data points into clusters. It works by iteratively assigning data points to k predefined clusters based on their similarity to the cluster centers (centroids). The algorithm starts by randomly initializing k centroids in the feature space. It then repeatedly performs two steps:\n\nassign each data point to the nearest centroid, and\nrecalculate the centroids as the mean of all points in each cluster.\n\nThis process continues until the centroids stabilize or a maximum number of iterations is reached. K-means aims to minimize the within-cluster sum of squares, resulting in compact and distinct clusters."
+  },
+  {
+    "objectID": "ders11-clustering.html#k-means-clustering---interactive-demos",
+    "href": "ders11-clustering.html#k-means-clustering---interactive-demos",
+    "title": "Clustering Methods",
+    "section": "K-means clustering - interactive demos",
+    "text": "K-means clustering - interactive demos\nPlease visit the following sites:\n\nTwo-dimensional visualization of k-means clustering algorithm\nK-means Clustering - Interactive Demonstration\nVisualizing K-Means Clustering"
+  },
+  {
+    "objectID": "ders11-clustering.html#k-means-clustering-with-r",
+    "href": "ders11-clustering.html#k-means-clustering-with-r",
+    "title": "Clustering Methods",
+    "section": "K-means clustering with R",
+    "text": "K-means clustering with R\nPlease visit K-means with R page for the code."
+  },
+  {
+    "objectID": "ders11-clustering.html#advantages-of-k-means-clustering",
+    "href": "ders11-clustering.html#advantages-of-k-means-clustering",
+    "title": "Clustering Methods",
+    "section": "Advantages of K-means clustering",
+    "text": "Advantages of K-means clustering\n\nSimplicity: Easy to understand and implement.\nEfficiency: Generally fast and computationally efficient, especially for large datasets.\nScalability: Works well with high-dimensional data.\nFlexibility: Can be adapted to different types of data with appropriate distance metrics.\nInterpretability: Resulting clusters are often easy to interpret."
+  },
+  {
+    "objectID": "ders11-clustering.html#disadvantages-of-k-means-clustering",
+    "href": "ders11-clustering.html#disadvantages-of-k-means-clustering",
+    "title": "Clustering Methods",
+    "section": "Disadvantages of K-means clustering",
+    "text": "Disadvantages of K-means clustering\n\nSensitivity to initial centroids: Results can vary based on the initial random placement of centroids.\nRequires predefined k: The number of clusters must be specified beforehand, which isn’t always known.\nAssumes spherical clusters: Performs poorly with non-globular cluster shapes.\nSensitivity to outliers: Outliers can significantly impact centroid calculation and cluster assignment.\nStruggles with varying cluster sizes: Tends to create clusters of similar spatial extent.\nLocal optima: May converge to a local minimum rather than the global optimum.\nInability to handle categorical data directly: Requires preprocessing for non-numerical data."
+  },
+  {
+    "objectID": "ders11-clustering.html#hierarchical-clustering",
+    "href": "ders11-clustering.html#hierarchical-clustering",
+    "title": "Clustering Methods",
+    "section": "Hierarchical clustering",
+    "text": "Hierarchical clustering\nHierarchical clustering is an unsupervised machine learning technique used to group similar data points into clusters. Unlike other clustering methods that require a predefined number of clusters, hierarchical clustering creates a tree-like structure of clusters called a dendrogram. This method works by either starting with each data point as its own cluster and iteratively merging the closest clusters (agglomerative approach), or by starting with all data points in one cluster and recursively dividing it (divisive approach). The process continues until a stopping criterion is met, such as a desired number of clusters or a threshold distance between clusters.\nHierarchical clustering is particularly useful for exploring the inherent structure of data at different levels of granularity and for datasets where the number of clusters is not known in advance."
+  },
+  {
+    "objectID": "ders11-clustering.html#how-it-works",
+    "href": "ders11-clustering.html#how-it-works",
+    "title": "Clustering Methods",
+    "section": "How it works",
+    "text": "How it works\nHierarchical clustering begins by calculating the distances between all pairs of data points using a chosen distance metric (e.g., Euclidean distance). In the agglomerative approach, which is more common, each data point starts as its own cluster. The algorithm then iteratively merges the two closest clusters based on a linkage criterion (e.g., single linkage, complete linkage, or average linkage). This process repeats, forming larger clusters until all data points are in a single cluster or until the desired number of clusters is reached. The result is a hierarchical structure that can be visualized as a dendrogram, allowing users to choose the level of clustering that best suits their needs.\nPlease visit Hierarchical Clustering in Data Mining and An Introduction to Hierarchical Clustering"
+  },
+  {
+    "objectID": "ders11-clustering.html#section-1",
+    "href": "ders11-clustering.html#section-1",
+    "title": "Clustering Methods",
+    "section": "",
+    "text": "Please visit following sites for demos\n\nClustering Demo at yFiles"
+  },
+  {
+    "objectID": "ders11-clustering.html#advantages-of-hierarchical-clustering",
+    "href": "ders11-clustering.html#advantages-of-hierarchical-clustering",
+    "title": "Clustering Methods",
+    "section": "Advantages of hierarchical clustering",
+    "text": "Advantages of hierarchical clustering\n\nNo predefined number of clusters required: Unlike k-means, hierarchical clustering doesn’t require specifying the number of clusters in advance.\nHierarchical representation: Provides a dendrogram, offering insights into the data structure at different levels.\nFlexibility in cluster granularity: Users can choose the level of clustering that best suits their needs by cutting the dendrogram at different levels.\nApplicability to various data types: Can be applied to any data type for which a similarity or distance measure can be defined.\nInterpretability: The dendrogram provides a visually intuitive representation of the clustering process.\nHandles different cluster shapes: Can identify clusters of various shapes and sizes, not just spherical ones."
+  },
+  {
+    "objectID": "ders11-clustering.html#disadvantages",
+    "href": "ders11-clustering.html#disadvantages",
+    "title": "Clustering Methods",
+    "section": "Disadvantages",
+    "text": "Disadvantages\n\nComputational complexity: O(n^2) space complexity and O(n^3) time complexity in many implementations, making it less suitable for very large datasets.\nSensitivity to noise and outliers: Outliers can significantly affect the shape of the dendrogram.\nDifficulty in handling high-dimensional data: Performance and interpretability may decrease as the number of dimensions increases.\nLack of backtracking: Once a merge or split is made, it can’t be undone, which may lead to suboptimal results.\nMemory intensive: Storing the distance matrix for large datasets can be memory-intensive.\nChoice of distance metric and linkage method: Results can vary significantly based on the chosen distance metric and linkage method, requiring careful consideration.\nScalability issues: Not as scalable as some other clustering methods for very large datasets."
+  },
+  {
+    "objectID": "ders11-clustering.html#dbscan-clustering",
+    "href": "ders11-clustering.html#dbscan-clustering",
+    "title": "Clustering Methods",
+    "section": "DBSCAN clustering",
+    "text": "DBSCAN clustering\nDBSCAN (Density-Based Spatial Clustering of Applications with Noise) is a popular clustering algorithm that groups together points that are closely packed in space, marking points that lie alone in low-density regions as outliers.\nIt works by selecting a random unvisited point and exploring its neighborhood within a specified radius (ε). If this neighborhood contains a minimum number of points (MinPts), a cluster is formed. The algorithm then iteratively expands the cluster by exploring the neighborhoods of the newly added points. If a point doesn’t have enough neighbors to form a cluster, it’s labeled as noise. This process continues until all points have been visited, resulting in a set of dense clusters of varying shapes and sizes, along with identified noise points."
+  },
+  {
+    "objectID": "ders11-clustering.html#interactive-demos",
+    "href": "ders11-clustering.html#interactive-demos",
+    "title": "Clustering Methods",
+    "section": "Interactive demos",
+    "text": "Interactive demos\nPlease visit DBSCAN— A visualized and detailed introduction page about core concepts\nPlease visit Visualizing DBSCAN Clustering page for interactive demo for DBSCAN algoritm"
+  },
+  {
+    "objectID": "ders11-clustering.html#dbscan-algoritm",
+    "href": "ders11-clustering.html#dbscan-algoritm",
+    "title": "Clustering Methods",
+    "section": "DBSCAN Algoritm",
+    "text": "DBSCAN Algoritm"
+  },
+  {
+    "objectID": "ders11-clustering.html#advantages-of-dbscan",
+    "href": "ders11-clustering.html#advantages-of-dbscan",
+    "title": "Clustering Methods",
+    "section": "Advantages of DBSCAN",
+    "text": "Advantages of DBSCAN\n\nShape flexibility: Can find arbitrarily shaped clusters, not just circular ones.\nOutlier detection: Automatically identifies noise points and outliers.\nNo pre-defined number of clusters: Unlike k-means, doesn’t require specifying the number of clusters beforehand.\nDensity-based: Effective at separating clusters of different densities.\nRobustness: Less sensitive to outliers compared to centroid-based algorithms."
+  },
+  {
+    "objectID": "ders11-clustering.html#disadvantages-1",
+    "href": "ders11-clustering.html#disadvantages-1",
+    "title": "Clustering Methods",
+    "section": "Disadvantages",
+    "text": "Disadvantages\n\nParameter sensitivity: Results can vary significantly based on the choice of ε and MinPts parameters.\nStruggle with varying densities: May have difficulty when clusters have widely different densities.\nHigh-dimensional data: Performance and effectiveness can decrease in high-dimensional spaces due to the “curse of dimensionality”.\nMemory requirements: Can be memory-intensive for large datasets.\nScalability: Not as efficient for very large datasets compared to some other algorithms.\nConnectivity-based: May struggle with datasets where clusters are close but separated by sparse areas."
+  },
+  {
+    "objectID": "ders11-clustering.html#evaluating-clustering",
+    "href": "ders11-clustering.html#evaluating-clustering",
+    "title": "Clustering Methods",
+    "section": "Evaluating clustering",
+    "text": "Evaluating clustering\nDefinition: The silhouette score ranges from -1 to 1, where:\n\nA score close to 1 indicates that the data point is well-matched to its own cluster and poorly-matched to neighboring clusters.\nA score around 0 suggests that the data point is on or very close to the decision boundary between two neighboring clusters.\nA negative score indicates that the data point might have been assigned to the wrong cluster.\n\nCalculation: For each data point i, the silhouette score s(i) is calculated as:\ns(i) = (b(i) - a(i)) / max(a(i), b(i))\nWhere: a(i) is the average distance between i and all other points in the same clusteri, (i) is the average distance between i and all points in the nearest cluster that i is not a part of\nInterpretation:\n\nHigher silhouette scores indicate better-defined clusters.\nThe average silhouette score across all points can be used to compare different clustering configurations."
+  },
+  {
+    "objectID": "ders11-clustering.html#classification-vs.-clustering",
+    "href": "ders11-clustering.html#classification-vs.-clustering",
+    "title": "Clustering Methods",
+    "section": "Classification vs. Clustering",
+    "text": "Classification vs. Clustering\nplease compare these two concepts"
+  },
+  {
     "objectID": "ders3.html#değerlendirme-ölçütleri-performance-metrics",
     "href": "ders3.html#değerlendirme-ölçütleri-performance-metrics",
     "title": "Değerlendirme Ölçütleri",
@@ -238,242 +406,165 @@
     "text": "Root Mean Squared Error (RMSE)\n\\[ \\text{RMSE} = \\sqrt{\\frac{1}{n} \\sum_{i=1}^{n} (y_i - \\hat{y}_i)^2} \\]"
   },
   {
-    "objectID": "ders3_1.html#sample-data",
-    "href": "ders3_1.html#sample-data",
-    "title": "Data Types and Preprocessing Data",
-    "section": "Sample data",
-    "text": "Sample data\n\n\n\nNo.\nProfession\nMarital Status\nIncome\nEducation Level\n\n\n\n\n1\nTeacher\nSingle\n8000\nPostgraduate\n\n\n2\nNurse\nSingle\n6000\nBachelor’s\n\n\n3\nWorker\nMarried\n5000\nHigh School\n\n\n4\nWorker\nSingle\n7200\nHigh School\n\n\n5\nPolice\nMarried\n8500\nBachelor’s\n\n\n6\nTeacher\nMarried\n8500\nBachelor’s\n\n\n7\nDoctor\nMarried\n12000\nPostgraduate\n\n\n8\nWorker\nSingle\n5500\nHigh School\n\n\n9\nPolice\nMarried\n8250\nBachelor’s\n\n\n10\nLawyer\nMarried\n12500\nBachelor’s"
-  },
-  {
-    "objectID": "ders3_1.html#data-types",
-    "href": "ders3_1.html#data-types",
-    "title": "Data Types and Preprocessing Data",
-    "section": "Data Types",
-    "text": "Data Types\n\nNominal (Categorical) Data: Data type consisting of categories. Not used with ‘more than’ expressions.\n\nBinary (Two-Category) Data: Marital Status {Married, Single}\nMulti-Category Data: Profession {Teacher, Nurse, Worker, Police, Doctor, Lawyer}\n\nOrdinal Data: Data type consisting of categories where categories indicate rank (importance, priority). Can be used with ‘more than’ expressions. Example: Education Level {High School, Bachelor’s, Postgraduate}\nInterval Data: Data type measured on a scale divided into equal parts. Example: Income [5000,12500]\nRatio Data: Data type consisting of continuous values within a certain range. Example: Weight {65.2, 68.1, 73.5, …}"
-  },
-  {
-    "objectID": "ders3_1.html#data-descriptive-characteristics",
-    "href": "ders3_1.html#data-descriptive-characteristics",
-    "title": "Data Types and Preprocessing Data",
-    "section": "Data Descriptive Characteristics",
-    "text": "Data Descriptive Characteristics\nPurpose: Better understanding of data.\n\nMeasures of Central Tendency (Arithmetic Mean, Median, Mode)\nMeasures of Dispersion (Variance, Standard Deviation, Quartiles)"
-  },
-  {
-    "objectID": "ders3_1.html#measures-of-central-tendency",
-    "href": "ders3_1.html#measures-of-central-tendency",
-    "title": "Data Types and Preprocessing Data",
-    "section": "Measures of Central Tendency",
-    "text": "Measures of Central Tendency\nArithmetic Mean\nArithmetic Mean is defined as\n\\[\\frac{\\sum_{i=1}^n x_i}{n}\\]\nWhere:\n\n\\(x_i\\) are the individual data points.\nn is the total number of data points.\n\nSample data: 5 7 4 6 8 16 11 7\nArithmetic Mean: 8"
-  },
-  {
-    "objectID": "ders3_1.html#median",
-    "href": "ders3_1.html#median",
-    "title": "Data Types and Preprocessing Data",
-    "section": "Median",
-    "text": "Median\nThe value that remains in the middle when data is arranged in ascending or descending order.\nSample data: 5 7 4 6 8 16 11 7\nOrdered: 4 5 6 7 7 8 11 16\nMedian: 7 7 -&gt; 7"
-  },
-  {
-    "objectID": "ders3_1.html#mode",
-    "href": "ders3_1.html#mode",
-    "title": "Data Types and Preprocessing Data",
-    "section": "Mode",
-    "text": "Mode\nThe most frequently occurring value.\nSample data: 5 7 4 6 8 16 11 7\nIn the sample data, 7 is the mode, occurring twice"
-  },
-  {
-    "objectID": "ders3_1.html#measures-of-dispersion",
-    "href": "ders3_1.html#measures-of-dispersion",
-    "title": "Data Types and Preprocessing Data",
-    "section": "Measures of Dispersion",
-    "text": "Measures of Dispersion\nVariance\nVariance measures the spread of a set of data points around their mean. It quantifies how much the values differ from the average (mean). A higher variance indicates greater spread, while a lower variance suggests the data points are closer to the mean.\n\\[ \\sigma^2 = \\frac{\\sum_{i=1}^N (x_i - \\mu)^2}{N} \\]\n\n\\(\\mu\\) : average or mean of the sample"
-  },
-  {
-    "objectID": "ders3_1.html#section",
-    "href": "ders3_1.html#section",
-    "title": "Data Types and Preprocessing Data",
+    "objectID": "kmeans-r.html",
+    "href": "kmeans-r.html",
+    "title": "K-means clustering with R",
     "section": "",
-    "text": "Standard deviation\nStandard deviation is a measure of how much individual data points deviate, on average, from the mean of the dataset. It provides a sense of the spread of the data in the same units as the original data, making it easier to interpret compared to variance (which is in squared units).\nRelation with Variance:\nThe standard deviation is simply the square root of the variance. Mathematically:\n\\[ std.dev = \\sqrt{\\sigma^2} \\]"
+    "text": "taken from Partitional Clustering in R: The Essentials"
   },
   {
-    "objectID": "ders3_1.html#unclean-data",
-    "href": "ders3_1.html#unclean-data",
-    "title": "Data Types and Preprocessing Data",
-    "section": "Unclean data",
-    "text": "Unclean data\n\nData collected in real applications:\n\nCan be missing: Some attribute values may not be entered for some objects.\n\nProfession = ’ ’\n\nCan be noisy: May contain errors.\n\nSalary = -10\n\nCan be inconsistent: Attribute values or attribute names may be incompatible.\n\nAge = 35 while Date of Birth = 03/10/2004"
+    "objectID": "kmeans-r.html#the-data",
+    "href": "kmeans-r.html#the-data",
+    "title": "K-means clustering with R",
+    "section": "The data",
+    "text": "The data\n\nlibrary(factoextra)\ndata(\"USArrests\")\ndf &lt;- scale(USArrests)\n\n\nhead(df)\n\n               Murder   Assault   UrbanPop         Rape\nAlabama    1.24256408 0.7828393 -0.5209066 -0.003416473\nAlaska     0.50786248 1.1068225 -1.2117642  2.484202941\nArizona    0.07163341 1.4788032  0.9989801  1.042878388\nArkansas   0.23234938 0.2308680 -1.0735927 -0.184916602\nCalifornia 0.27826823 1.2628144  1.7589234  2.067820292\nColorado   0.02571456 0.3988593  0.8608085  1.864967207"
   },
   {
-    "objectID": "ders3_1.html#data-preprocessing",
-    "href": "ders3_1.html#data-preprocessing",
-    "title": "Data Types and Preprocessing Data",
-    "section": "Data Preprocessing",
-    "text": "Data Preprocessing\n\nData Cleaning: Completing missing attribute values, correcting erroneous data, detecting and cleaning outliers, resolving inconsistencies\nData Integration: Combining data from different data sources\nData Reduction: Excluding data while maintaining same results as original data\nData Transformation: Normalization"
+    "objectID": "kmeans-r.html#what-should-k-be",
+    "href": "kmeans-r.html#what-should-k-be",
+    "title": "K-means clustering with R",
+    "section": "What should K be?",
+    "text": "What should K be?\n\nfviz_nbclust(df, kmeans, \"wss\")"
   },
   {
-    "objectID": "ders3_1.html#data-cleaning",
-    "href": "ders3_1.html#data-cleaning",
-    "title": "Data Types and Preprocessing Data",
-    "section": "Data Cleaning",
-    "text": "Data Cleaning\nRefers to identifying, correcting, or deleting missing, noisy (erroneous), or inconsistent data.\n\n\nCauses of missing data records:\n\nInability to obtain or unknown attribute value when collecting data\nFailure to recognize necessity of certain attributes during data collection\nHuman, software, or hardware problems\n\n\n\n\n\nIt is the most difficult type of error to identify and correct –&gt;\n\n\nCauses of noisy (erroneous) data records:\n\nFaulty data collection tools\nData entry problems\nData transmission problems\nTechnological limitations\nInconsistency in attribute names\n\n\nCauses of inconsistent data records:\n\nData stored in different data sources\nNon-compliance with functional dependency rules"
+    "objectID": "kmeans-r.html#clustering",
+    "href": "kmeans-r.html#clustering",
+    "title": "K-means clustering with R",
+    "section": "Clustering",
+    "text": "Clustering\n\nkm.res &lt;- kmeans(df, 4, nstart=25)\nprint(km.res)\n\nK-means clustering with 4 clusters of sizes 16, 8, 13, 13\n\nCluster means:\n      Murder    Assault   UrbanPop        Rape\n1 -0.4894375 -0.3826001  0.5758298 -0.26165379\n2  1.4118898  0.8743346 -0.8145211  0.01927104\n3 -0.9615407 -1.1066010 -0.9301069 -0.96676331\n4  0.6950701  1.0394414  0.7226370  1.27693964\n\nClustering vector:\n       Alabama         Alaska        Arizona       Arkansas     California \n             2              4              4              2              4 \n      Colorado    Connecticut       Delaware        Florida        Georgia \n             4              1              1              4              2 \n        Hawaii          Idaho       Illinois        Indiana           Iowa \n             1              3              4              1              3 \n        Kansas       Kentucky      Louisiana          Maine       Maryland \n             1              3              2              3              4 \n Massachusetts       Michigan      Minnesota    Mississippi       Missouri \n             1              4              3              2              4 \n       Montana       Nebraska         Nevada  New Hampshire     New Jersey \n             3              3              4              3              1 \n    New Mexico       New York North Carolina   North Dakota           Ohio \n             4              4              2              3              1 \n      Oklahoma         Oregon   Pennsylvania   Rhode Island South Carolina \n             1              1              1              1              2 \n  South Dakota      Tennessee          Texas           Utah        Vermont \n             3              2              4              1              3 \n      Virginia     Washington  West Virginia      Wisconsin        Wyoming \n             1              1              3              3              1 \n\nWithin cluster sum of squares by cluster:\n[1] 16.212213  8.316061 11.952463 19.922437\n (between_SS / total_SS =  71.2 %)\n\nAvailable components:\n\n[1] \"cluster\"      \"centers\"      \"totss\"        \"withinss\"     \"tot.withinss\"\n[6] \"betweenss\"    \"size\"         \"iter\"         \"ifault\""
   },
   {
-    "objectID": "ders3_1.html#data-preprocessing-1",
-    "href": "ders3_1.html#data-preprocessing-1",
-    "title": "Data Types and Preprocessing Data",
-    "section": "Data preprocessing",
-    "text": "Data preprocessing\nHow to handle missing data?\n\nExclude data records with missing attribute values\nFill missing attribute values manually\nUse a global variable for missing attribute values (Null, unknown, …)\nFill missing attribute values with the mean value of that attribute\nFill with the average of attribute values from records belonging to the same class\nFill with the most probable attribute values"
+    "objectID": "kmeans-r.html#visualizing-the-results",
+    "href": "kmeans-r.html#visualizing-the-results",
+    "title": "K-means clustering with R",
+    "section": "Visualizing the results",
+    "text": "Visualizing the results\n\nfviz_cluster(km.res, data=df)"
   },
   {
-    "objectID": "ders3_1.html#data-preprocessing-2",
-    "href": "ders3_1.html#data-preprocessing-2",
-    "title": "Data Types and Preprocessing Data",
-    "section": "Data preprocessing",
-    "text": "Data preprocessing\nHow to correct noisy data?\n\nBinning: Data is sorted and divided into equal intervals. Each bin is represented by mean, median, and boundary values.\nRegression: Data is fitted to regression functions.\nClustering: Data is grouped based on similarity. Outliers and extreme values are identified and deleted.\nManual detection of erroneous data: Suspicious values are found and checked by humans."
+    "objectID": "ders10-regression.html#ml-types",
+    "href": "ders10-regression.html#ml-types",
+    "title": "Regression Methods",
+    "section": "ML types",
+    "text": "ML types\n\nClassical ML\n\nSupervised\n\nClassification\nRegression\n\nUnsupervised\n\nClustering"
   },
   {
-    "objectID": "ders3_1.html#data-transformation",
-    "href": "ders3_1.html#data-transformation",
-    "title": "Data Types and Preprocessing Data",
-    "section": "Data Transformation",
-    "text": "Data Transformation\nCreating new attributes from given attributes.\n\nGeneralization: Summarizing the data.\nNormalization (Statistical Normalization):\n\nUseful when there are significant differences between data, helps bring data into a single format. Enables reducing data to smaller ranges.\nAllows comparison of data from different scaling systems by bringing them into a similar format. The goal here is to transfer data from different systems into a common system and make them comparable using mathematical functions."
+    "objectID": "ders10-regression.html#contents",
+    "href": "ders10-regression.html#contents",
+    "title": "Regression Methods",
+    "section": "Contents",
+    "text": "Contents\n\nDefinition of regression\nTypes of regression (linear, polynomial, and ensemble methods)\n\nLinear Regression: Simple Linear Regression, Ordinary Least Squares method, Evaluating model performance (R-squared, RMSE)\nPolynomial Regression: When to use polynomial regression, overfitting\nRegression with Random Forest: Random Forest algorithm for regression, Advantages (handling non-linearity, feature importance)\nOther types of regression: Logistic regression (for binary outcomes), Ridge and Lasso regression (regularization techniques)\n\nExamples on Excel\nCode examples in R and Python"
   },
   {
-    "objectID": "ders3_1.html#types-of-normalization",
-    "href": "ders3_1.html#types-of-normalization",
-    "title": "Data Types and Preprocessing Data",
-    "section": "Types of Normalization",
-    "text": "Types of Normalization\n\nZ-Score Normalization\nMin-Max Normalization"
+    "objectID": "ders10-regression.html#regression",
+    "href": "ders10-regression.html#regression",
+    "title": "Regression Methods",
+    "section": "Regression",
+    "text": "Regression\nRegression is a statistical method used in data analysis and machine learning to model and analyze the relationship between a dependent variable (often called the target or outcome variable) and one or more independent variables (also known as predictors or features). The primary goal of regression is to estimate how changes in the independent variables are associated with changes in the dependent variable, allowing for prediction and inference.\nKey points about regression:\n\nIt helps identify and quantify relationships between variables.\nIt can be used for both prediction and understanding the impact of variables.\nThere are various types of regression, including linear, polynomial, and more complex methods like Random Forest or Neural networks for regression.\nRegression models can handle both continuous and categorical variables.\nIt’s widely used in many fields, including science, economics, and social sciences."
   },
   {
-    "objectID": "ders3_1.html#z-score-normalization",
-    "href": "ders3_1.html#z-score-normalization",
-    "title": "Data Types and Preprocessing Data",
-    "section": "Z-score normalization",
-    "text": "Z-score normalization\nZ-score normalization (or standardization) transforms data to have a mean of 0 and a standard deviation of 1. This technique is useful for comparing data points from different distributions or preparing data for machine learning algorithms sensitive to scale.\nThe Z-score of a data point xx is calculated as:\n\\[ z = \\frac{x - \\mu}{\\sigma} \\]\nWhere:\n\n\\(x\\): The data point.\n\\(\\mu\\): The mean of the dataset.\n\\(\\sigma\\): The standard deviation of the dataset."
+    "objectID": "ders10-regression.html#linear-regression",
+    "href": "ders10-regression.html#linear-regression",
+    "title": "Regression Methods",
+    "section": "Linear Regression",
+    "text": "Linear Regression"
   },
   {
-    "objectID": "ders3_1.html#min-max-normalization",
-    "href": "ders3_1.html#min-max-normalization",
-    "title": "Data Types and Preprocessing Data",
-    "section": "Min-max normalization",
-    "text": "Min-max normalization\nMin-Max Normalization scales data to a specified range, typically [0,1][0,1], by adjusting the values proportionally within the given range. It is useful for ensuring that all features contribute equally to analyses or machine learning models.\nThe Min-Max Normalization formula is:\n\\[ x' = \\frac{x - x_{min}}{x_{max} - x_{min}} \\]"
+    "objectID": "ders10-regression.html#linear-regression-1",
+    "href": "ders10-regression.html#linear-regression-1",
+    "title": "Regression Methods",
+    "section": "Linear Regression",
+    "text": "Linear Regression"
   },
   {
-    "objectID": "ders3_1.html#section-1",
-    "href": "ders3_1.html#section-1",
-    "title": "Data Types and Preprocessing Data",
+    "objectID": "ders10-regression.html#linear-regression-2",
+    "href": "ders10-regression.html#linear-regression-2",
+    "title": "Regression Methods",
+    "section": "Linear Regression",
+    "text": "Linear Regression\ntry finding the best line: https://www.geogebra.org/m/xC6zq7Zv"
+  },
+  {
+    "objectID": "ders10-regression.html#ols-method",
+    "href": "ders10-regression.html#ols-method",
+    "title": "Regression Methods",
+    "section": "OLS method",
+    "text": "OLS method\nOrdinary Least Squares (OLS) is a statistical method used to estimate the parameters of a linear regression model. It’s the most common technique for fitting a line to a set of data points in linear regression.\nOLS is a method that minimizes the sum of the squared differences between the observed dependent variable values and the predicted values by the linear function of the independent variable(s). In other words, it finds the line (or hyperplane in multiple dimensions) that best fits the data by minimizing the sum of the squared residuals.\nPlease visit OLS Method at Wikipedia for technical details."
+  },
+  {
+    "objectID": "ders10-regression.html#multivariate-linear-regression",
+    "href": "ders10-regression.html#multivariate-linear-regression",
+    "title": "Regression Methods",
+    "section": "Multivariate Linear Regression",
+    "text": "Multivariate Linear Regression\nMultivariate Linear Regression, also known as Multiple Linear Regression, is a statistical method used to model the relationship between multiple independent variables and a single dependent variable. It extends the concept of simple linear regression to include more than one predictor variable.\nThe general form of the model is:\n\\[\ny = \\beta_0 + \\beta_1x_1 + \\beta_2x_2 + \\ldots + \\beta_nx_n + \\varepsilon\n\\]\nWhere:\ny is the dependent variable, x₁, x₂, …, xₙ are the independent variables, β₀ is the y-intercept (the value of y when all x’s are zero), β₁, β₂, …, βₙ are the coefficients associated with each independent variable, n is the number of independent variables, ε is the error term"
+  },
+  {
+    "objectID": "ders10-regression.html#polynomial-regression",
+    "href": "ders10-regression.html#polynomial-regression",
+    "title": "Regression Methods",
+    "section": "Polynomial Regression",
+    "text": "Polynomial Regression\nPolynomial Regression is a form of regression analysis in which the relationship between the independent variable x and the dependent variable y is modeled as an nth degree polynomial. It’s used when the relationship between variables is not linear but can be approximated by a polynomial function.\n\\[\ny = \\beta_0 + \\beta_1x + \\beta_2x^2 + \\beta_3x^3 + \\ldots + \\beta_nx^n + \\varepsilon\n\\]\nWhere:\ny is the dependent variable, x is the independent variable, β₀, β₁, β₂, …, βₙ are the coefficients to be estimated, n is the degree of the polynomial and ε is the error term"
+  },
+  {
+    "objectID": "ders10-regression.html#polynomial-regression-1",
+    "href": "ders10-regression.html#polynomial-regression-1",
+    "title": "Regression Methods",
+    "section": "Polynomial Regression",
+    "text": "Polynomial Regression"
+  },
+  {
+    "objectID": "ders10-regression.html#linear-regression-in-excel",
+    "href": "ders10-regression.html#linear-regression-in-excel",
+    "title": "Regression Methods",
+    "section": "Linear Regression in Excel",
+    "text": "Linear Regression in Excel\nUse MTCARS dataset Excel file and;\n\ndraw Trendline between wt (weight) and mpg (miles per galon) columns.\ndraw Trendline between disp (displacement) and wt (weight) columns.\n\nPlease visit MyExcelOnline in order see how to draw a Trendline in Excel"
+  },
+  {
+    "objectID": "ders10-regression.html#linear-regression-in-r",
+    "href": "ders10-regression.html#linear-regression-in-r",
+    "title": "Regression Methods",
+    "section": "Linear Regression in R",
+    "text": "Linear Regression in R\nPlease refer to Linear Regression with R page for simple linear and polynomial regression."
+  },
+  {
+    "objectID": "ders10-regression.html#regression-with-random-forest",
+    "href": "ders10-regression.html#regression-with-random-forest",
+    "title": "Regression Methods",
+    "section": "Regression with Random Forest",
+    "text": "Regression with Random Forest\nPlease refer to random forest regression with R document."
+  },
+  {
+    "objectID": "An_Introduction_to_Hierarchical_Clustering.html",
+    "href": "An_Introduction_to_Hierarchical_Clustering.html",
+    "title": "An Introduction to Hierarchical Clustering",
     "section": "",
-    "text": "Min-max example: Sample data {10,20,30,40,50}\n\nStep 1: identify min and max, 10 and 50, respectively.\nStep 2: Apply min-max formula to each value\n\n10: (10 - 10)/(50 -10) = 0\n20: (20 - 10)/(50 -10) = 0.25\n30: (30 - 10)/(50 -10) = 0.50\n40: (40 - 10)/(50 -10) = 0.75\n50: (50 - 10)/(50 -10) = 1\n\n\nMin-max normalized data: {0.00, 0.25, 0.50, 0.75, 1.00}"
+    "text": "Taken from the article “An Introduction to Hierarchical Clustering in Python” from DataCamp"
   },
   {
-    "objectID": "ders3_1.html#example",
-    "href": "ders3_1.html#example",
-    "title": "Data Types and Preprocessing Data",
-    "section": "Example",
-    "text": "Example\nIn the table below, we have two different attributes with unrelated scales. We applied z-score normaliation to Experience and min-max normaliation to savings data.\nNotice that both features are now between (-0.97, 1.79) and (0, 1)\n\n\n\n\n\n\n\n\n\nExperience (Years)\nSavings (TL)\nzscore_experience\nminmax_savings\n\n\n\n\n6\n100,000\n-0.97\n0.00\n\n\n7\n250,000\n-0.87\n0.23\n\n\n15\n750,000\n-0.08\n1.00\n\n\n15\n150,000\n-0.08\n0.08\n\n\n18\n400,000\n0.21\n0.46\n\n\n34\n650,000\n1.79\n0.85"
+    "objectID": "An_Introduction_to_Hierarchical_Clustering.html#definition-of-hierarchical-clustering",
+    "href": "An_Introduction_to_Hierarchical_Clustering.html#definition-of-hierarchical-clustering",
+    "title": "An Introduction to Hierarchical Clustering",
+    "section": "Definition of Hierarchical Clustering",
+    "text": "Definition of Hierarchical Clustering\nA hierarchical clustering approach is based on the determination of successive clusters based on previously defined clusters. It’s a technique aimed more toward grouping data into a tree of clusters called dendrograms, which graphically represents the hierarchical relationship between the underlying clusters."
   },
   {
-    "objectID": "ders1.html",
-    "href": "ders1.html",
-    "title": "GPT models",
-    "section": "",
-    "text": "GPT1, GPT2 abd GPT3 were released couple years before ChatGPT and it was able to complete sentences. Please visit “How Does ChatGPT Work?” site for more information. After ChatGPT was released, large language models got “conversational”\nPlease visit OpenAI Playground completion site and select “gpt-3.5-turbo” as model. Type a incomplete sentence and then press Submit button.\nYou’ll see that the model will complete your sentence. If you turn on the “Show probabilities” option on right menu, you’ll get a glimpse of how GPT works.\nIf you complete the sentence and then hover over the words, you’ll see that the model had many words to chose from with certain probabilities. In this example, “my” is the 4th most probable word after Today is and “birthday” is most probable word after Today is my.\nOne of key settings of GPT models is temperature. If you decrease the temperature the model will choose the most probably words. If temperature is high, the model will be picking words with low probabalities, which will bring creative and diverse output.\nIf you decrease the temperature to zero, the output will be always same."
+    "objectID": "An_Introduction_to_Hierarchical_Clustering.html#comparison-of-hierarchical-clustering-to-other-clustering-techniques",
+    "href": "An_Introduction_to_Hierarchical_Clustering.html#comparison-of-hierarchical-clustering-to-other-clustering-techniques",
+    "title": "An Introduction to Hierarchical Clustering",
+    "section": "Comparison of Hierarchical Clustering to Other Clustering Techniques",
+    "text": "Comparison of Hierarchical Clustering to Other Clustering Techniques\nHierarchical clustering is a powerful algorithm, but it is not the only one out there, and each type of clustering comes with its set of advantages and drawbacks.\nLet’s understand how it compares to other types of clustering, such as K-means and model-based clustering. Many more techniques exist, but these two, in addition to hierarchical clustering, are widely used and provide a framework to help better understand the others.\nYou can learn more about clustering in machine learning in our separate article, covering five essential clustering algorithms.\n\nHierarchical clustering vs K Means clustering\nUnlike Hierarchical clustering, K-means clustering seeks to partition the original data points into “K” groups or clusters where the user specifies “K” in advance.\nThe general idea is to look for clusters that minimize the squared Euclidean distance of all the points from the centers over all attributes (variables or features) and merge those individuals in an iterative manner.\nOur K-means Clustering in Python with Scikit-learn tutorial will help you understand the inner workings of K-means clustering with an interesting case study.\n\nBenefits\n\nIt is computationally efficient compared to hierarchical clustering and can be used to analyze large data sets.\nK-means is easier to understand and implement.\n\n\n\nDrawbacks\n\nIt is less flexible than hierarchical clustering because it constrains the user to specify the number of clusters beforehand, which may not be obvious in some situations.\nThe result is not stable and changes from one iteration to another for the same data set.\nIt is more sensitive to outliers because the use of outliers in the data impacts the mean of the cluster.\nBoth k-means and hierarchical clustering are incapable of handling categorical data directly and may not work well with data that is not continuous or has very large variance.\n\nDespite its limitations, k-means clustering is still a popular method due to its ease of use and computational efficiency. It is frequently used as a reference point for comparing the performance of other clustering techniques.\n\n\n\nModel-based clustering\nBoth K-means and hierarchical clustering techniques use a distance matrix to represent the distances between all the points in the dataset. Model-based clustering, on the other hand, applies statistical techniques to identify clusters in the data. Below is the general process:\n\nDecide the statistical model to use and choose the number of clusters.\nFit the model on the data.\nIdentify the clusters based on the model parameters.\n\n\nBenefits\n\nModel-based clustering is more flexible than hierarchical clustering because it allows the use of different models to identify different types of clusters.\nIt works better on data with complex shapes or structures.\n\n\n\nDrawbacks\n\nIt’s computationally more expensive than hierarchical clustering, especially for large data.\nIt requires a better understanding of statistical modeling techniques since the choice of the model can affect the final result.\nSimilarly to K-means clustering, it requires the number of clusters to be specified beforehand."
   },
   {
-    "objectID": "ders1.html#chatgpt-writes-code-for-us",
-    "href": "ders1.html#chatgpt-writes-code-for-us",
-    "title": "GPT models",
-    "section": "ChatGPT writes code for us",
-    "text": "ChatGPT writes code for us\nLet’s ask ChatGPT for a fast prime number function in Python\n\n\n\nimage.png\n\n\n\n\n\nimage.png\n\n\nDid you see what just happened! It provided code tailored for us and it also explained bits of the code. Have you noticed that the code contains the tricks we have learned during our lecture: * early stop: if a condition is met, return immediately True or False * instead of checking until N, we should check numbers until \\(\\sqrt{N}\\) (n  0.5** in Python)\nYou can continue the conversation. Let’s ask for memoization.\n\n\n\nimage.png\n\n\n\n\n\nimage.png\n\n\nLet’s get the code and test it here:\n\ndef is_prime(n, memo={}):\n    if n in memo:\n        return memo[n]\n    if n in (2, 3):\n        result = True\n    elif n == 1 or n % 2 == 0:\n        result = False\n    else:\n        result = True\n        for i in range(3, int(n ** 0.5) + 1, 2):\n            if n % i == 0:\n                result = False\n                break\n    memo[n] = result\n    return result\n\n\n# is_prime(100000000003)\n\n\n&lt;i class=\"fas fa-fw fa-exclamation-circle mr-3 align-self-center\"&gt;&lt;/i&gt;\n&lt;b&gt;Warning:&lt;/b&gt; At the time of writing this note (January 2023) chatGPT is known to provide results which are not exactly true!&lt;br&gt;So, be aware and don't use code or information you got from chatGPT as is without checking or confirming."
+    "objectID": "An_Introduction_to_Hierarchical_Clustering.html#applications-of-hierarchical-clustering",
+    "href": "An_Introduction_to_Hierarchical_Clustering.html#applications-of-hierarchical-clustering",
+    "title": "An Introduction to Hierarchical Clustering",
+    "section": "Applications of Hierarchical Clustering",
+    "text": "Applications of Hierarchical Clustering\nHierarchical clustering has a variety of applications in our day-to-day life, including (but by no means limited to) biology, image processing, marketing, economics, and social network analysis.\n\nBiology\nThe clustering of DNA sequences is one of the biggest challenges in bioinformatics.\nBiologists can leverage hierarchical clustering to study genetic relationships between organisms to classify those organisms into taxonomic groups. This is beneficial for quick analysis and visualization of the underlying relationships.\n\n\nImage processing\nHierarchical clustering can be performed in image processing to group similar regions or pixels of an image in terms of color, intensity, or other features. This can be useful for further tasks such as image segmentation, image classification, and object recognition.\n\n\nMarketing\nMarketing specialists can use hierarchical clustering to draw a hierarchy between different types of customers based on their purchasing habits for better marketing strategies and product recommendations. For instance, different products in retails can be recommended to customers whether they are low, medium, or high spenders.\n\n\nSocial network analysis\nSocial networks are a great source of valuable information when exploited efficiently. Hierarchical clustering can be used to identify groups or communities and to understand their relationships to each other and the structure of the network as a whole."
   },
   {
-    "objectID": "ders1.html#chatgpt-can-fix-or-modify-the-code",
-    "href": "ders1.html#chatgpt-can-fix-or-modify-the-code",
-    "title": "GPT models",
-    "section": "ChatGPT can fix or modify the code",
-    "text": "ChatGPT can fix or modify the code\nYou have a piece of code and it does not work as intended? Then you can ask ChatGPT to fix the code.\nLet’s provide a code with error and ask chatGPT to debug it:\n\n\n\nimage.png\n\n\n\n\n\nimage.png\n\n\nSo, ChatGPT can fix code! By the way, did you know that I used ChatGPT to prepare that example ;)\n\n\n\nimage.png\n\n\n\n\n\nimage.png"
-  },
-  {
-    "objectID": "ders1.html#is-it-the-end-of-programming",
-    "href": "ders1.html#is-it-the-end-of-programming",
-    "title": "GPT models",
-    "section": "Is it the end of programming?",
-    "text": "Is it the end of programming?\nYou might think, “we learned Python for a semester and but now there’s ChatGPT, no need to learn coding at all!”. You might find content online which are exploring similar concerns. But more sane approach is “AI tools will increase speed and efficiency of developers also will decresase barriers to entry for new languages.\nThe section below is taken from Github Copilot’s page:"
-  },
-  {
-    "objectID": "ders1.html#thanks-for-showing-us-chatgpt-i-can-now-prepare-my-homeworks-easily",
-    "href": "ders1.html#thanks-for-showing-us-chatgpt-i-can-now-prepare-my-homeworks-easily",
-    "title": "GPT models",
-    "section": "Thanks for showing us ChatGPT, I can now prepare my homeworks easily!",
-    "text": "Thanks for showing us ChatGPT, I can now prepare my homeworks easily!\nSeeing the capabilities of ChatGPT might give some hint about misuse. First of all, a homework is for you to learn a concept (remember the playing the guitar analogy?) so being involved in AI-assisted plagiarism is still a plagiarism and a loss on your side. (please also check the file 00-academic-integrity.ipynb for adverse effects of plagiarism)\nSecond of all, OpenAI and others are working on tools and ways to include watermarks in ChatGPT output so that it can be spotted easily.\nSo, please be inspired by this tool, use it to augment your learning but do not use it for plagiarism."
-  },
-  {
-    "objectID": "ders1.html#closed-and-open-models",
-    "href": "ders1.html#closed-and-open-models",
-    "title": "GPT models",
-    "section": "Closed and Open models",
-    "text": "Closed and Open models\nCurrently there are several closed-source large language models which are developed by major corparations each took hundreds of millions to train * GPT3.5 (ChatGPT) and GPT4 by OpenAI * PaLM and Bard by Google * Claude by Anthropics"
-  },
-  {
-    "objectID": "ders1.html#claude-3.5-sonnet-by-antropic",
-    "href": "ders1.html#claude-3.5-sonnet-by-antropic",
-    "title": "GPT models",
-    "section": "Claude 3.5 Sonnet by Antropic",
-    "text": "Claude 3.5 Sonnet by Antropic\nClaude 3.5 is the latest version of Claude model. Antropic releases Claude in three sizes Haiku (smallest), Sonnet (medium) and Opus (largest). Currently, Claude 3.5 Sonnest is the best LLM. Generally Claude is good at creative writing but with the latest release it excels at coding as well. Also, Claude allows preview of the code (web-based) on right panel.\nBelow is as example where Claude 3.5 Sonnet was prompted “Please write game of snake in HTML, CSS and JS”. You can actually play the game!\n\nClaude also allows uploading documents (e.g. PDF) and asking questions about the document.\nYou can use Claude (with some limitations) at https://claude.ai/chat after registering an account for free."
-  },
-  {
-    "objectID": "ders1.html#gemini-by-google",
-    "href": "ders1.html#gemini-by-google",
-    "title": "GPT models",
-    "section": "Gemini by Google",
-    "text": "Gemini by Google\nGemini is actually an LLM with online search capacity. Also, you can download documents (via Google Drive) or point to YouTube videos to ask questions. Finally, Gemini has the longest context window of 1 million tokens (will fit around 10 books at once)."
-  },
-  {
-    "objectID": "ders1.html#running-models-locally",
-    "href": "ders1.html#running-models-locally",
-    "title": "GPT models",
-    "section": "Running models locally",
-    "text": "Running models locally\nSince developers share the model weights, it’s possible to download and run the models locally. There are various sizes of models. 7B (7 billion) models require around 4Gb memory, so you can run them in your laptop.\nYou can run the models by installing PyTorch and some other libraries for Python and then writing some Python code. Or you can install Ollama and then run any compatible model with it.\nAdvantages of running a model locally: 1. Less Censorship 2. Better Data Privacy 3. Offline Usage 4. Cost Savings 5. Better Customization\nDisadvantages of running a model locally: 1. Resource Intensive 2. Slower Responses and Inferior Performance 3. Complex Setup\n\nRunning a model locally using Jupyter notebook or Google Colab\nYou can actually run LLM models in Jupyter notebooks. However the process will require you to install lots of Python packages, downloading the model weights and then writing some Python code to ask questions to the model and then capturing the answer in a dictionary. Although there are some solutions for “chat-like” experience, the experince is more like “one-shot question and answer”.\nPlease check the Youtube video which describes the process in Google Colab, where Google provides GPU (or TPU) to run the model in a Jupyter notebook environment.\n\n\nRunning a model locally with Ollama\n\nPlease visit the list of models page to have an idea about specialized models. With Ollama, you can download and use any of those models.\nIn the terminal, let’s list available models\n$ ollama list\n\nNAME                ID              SIZE    MODIFIED\ndeepseek-coder:6.7b 72be2442d736    3.8 GB  5 weeks ago     \nneural-chat:latest  73940af9fe02    4.1 GB  5 weeks ago     \norca2:7b            ea98cc422de3    3.8 GB  5 weeks ago     \nphi:latest          c651b7a89d73    1.6 GB  14 hours ago    \nsolar:latest        059fdabbe6e6    6.1 GB  2 hours ago     \nstablelm-zephyr:3b  7c596e78b1fc    1.6 GB  3 weeks ago\nLet’s run Phi-2 by Microsoft. Here’s info about Phi-2:\n\na 2.7 billion-parameter language model that demonstrates outstanding reasoning and language understanding capabilities, showcasing state-of-the-art performance among base language models with less than 13 billion parameters. On complex benchmarks Phi-2 matches or outperforms models up to 25x larger, thanks to new innovations in model scaling and training data curation.\n\n$ ollama run phi:latest\n\n&gt;&gt;&gt; why sky is blue?\n\n The sky appears blue due to a phenomenon called Rayleigh scattering. When sunlight enters the Earth's atmosphere,\nit collides with molecules and tiny particles in the air, such as oxygen and nitrogen atoms. These collisions cause\nthe shorter wavelengths of light (blue) to scatter more than the longer wavelengths (red, orange, yellow, green, and\nviolet). As a result, our eyes perceive the scattered blue light to be dominant, which is why the sky appears blue to us.\nAs you can see, a small model, which can answer questions, help coding can be run locally.\n\n\nRunning a model locally with user interface\n\nOllama Web UI\n\n\n\nLLM Studio\nYou can install LM Studio and then interact with local models with its user interface"
-  },
-  {
-    "objectID": "ders1.html#github-copilot",
-    "href": "ders1.html#github-copilot",
-    "title": "GPT models",
-    "section": "Github CoPilot",
-    "text": "Github CoPilot\n\n%%HTML\n&lt;iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/ZapdeEJ7xJw?si=3DYWvMa7uudDhUnj\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" allowfullscreen&gt;&lt;/iframe&gt;"
-  },
-  {
-    "objectID": "ders1.html#free-github-copilot-alternative",
-    "href": "ders1.html#free-github-copilot-alternative",
-    "title": "GPT models",
-    "section": "Free Github CoPilot alternative",
-    "text": "Free Github CoPilot alternative\nCody is Sourcegraph’s AI coding assistant, and it has a couple of features that no other assistant has to make you a 10x developer. You can check it out here: https://sourcegraph.com/cody"
-  },
-  {
-    "objectID": "ders1.html#open-source-local-alternatives",
-    "href": "ders1.html#open-source-local-alternatives",
-    "title": "GPT models",
-    "section": "Open source local alternatives",
-    "text": "Open source local alternatives\nPlease visit https://tabby.tabbyml.com/ for more information"
-  },
-  {
-    "objectID": "ders1.html#image-generation",
-    "href": "ders1.html#image-generation",
-    "title": "GPT models",
-    "section": "Image generation",
-    "text": "Image generation\n\nDALL-E 3 by OpenAI\nPrompt: “a dna strand with istanbul city as silhoutte in background”\nRevised prompt: “Imagine a detailed science meets architecture illustration. In the foreground, there’s a strand of DNA, magnified and glowing against a dark backdrop. This helix structure is precisely depicted, its familiar double-helix shape twisting majestically. Intertwining with this scientific image, in the background, there’s a silhouette representation of Istanbul city. The skyline shows off its marvelous historical architecture, including its domed mosques and towering minarets. The cityscape sits against a dusky eveningsky, the setting sun casting an orange glow on the horizon behind the buildings. The combination results in a fascinating juxtapositionof science and urban beauty.”\nResult:\n\n\n\nMidjourney v6\nMidjourney announced v6 in December 2023. It can generate photorealistic images. Normally, you need to use their Discord channel to generate images free. Also, you can generate images using getimg.ai. I tried generating images using the following prompts\n\nMolecular biology lab with lots of students.\nBeautiful sea side with white sand beach and tropical trees on shore. The sea looks greenish blue\n\nThe results are great:\n\n\n\nDisinformation\nBe aware of deepfake or AI-generated fake photos\nFake Trump Photo\n\nFake Pope Photo"
-  },
-  {
-    "objectID": "ders1.html#video-generation",
-    "href": "ders1.html#video-generation",
-    "title": "GPT models",
-    "section": "Video generation",
-    "text": "Video generation\n\nPrompt to video\n\nRunwayML Gen-2\nPika\nStable Video Diffusion by Stable Diffusion\nGENMO\n\n\n\nImage to video\n\nGENMO"
-  },
-  {
-    "objectID": "ders1.html#music-or-sound-generation",
-    "href": "ders1.html#music-or-sound-generation",
-    "title": "GPT models",
-    "section": "Music or sound generation",
-    "text": "Music or sound generation\n\nElevenlabs can convert text to speech online for free with our AI voice generator"
+    "objectID": "An_Introduction_to_Hierarchical_Clustering.html#the-hierarchical-clustering-algorithm",
+    "href": "An_Introduction_to_Hierarchical_Clustering.html#the-hierarchical-clustering-algorithm",
+    "title": "An Introduction to Hierarchical Clustering",
+    "section": "The Hierarchical Clustering Algorithm",
+    "text": "The Hierarchical Clustering Algorithm\nIn this section, we will look at three main concepts. The steps of the hierarchical algorithm, a highlight of the two types of hierarchical clustering (agglomerative and divisive), and finally, some techniques to choose the right distance measure.\n\nSteps involved in the hierarchical clustering algorithm\nThe hierarchical clustering algorithm employs the use of distance measures to generate clusters. This generation process involves the following main steps:\n\n\n\nCreating Hierarchical Clustering Algorithm\n\n\nPreprocess the data by removing missing data and applying any additional tasks that make the data as clean as possible. This step is a more general one for most of the machine learning tasks.\n\nCompute the distance matrix containing the distance between each pair of data points using a particular distance metric such as Euclidean distance, Manhattan distance, or cosine similarity. But the default distance metric is the Euclidean one.\n\n2.Merge the two clusters that are the closest in distance.\n\nUpdate the distance matrix with regard to the new clusters.\nRepeat steps 1, 2, and 3 until all the clusters are merged together to create a single cluster.\n\n\n\nHierarchical clustering examples\nWe can consider agglomerative and divisive clustering as mirrors of each other. Let’s have a better look at how each one operates, along with a hierarchical clustering example and graphical visualization.\n\nAgglomerative hierarchical clustering\nThis first scenario corresponds to the approach explained above. It starts by considering each observation as a singleton cluster (cluster with only one data point). Then iteratively merges clusters until only one cluster is obtained. This process is also known as the bottom-up approach.\nAs showing in the illustration below:\n\nWe start by considering each animal to be its unique cluster.\nThen we generate three different clusters from those unique animals based on their similarities:\n\nBirds: Eagle and Peacock\nMammals: Lion and Bear\nMore than three leg animals: Spider and Scorpion.\n\nWe repeat the merging process to create the vertebrate cluster by combining the two most similar clusters: Birds and Mammals.\nAfter this step, the remaining two clusters, Vertebrate and More than three legs, are merged to create a single Animals cluster.\n\n\n\n\nDendrogram of Agglomerative Clustering Approach\n\n\nDendrogram of Agglomerative Clustering Approach\n\n\nDivisive clustering\nOn the other hand, divisive clustering is top-down because it starts by considering all the data points as a unique cluster. Then it separates them until all the data points are unique.\nFrom this divisive approach graphic:\n\nWe notice that the whole animal dataset is considered as a single bloc.\nThen, we divide that block into two clusters: Vertebrate and More than 3 legs.\nThe division process is iteratively applied to the previously created clusters until we get unique animals.\n\n\n\n\nDendrogram of Divisive Clustering Approach\n\n\nDendrogram of Divisive Clustering Approach\n\n\n\nChoosing the right distance measure\nYour choice of distance measure is a critical step in clustering, and it depends on the problem you’re trying to solve. Considering the following scenario, we could cluster students based on any number of approaches such as their:\n\nCountry of origin\nGender, either male or female\nPrevious academic background.\n\nThese are all valid clusters but differ in meaning.\nEven though Euclidean distance is the most common distance used in most clustering software, other distance measures such as Manhattan distance, Canberra distance, Pearson or Spearman correlation, and Minkowski distance exist.\n\n\nHow to measure clusters before merging them\nThe previously mentioned distances are related to items. In this section, we will cover three standard ways (not exhaustive) to measure the nearest pair of clusters before merging them: (1) Single linkage, (2) Complete linkage, and (3) Average linkage.\n\nSingle linkage\nFrom all the pairwise distances between the items in the two clusters C1 and C2, the single linkage takes the distance between the clusters as the minimum distance.\nDistance (C1, C2) = Min { d(i, j), where item i is within C1, and item j is within C2}\nOut of all the pairs of items from the two clusters, the ones highlighted in green have the minimum distance.\n\n\n\nSingle linkage illustration\n\n\nSingle linkage illustration\n\n\nComplete linkage\nFrom all the pairwise distances between the items in the two clusters C1 and C2, the single linkage takes the distance between the clusters as the maximum distance.\nDistance (C1, C2) = Max { d(i, j), where item i is within C1, and item j is within C2}\nOut of all the pairs of items from the two clusters, the ones highlighted in green have the maximum distance.\n\n\n\nComplete linkage illustration\n\n\nComplete linkage illustration\n\n\nAverage linkage\nIn the average linkage clustering, the distance between two given clusters C1 and C2 corresponds to the average distances between all pairs of items in the two clusters.\nDistance (C1, C2) = Sum{ d(i, j) } / Total Number of distances\n\n\n\nAverage linkage illustration\n\n\nAverage linkage illustration\nThen the average linkage clustering is performed as follows\nd(a,j) + d(a,h) + d(a,n) + d(d,j) + d(d,h) + d(d,n)\n————————————————————–, where Total number of distances = 6\nTotal number of distances"
   },
   {
     "objectID": "ders8-classification.html#contents",
@@ -945,88 +1036,242 @@
     "text": "Taken from https://medium.datadriveninvestor.com/decision-tree-algorithm-with-hands-on-example-e6c2afb40d38\nEntropy\nIn machine learning, entropy is a measure of the randomness in the information being processed. The higher the entropy, the harder it is to draw any conclusions from that information.\n\nInformation Gain\nInformation gain can be defined as the amount of information gained about a random variable or signal from observing another random variable.It can be considered as the difference between the entropy of parent node and weighted average entropy of child nodes.\n\nGini Impurity\nGini impurity is a measure of how often a randomly chosen element from the set would be incorrectly labeled if it was randomly labeled according to the distribution of labels in the subset.\n\nGini impurity is lower bounded by 0, with 0 occurring if the data set contains only one class.\n\nThere are many algorithms there to build a decision tree. They are\n\nCART (Classification and Regression Trees) — This makes use of Gini impurity as the metric.\nID3 (Iterative Dichotomiser 3) — This uses entropy and information gain as metric.\n\nIn this article, I will go through ID3. Once you got it it is easy to implement the same using CART.\n\nClassification using the ID3 algorithm\nConsider whether a dataset based on which we will determine whether to play football or not.\n\nHere There are for independent variables to determine the dependent variable. The independent variables are Outlook, Temperature, Humidity, and Wind. The dependent variable is whether to play football or not.\nAs the first step, we have to find the parent node for our decision tree. For that follow the steps:\n*Find the entropy of the class variable.*\nE(S) = -[(9/14)log(9/14) + (5/14)log(5/14)] = 0.94\nnote: Here typically we will take log to base 2.Here total there are 14 yes/no. Out of which 9 yes and 5 no.Based on it we calculated probability above.\nFrom the above data for outlook we can arrive at the following table easily\n\n*Now we have to calculate average weighted entropy*. ie, we have found the total of weights of each feature multiplied by probabilities.\nE(S, outlook) = (5/14)E(3,2) + (4/14)E(4,0) + (5/14)*E(2,3) = (5/14)(-(3/5)log(3/5)-(2/5)log(2/5))+ (4/14)(0) + (5/14)((2/5)log(2/5)-(3/5)log(3/5)) = 0.693\n*The next step is to find the information gain*. It is the difference between parent entropy and average weighted entropy we found above.\nIG(S, outlook) = 0.94 - 0.693 = 0.247\nSimilarly find Information gain for Temperature, Humidity, and Windy.\nIG(S, Temperature) = 0.940 - 0.911 = 0.029\nIG(S, Humidity) = 0.940 - 0.788 = 0.152\nIG(S, Windy) = 0.940 - 0.8932 = 0.048\n*Now select the feature having the largest entropy gain*. Here it is Outlook. So it forms the first node(root node) of our decision tree.\nNow our data look as follows\n\n\n\nSince overcast contains only examples of class ‘Yes’ we can set it as yes. That means If outlook is overcast football will be played. Now our decision tree looks as follows.\n\nThe next step is to find the next node in our decision tree. Now we will find one under sunny. We have to determine which of the following Temperature, Humidity or Wind has higher information gain.\n\nCalculate parent entropy E(sunny)\nE(sunny) = (-(3/5)log(3/5)-(2/5)log(2/5)) = 0.971.\nNow Calculate the information gain of Temperature. IG(sunny, Temperature)\n\nE(sunny, Temperature) = (2/5)E(0,2) + (2/5)E(1,1) + (1/5)*E(1,0)=2/5=0.4\nNow calculate information gain.\nIG(sunny, Temperature) = 0.971–0.4 =0.571\nSimilarly we get\nIG(sunny, Humidity) = 0.971\nIG(sunny, Windy) = 0.020\nHere IG(sunny, Humidity) is the largest value. So Humidity is the node that comes under sunny.\n\nFor humidity from the above table, we can say that play will occur if humidity is normal and will not occur if it is high. Similarly, find the nodes under rainy.\n*Note: A branch with entropy more than 0 needs further splitting.*\nFinally, our decision tree will look as below:\n\n\n\nClassification using CART algorithm\nClassification using CART is similar to it. But instead of entropy, we use Gini impurity.\nSo as the first step we will find the root node of our decision tree. For that Calculate the Gini index of the class variable\nGini(S) = 1 - [(9/14)² + (5/14)²] = 0.4591\nAs the next step, we will calculate the Gini gain. For that first, we will find the average weighted Gini impurity of Outlook, Temperature, Humidity, and Windy.\nFirst, consider case of Outlook\n\nGini(S, outlook) = (5/14)gini(3,2) + (4/14)gini(4,0)+ (5/14)gini(2,3) = (5/14)(1 - (3/5)² - (2/5)²) + (4/14)*0 + (5/14)(1 - (2/5)² - (3/5)²)= 0.171+0+0.171 = 0.342\nGini gain (S, outlook) = 0.459 - 0.342 = 0.117\nGini gain(S, Temperature) = 0.459 - 0.4405 = 0.0185\nGini gain(S, Humidity) = 0.459 - 0.3674 = 0.0916\nGini gain(S, windy) = 0.459 - 0.4286 = 0.0304\nChoose one that has a higher Gini gain. Gini gain is higher for outlook. So we can choose it as our root node."
   },
   {
-    "objectID": "ders10-regression.html#contents",
-    "href": "ders10-regression.html#contents",
-    "title": "Regression Methods",
-    "section": "Contents",
-    "text": "Contents\n\nDefinition of regression\nTypes of regression (linear, polynomial, and ensemble methods)\n\nLinear Regression: Simple Linear Regression, Ordinary Least Squares method, Evaluating model performance (R-squared, RMSE)\nPolynomial Regression: When to use polynomial regression, overfitting\nRegression with Random Forest: Random Forest algorithm for regression, Advantages (handling non-linearity, feature importance)\nOther types of regression: Logistic regression (for binary outcomes), Ridge and Lasso regression (regularization techniques)\n\nExamples on Excel\nCode examples in R and Python"
+    "objectID": "ders1.html",
+    "href": "ders1.html",
+    "title": "GPT models",
+    "section": "",
+    "text": "GPT1, GPT2 abd GPT3 were released couple years before ChatGPT and it was able to complete sentences. Please visit “How Does ChatGPT Work?” site for more information. After ChatGPT was released, large language models got “conversational”\nPlease visit OpenAI Playground completion site and select “gpt-3.5-turbo” as model. Type a incomplete sentence and then press Submit button.\nYou’ll see that the model will complete your sentence. If you turn on the “Show probabilities” option on right menu, you’ll get a glimpse of how GPT works.\nIf you complete the sentence and then hover over the words, you’ll see that the model had many words to chose from with certain probabilities. In this example, “my” is the 4th most probable word after Today is and “birthday” is most probable word after Today is my.\nOne of key settings of GPT models is temperature. If you decrease the temperature the model will choose the most probably words. If temperature is high, the model will be picking words with low probabalities, which will bring creative and diverse output.\nIf you decrease the temperature to zero, the output will be always same."
   },
   {
-    "objectID": "ders10-regression.html#regression",
-    "href": "ders10-regression.html#regression",
-    "title": "Regression Methods",
-    "section": "Regression",
-    "text": "Regression\nRegression is a statistical method used in data analysis and machine learning to model and analyze the relationship between a dependent variable (often called the target or outcome variable) and one or more independent variables (also known as predictors or features). The primary goal of regression is to estimate how changes in the independent variables are associated with changes in the dependent variable, allowing for prediction and inference.\nKey points about regression:\n\nIt helps identify and quantify relationships between variables.\nIt can be used for both prediction and understanding the impact of variables.\nThere are various types of regression, including linear, polynomial, and more complex methods like Random Forest or Neural networks for regression.\nRegression models can handle both continuous and categorical variables.\nIt’s widely used in many fields, including science, economics, and social sciences."
+    "objectID": "ders1.html#chatgpt-writes-code-for-us",
+    "href": "ders1.html#chatgpt-writes-code-for-us",
+    "title": "GPT models",
+    "section": "ChatGPT writes code for us",
+    "text": "ChatGPT writes code for us\nLet’s ask ChatGPT for a fast prime number function in Python\n\n\n\nimage.png\n\n\n\n\n\nimage.png\n\n\nDid you see what just happened! It provided code tailored for us and it also explained bits of the code. Have you noticed that the code contains the tricks we have learned during our lecture: * early stop: if a condition is met, return immediately True or False * instead of checking until N, we should check numbers until \\(\\sqrt{N}\\) (n  0.5** in Python)\nYou can continue the conversation. Let’s ask for memoization.\n\n\n\nimage.png\n\n\n\n\n\nimage.png\n\n\nLet’s get the code and test it here:\n\ndef is_prime(n, memo={}):\n    if n in memo:\n        return memo[n]\n    if n in (2, 3):\n        result = True\n    elif n == 1 or n % 2 == 0:\n        result = False\n    else:\n        result = True\n        for i in range(3, int(n ** 0.5) + 1, 2):\n            if n % i == 0:\n                result = False\n                break\n    memo[n] = result\n    return result\n\n\n# is_prime(100000000003)\n\n\n&lt;i class=\"fas fa-fw fa-exclamation-circle mr-3 align-self-center\"&gt;&lt;/i&gt;\n&lt;b&gt;Warning:&lt;/b&gt; At the time of writing this note (January 2023) chatGPT is known to provide results which are not exactly true!&lt;br&gt;So, be aware and don't use code or information you got from chatGPT as is without checking or confirming."
   },
   {
-    "objectID": "ders10-regression.html#linear-regression",
-    "href": "ders10-regression.html#linear-regression",
-    "title": "Regression Methods",
-    "section": "Linear Regression",
-    "text": "Linear Regression"
+    "objectID": "ders1.html#chatgpt-can-fix-or-modify-the-code",
+    "href": "ders1.html#chatgpt-can-fix-or-modify-the-code",
+    "title": "GPT models",
+    "section": "ChatGPT can fix or modify the code",
+    "text": "ChatGPT can fix or modify the code\nYou have a piece of code and it does not work as intended? Then you can ask ChatGPT to fix the code.\nLet’s provide a code with error and ask chatGPT to debug it:\n\n\n\nimage.png\n\n\n\n\n\nimage.png\n\n\nSo, ChatGPT can fix code! By the way, did you know that I used ChatGPT to prepare that example ;)\n\n\n\nimage.png\n\n\n\n\n\nimage.png"
   },
   {
-    "objectID": "ders10-regression.html#linear-regression-1",
-    "href": "ders10-regression.html#linear-regression-1",
-    "title": "Regression Methods",
-    "section": "Linear Regression",
-    "text": "Linear Regression"
+    "objectID": "ders1.html#is-it-the-end-of-programming",
+    "href": "ders1.html#is-it-the-end-of-programming",
+    "title": "GPT models",
+    "section": "Is it the end of programming?",
+    "text": "Is it the end of programming?\nYou might think, “we learned Python for a semester and but now there’s ChatGPT, no need to learn coding at all!”. You might find content online which are exploring similar concerns. But more sane approach is “AI tools will increase speed and efficiency of developers also will decresase barriers to entry for new languages.\nThe section below is taken from Github Copilot’s page:"
   },
   {
-    "objectID": "ders10-regression.html#linear-regression-2",
-    "href": "ders10-regression.html#linear-regression-2",
-    "title": "Regression Methods",
-    "section": "Linear Regression",
-    "text": "Linear Regression\ntry finding the best line: https://www.geogebra.org/m/xC6zq7Zv"
+    "objectID": "ders1.html#thanks-for-showing-us-chatgpt-i-can-now-prepare-my-homeworks-easily",
+    "href": "ders1.html#thanks-for-showing-us-chatgpt-i-can-now-prepare-my-homeworks-easily",
+    "title": "GPT models",
+    "section": "Thanks for showing us ChatGPT, I can now prepare my homeworks easily!",
+    "text": "Thanks for showing us ChatGPT, I can now prepare my homeworks easily!\nSeeing the capabilities of ChatGPT might give some hint about misuse. First of all, a homework is for you to learn a concept (remember the playing the guitar analogy?) so being involved in AI-assisted plagiarism is still a plagiarism and a loss on your side. (please also check the file 00-academic-integrity.ipynb for adverse effects of plagiarism)\nSecond of all, OpenAI and others are working on tools and ways to include watermarks in ChatGPT output so that it can be spotted easily.\nSo, please be inspired by this tool, use it to augment your learning but do not use it for plagiarism."
   },
   {
-    "objectID": "ders10-regression.html#ols-method",
-    "href": "ders10-regression.html#ols-method",
-    "title": "Regression Methods",
-    "section": "OLS method",
-    "text": "OLS method\nOrdinary Least Squares (OLS) is a statistical method used to estimate the parameters of a linear regression model. It’s the most common technique for fitting a line to a set of data points in linear regression.\nOLS is a method that minimizes the sum of the squared differences between the observed dependent variable values and the predicted values by the linear function of the independent variable(s). In other words, it finds the line (or hyperplane in multiple dimensions) that best fits the data by minimizing the sum of the squared residuals.\nPlease visit OLS Method at Wikipedia for technical details."
+    "objectID": "ders1.html#closed-and-open-models",
+    "href": "ders1.html#closed-and-open-models",
+    "title": "GPT models",
+    "section": "Closed and Open models",
+    "text": "Closed and Open models\nCurrently there are several closed-source large language models which are developed by major corparations each took hundreds of millions to train * GPT3.5 (ChatGPT) and GPT4 by OpenAI * PaLM and Bard by Google * Claude by Anthropics"
   },
   {
-    "objectID": "ders10-regression.html#multivariate-linear-regression",
-    "href": "ders10-regression.html#multivariate-linear-regression",
-    "title": "Regression Methods",
-    "section": "Multivariate Linear Regression",
-    "text": "Multivariate Linear Regression\nMultivariate Linear Regression, also known as Multiple Linear Regression, is a statistical method used to model the relationship between multiple independent variables and a single dependent variable. It extends the concept of simple linear regression to include more than one predictor variable.\nThe general form of the model is:\n\\[\ny = \\beta_0 + \\beta_1x_1 + \\beta_2x_2 + \\ldots + \\beta_nx_n + \\varepsilon\n\\]\nWhere:\ny is the dependent variable, x₁, x₂, …, xₙ are the independent variables, β₀ is the y-intercept (the value of y when all x’s are zero), β₁, β₂, …, βₙ are the coefficients associated with each independent variable, n is the number of independent variables, ε is the error term"
+    "objectID": "ders1.html#claude-3.5-sonnet-by-antropic",
+    "href": "ders1.html#claude-3.5-sonnet-by-antropic",
+    "title": "GPT models",
+    "section": "Claude 3.5 Sonnet by Antropic",
+    "text": "Claude 3.5 Sonnet by Antropic\nClaude 3.5 is the latest version of Claude model. Antropic releases Claude in three sizes Haiku (smallest), Sonnet (medium) and Opus (largest). Currently, Claude 3.5 Sonnest is the best LLM. Generally Claude is good at creative writing but with the latest release it excels at coding as well. Also, Claude allows preview of the code (web-based) on right panel.\nBelow is as example where Claude 3.5 Sonnet was prompted “Please write game of snake in HTML, CSS and JS”. You can actually play the game!\n\nClaude also allows uploading documents (e.g. PDF) and asking questions about the document.\nYou can use Claude (with some limitations) at https://claude.ai/chat after registering an account for free."
   },
   {
-    "objectID": "ders10-regression.html#polynomial-regression",
-    "href": "ders10-regression.html#polynomial-regression",
-    "title": "Regression Methods",
-    "section": "Polynomial Regression",
-    "text": "Polynomial Regression\nPolynomial Regression is a form of regression analysis in which the relationship between the independent variable x and the dependent variable y is modeled as an nth degree polynomial. It’s used when the relationship between variables is not linear but can be approximated by a polynomial function.\n\\[\ny = \\beta_0 + \\beta_1x + \\beta_2x^2 + \\beta_3x^3 + \\ldots + \\beta_nx^n + \\varepsilon\n\\]\nWhere:\ny is the dependent variable, x is the independent variable, β₀, β₁, β₂, …, βₙ are the coefficients to be estimated, n is the degree of the polynomial and ε is the error term"
+    "objectID": "ders1.html#gemini-by-google",
+    "href": "ders1.html#gemini-by-google",
+    "title": "GPT models",
+    "section": "Gemini by Google",
+    "text": "Gemini by Google\nGemini is actually an LLM with online search capacity. Also, you can download documents (via Google Drive) or point to YouTube videos to ask questions. Finally, Gemini has the longest context window of 1 million tokens (will fit around 10 books at once)."
   },
   {
-    "objectID": "ders10-regression.html#polynomial-regression-1",
-    "href": "ders10-regression.html#polynomial-regression-1",
-    "title": "Regression Methods",
-    "section": "Polynomial Regression",
-    "text": "Polynomial Regression"
+    "objectID": "ders1.html#running-models-locally",
+    "href": "ders1.html#running-models-locally",
+    "title": "GPT models",
+    "section": "Running models locally",
+    "text": "Running models locally\nSince developers share the model weights, it’s possible to download and run the models locally. There are various sizes of models. 7B (7 billion) models require around 4Gb memory, so you can run them in your laptop.\nYou can run the models by installing PyTorch and some other libraries for Python and then writing some Python code. Or you can install Ollama and then run any compatible model with it.\nAdvantages of running a model locally: 1. Less Censorship 2. Better Data Privacy 3. Offline Usage 4. Cost Savings 5. Better Customization\nDisadvantages of running a model locally: 1. Resource Intensive 2. Slower Responses and Inferior Performance 3. Complex Setup\n\nRunning a model locally using Jupyter notebook or Google Colab\nYou can actually run LLM models in Jupyter notebooks. However the process will require you to install lots of Python packages, downloading the model weights and then writing some Python code to ask questions to the model and then capturing the answer in a dictionary. Although there are some solutions for “chat-like” experience, the experince is more like “one-shot question and answer”.\nPlease check the Youtube video which describes the process in Google Colab, where Google provides GPU (or TPU) to run the model in a Jupyter notebook environment.\n\n\nRunning a model locally with Ollama\n\nPlease visit the list of models page to have an idea about specialized models. With Ollama, you can download and use any of those models.\nIn the terminal, let’s list available models\n$ ollama list\n\nNAME                ID              SIZE    MODIFIED\ndeepseek-coder:6.7b 72be2442d736    3.8 GB  5 weeks ago     \nneural-chat:latest  73940af9fe02    4.1 GB  5 weeks ago     \norca2:7b            ea98cc422de3    3.8 GB  5 weeks ago     \nphi:latest          c651b7a89d73    1.6 GB  14 hours ago    \nsolar:latest        059fdabbe6e6    6.1 GB  2 hours ago     \nstablelm-zephyr:3b  7c596e78b1fc    1.6 GB  3 weeks ago\nLet’s run Phi-2 by Microsoft. Here’s info about Phi-2:\n\na 2.7 billion-parameter language model that demonstrates outstanding reasoning and language understanding capabilities, showcasing state-of-the-art performance among base language models with less than 13 billion parameters. On complex benchmarks Phi-2 matches or outperforms models up to 25x larger, thanks to new innovations in model scaling and training data curation.\n\n$ ollama run phi:latest\n\n&gt;&gt;&gt; why sky is blue?\n\n The sky appears blue due to a phenomenon called Rayleigh scattering. When sunlight enters the Earth's atmosphere,\nit collides with molecules and tiny particles in the air, such as oxygen and nitrogen atoms. These collisions cause\nthe shorter wavelengths of light (blue) to scatter more than the longer wavelengths (red, orange, yellow, green, and\nviolet). As a result, our eyes perceive the scattered blue light to be dominant, which is why the sky appears blue to us.\nAs you can see, a small model, which can answer questions, help coding can be run locally.\n\n\nRunning a model locally with user interface\n\nOllama Web UI\n\n\n\nLLM Studio\nYou can install LM Studio and then interact with local models with its user interface"
   },
   {
-    "objectID": "ders10-regression.html#linear-regression-in-excel",
-    "href": "ders10-regression.html#linear-regression-in-excel",
-    "title": "Regression Methods",
-    "section": "Linear Regression in Excel",
-    "text": "Linear Regression in Excel\nUse MTCARS dataset Excel file and;\n\ndraw Trendline between wt (weight) and mpg (miles per galon) columns.\ndraw Trendline between disp (displacement) and wt (weight) columns.\n\nPlease visit MyExcelOnline in order see how to draw a Trendline in Excel"
+    "objectID": "ders1.html#github-copilot",
+    "href": "ders1.html#github-copilot",
+    "title": "GPT models",
+    "section": "Github CoPilot",
+    "text": "Github CoPilot\n\n%%HTML\n&lt;iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/ZapdeEJ7xJw?si=3DYWvMa7uudDhUnj\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" allowfullscreen&gt;&lt;/iframe&gt;"
   },
   {
-    "objectID": "ders10-regression.html#linear-regression-in-r",
-    "href": "ders10-regression.html#linear-regression-in-r",
-    "title": "Regression Methods",
-    "section": "Linear Regression in R",
-    "text": "Linear Regression in R\nPlease refer to Linear Regression with R page for simple linear and polynomial regression."
+    "objectID": "ders1.html#free-github-copilot-alternative",
+    "href": "ders1.html#free-github-copilot-alternative",
+    "title": "GPT models",
+    "section": "Free Github CoPilot alternative",
+    "text": "Free Github CoPilot alternative\nCody is Sourcegraph’s AI coding assistant, and it has a couple of features that no other assistant has to make you a 10x developer. You can check it out here: https://sourcegraph.com/cody"
   },
   {
-    "objectID": "ders10-regression.html#regression-with-random-forest",
-    "href": "ders10-regression.html#regression-with-random-forest",
-    "title": "Regression Methods",
-    "section": "Regression with Random Forest",
-    "text": "Regression with Random Forest\nPlease refer to random forest regression with R document."
+    "objectID": "ders1.html#open-source-local-alternatives",
+    "href": "ders1.html#open-source-local-alternatives",
+    "title": "GPT models",
+    "section": "Open source local alternatives",
+    "text": "Open source local alternatives\nPlease visit https://tabby.tabbyml.com/ for more information"
+  },
+  {
+    "objectID": "ders1.html#image-generation",
+    "href": "ders1.html#image-generation",
+    "title": "GPT models",
+    "section": "Image generation",
+    "text": "Image generation\n\nDALL-E 3 by OpenAI\nPrompt: “a dna strand with istanbul city as silhoutte in background”\nRevised prompt: “Imagine a detailed science meets architecture illustration. In the foreground, there’s a strand of DNA, magnified and glowing against a dark backdrop. This helix structure is precisely depicted, its familiar double-helix shape twisting majestically. Intertwining with this scientific image, in the background, there’s a silhouette representation of Istanbul city. The skyline shows off its marvelous historical architecture, including its domed mosques and towering minarets. The cityscape sits against a dusky eveningsky, the setting sun casting an orange glow on the horizon behind the buildings. The combination results in a fascinating juxtapositionof science and urban beauty.”\nResult:\n\n\n\nMidjourney v6\nMidjourney announced v6 in December 2023. It can generate photorealistic images. Normally, you need to use their Discord channel to generate images free. Also, you can generate images using getimg.ai. I tried generating images using the following prompts\n\nMolecular biology lab with lots of students.\nBeautiful sea side with white sand beach and tropical trees on shore. The sea looks greenish blue\n\nThe results are great:\n\n\n\nDisinformation\nBe aware of deepfake or AI-generated fake photos\nFake Trump Photo\n\nFake Pope Photo"
+  },
+  {
+    "objectID": "ders1.html#video-generation",
+    "href": "ders1.html#video-generation",
+    "title": "GPT models",
+    "section": "Video generation",
+    "text": "Video generation\n\nPrompt to video\n\nRunwayML Gen-2\nPika\nStable Video Diffusion by Stable Diffusion\nGENMO\n\n\n\nImage to video\n\nGENMO"
+  },
+  {
+    "objectID": "ders1.html#music-or-sound-generation",
+    "href": "ders1.html#music-or-sound-generation",
+    "title": "GPT models",
+    "section": "Music or sound generation",
+    "text": "Music or sound generation\n\nElevenlabs can convert text to speech online for free with our AI voice generator"
+  },
+  {
+    "objectID": "ders3_1.html#sample-data",
+    "href": "ders3_1.html#sample-data",
+    "title": "Data Types and Preprocessing Data",
+    "section": "Sample data",
+    "text": "Sample data\n\n\n\nNo.\nProfession\nMarital Status\nIncome\nEducation Level\n\n\n\n\n1\nTeacher\nSingle\n8000\nPostgraduate\n\n\n2\nNurse\nSingle\n6000\nBachelor’s\n\n\n3\nWorker\nMarried\n5000\nHigh School\n\n\n4\nWorker\nSingle\n7200\nHigh School\n\n\n5\nPolice\nMarried\n8500\nBachelor’s\n\n\n6\nTeacher\nMarried\n8500\nBachelor’s\n\n\n7\nDoctor\nMarried\n12000\nPostgraduate\n\n\n8\nWorker\nSingle\n5500\nHigh School\n\n\n9\nPolice\nMarried\n8250\nBachelor’s\n\n\n10\nLawyer\nMarried\n12500\nBachelor’s"
+  },
+  {
+    "objectID": "ders3_1.html#data-types",
+    "href": "ders3_1.html#data-types",
+    "title": "Data Types and Preprocessing Data",
+    "section": "Data Types",
+    "text": "Data Types\n\nNominal (Categorical) Data: Data type consisting of categories. Not used with ‘more than’ expressions.\n\nBinary (Two-Category) Data: Marital Status {Married, Single}\nMulti-Category Data: Profession {Teacher, Nurse, Worker, Police, Doctor, Lawyer}\n\nOrdinal Data: Data type consisting of categories where categories indicate rank (importance, priority). Can be used with ‘more than’ expressions. Example: Education Level {High School, Bachelor’s, Postgraduate}\nInterval Data: Data type measured on a scale divided into equal parts. Example: Income [5000,12500]\nRatio Data: Data type consisting of continuous values within a certain range. Example: Weight {65.2, 68.1, 73.5, …}"
+  },
+  {
+    "objectID": "ders3_1.html#data-descriptive-characteristics",
+    "href": "ders3_1.html#data-descriptive-characteristics",
+    "title": "Data Types and Preprocessing Data",
+    "section": "Data Descriptive Characteristics",
+    "text": "Data Descriptive Characteristics\nPurpose: Better understanding of data.\n\nMeasures of Central Tendency (Arithmetic Mean, Median, Mode)\nMeasures of Dispersion (Variance, Standard Deviation, Quartiles)"
+  },
+  {
+    "objectID": "ders3_1.html#measures-of-central-tendency",
+    "href": "ders3_1.html#measures-of-central-tendency",
+    "title": "Data Types and Preprocessing Data",
+    "section": "Measures of Central Tendency",
+    "text": "Measures of Central Tendency\nArithmetic Mean\nArithmetic Mean is defined as\n\\[\\frac{\\sum_{i=1}^n x_i}{n}\\]\nWhere:\n\n\\(x_i\\) are the individual data points.\nn is the total number of data points.\n\nSample data: 5 7 4 6 8 16 11 7\nArithmetic Mean: 8"
+  },
+  {
+    "objectID": "ders3_1.html#median",
+    "href": "ders3_1.html#median",
+    "title": "Data Types and Preprocessing Data",
+    "section": "Median",
+    "text": "Median\nThe value that remains in the middle when data is arranged in ascending or descending order.\nSample data: 5 7 4 6 8 16 11 7\nOrdered: 4 5 6 7 7 8 11 16\nMedian: 7 7 -&gt; 7"
+  },
+  {
+    "objectID": "ders3_1.html#mode",
+    "href": "ders3_1.html#mode",
+    "title": "Data Types and Preprocessing Data",
+    "section": "Mode",
+    "text": "Mode\nThe most frequently occurring value.\nSample data: 5 7 4 6 8 16 11 7\nIn the sample data, 7 is the mode, occurring twice"
+  },
+  {
+    "objectID": "ders3_1.html#measures-of-dispersion",
+    "href": "ders3_1.html#measures-of-dispersion",
+    "title": "Data Types and Preprocessing Data",
+    "section": "Measures of Dispersion",
+    "text": "Measures of Dispersion\nVariance\nVariance measures the spread of a set of data points around their mean. It quantifies how much the values differ from the average (mean). A higher variance indicates greater spread, while a lower variance suggests the data points are closer to the mean.\n\\[ \\sigma^2 = \\frac{\\sum_{i=1}^N (x_i - \\mu)^2}{N} \\]\n\n\\(\\mu\\) : average or mean of the sample"
+  },
+  {
+    "objectID": "ders3_1.html#section",
+    "href": "ders3_1.html#section",
+    "title": "Data Types and Preprocessing Data",
+    "section": "",
+    "text": "Standard deviation\nStandard deviation is a measure of how much individual data points deviate, on average, from the mean of the dataset. It provides a sense of the spread of the data in the same units as the original data, making it easier to interpret compared to variance (which is in squared units).\nRelation with Variance:\nThe standard deviation is simply the square root of the variance. Mathematically:\n\\[ std.dev = \\sqrt{\\sigma^2} \\]"
+  },
+  {
+    "objectID": "ders3_1.html#unclean-data",
+    "href": "ders3_1.html#unclean-data",
+    "title": "Data Types and Preprocessing Data",
+    "section": "Unclean data",
+    "text": "Unclean data\n\nData collected in real applications:\n\nCan be missing: Some attribute values may not be entered for some objects.\n\nProfession = ’ ’\n\nCan be noisy: May contain errors.\n\nSalary = -10\n\nCan be inconsistent: Attribute values or attribute names may be incompatible.\n\nAge = 35 while Date of Birth = 03/10/2004"
+  },
+  {
+    "objectID": "ders3_1.html#data-preprocessing",
+    "href": "ders3_1.html#data-preprocessing",
+    "title": "Data Types and Preprocessing Data",
+    "section": "Data Preprocessing",
+    "text": "Data Preprocessing\n\nData Cleaning: Completing missing attribute values, correcting erroneous data, detecting and cleaning outliers, resolving inconsistencies\nData Integration: Combining data from different data sources\nData Reduction: Excluding data while maintaining same results as original data\nData Transformation: Normalization"
+  },
+  {
+    "objectID": "ders3_1.html#data-cleaning",
+    "href": "ders3_1.html#data-cleaning",
+    "title": "Data Types and Preprocessing Data",
+    "section": "Data Cleaning",
+    "text": "Data Cleaning\nRefers to identifying, correcting, or deleting missing, noisy (erroneous), or inconsistent data.\n\n\nCauses of missing data records:\n\nInability to obtain or unknown attribute value when collecting data\nFailure to recognize necessity of certain attributes during data collection\nHuman, software, or hardware problems\n\n\n\n\n\nIt is the most difficult type of error to identify and correct –&gt;\n\n\nCauses of noisy (erroneous) data records:\n\nFaulty data collection tools\nData entry problems\nData transmission problems\nTechnological limitations\nInconsistency in attribute names\n\n\nCauses of inconsistent data records:\n\nData stored in different data sources\nNon-compliance with functional dependency rules"
+  },
+  {
+    "objectID": "ders3_1.html#data-preprocessing-1",
+    "href": "ders3_1.html#data-preprocessing-1",
+    "title": "Data Types and Preprocessing Data",
+    "section": "Data preprocessing",
+    "text": "Data preprocessing\nHow to handle missing data?\n\nExclude data records with missing attribute values\nFill missing attribute values manually\nUse a global variable for missing attribute values (Null, unknown, …)\nFill missing attribute values with the mean value of that attribute\nFill with the average of attribute values from records belonging to the same class\nFill with the most probable attribute values"
+  },
+  {
+    "objectID": "ders3_1.html#data-preprocessing-2",
+    "href": "ders3_1.html#data-preprocessing-2",
+    "title": "Data Types and Preprocessing Data",
+    "section": "Data preprocessing",
+    "text": "Data preprocessing\nHow to correct noisy data?\n\nBinning: Data is sorted and divided into equal intervals. Each bin is represented by mean, median, and boundary values.\nRegression: Data is fitted to regression functions.\nClustering: Data is grouped based on similarity. Outliers and extreme values are identified and deleted.\nManual detection of erroneous data: Suspicious values are found and checked by humans."
+  },
+  {
+    "objectID": "ders3_1.html#data-transformation",
+    "href": "ders3_1.html#data-transformation",
+    "title": "Data Types and Preprocessing Data",
+    "section": "Data Transformation",
+    "text": "Data Transformation\nCreating new attributes from given attributes.\n\nGeneralization: Summarizing the data.\nNormalization (Statistical Normalization):\n\nUseful when there are significant differences between data, helps bring data into a single format. Enables reducing data to smaller ranges.\nAllows comparison of data from different scaling systems by bringing them into a similar format. The goal here is to transfer data from different systems into a common system and make them comparable using mathematical functions."
+  },
+  {
+    "objectID": "ders3_1.html#types-of-normalization",
+    "href": "ders3_1.html#types-of-normalization",
+    "title": "Data Types and Preprocessing Data",
+    "section": "Types of Normalization",
+    "text": "Types of Normalization\n\nZ-Score Normalization\nMin-Max Normalization"
+  },
+  {
+    "objectID": "ders3_1.html#z-score-normalization",
+    "href": "ders3_1.html#z-score-normalization",
+    "title": "Data Types and Preprocessing Data",
+    "section": "Z-score normalization",
+    "text": "Z-score normalization\nZ-score normalization (or standardization) transforms data to have a mean of 0 and a standard deviation of 1. This technique is useful for comparing data points from different distributions or preparing data for machine learning algorithms sensitive to scale.\nThe Z-score of a data point xx is calculated as:\n\\[ z = \\frac{x - \\mu}{\\sigma} \\]\nWhere:\n\n\\(x\\): The data point.\n\\(\\mu\\): The mean of the dataset.\n\\(\\sigma\\): The standard deviation of the dataset."
+  },
+  {
+    "objectID": "ders3_1.html#min-max-normalization",
+    "href": "ders3_1.html#min-max-normalization",
+    "title": "Data Types and Preprocessing Data",
+    "section": "Min-max normalization",
+    "text": "Min-max normalization\nMin-Max Normalization scales data to a specified range, typically [0,1][0,1], by adjusting the values proportionally within the given range. It is useful for ensuring that all features contribute equally to analyses or machine learning models.\nThe Min-Max Normalization formula is:\n\\[ x' = \\frac{x - x_{min}}{x_{max} - x_{min}} \\]"
+  },
+  {
+    "objectID": "ders3_1.html#section-1",
+    "href": "ders3_1.html#section-1",
+    "title": "Data Types and Preprocessing Data",
+    "section": "",
+    "text": "Min-max example: Sample data {10,20,30,40,50}\n\nStep 1: identify min and max, 10 and 50, respectively.\nStep 2: Apply min-max formula to each value\n\n10: (10 - 10)/(50 -10) = 0\n20: (20 - 10)/(50 -10) = 0.25\n30: (30 - 10)/(50 -10) = 0.50\n40: (40 - 10)/(50 -10) = 0.75\n50: (50 - 10)/(50 -10) = 1\n\n\nMin-max normalized data: {0.00, 0.25, 0.50, 0.75, 1.00}"
+  },
+  {
+    "objectID": "ders3_1.html#example",
+    "href": "ders3_1.html#example",
+    "title": "Data Types and Preprocessing Data",
+    "section": "Example",
+    "text": "Example\nIn the table below, we have two different attributes with unrelated scales. We applied z-score normaliation to Experience and min-max normaliation to savings data.\nNotice that both features are now between (-0.97, 1.79) and (0, 1)\n\n\n\n\n\n\n\n\n\nExperience (Years)\nSavings (TL)\nzscore_experience\nminmax_savings\n\n\n\n\n6\n100,000\n-0.97\n0.00\n\n\n7\n250,000\n-0.87\n0.23\n\n\n15\n750,000\n-0.08\n1.00\n\n\n15\n150,000\n-0.08\n0.08\n\n\n18\n400,000\n0.21\n0.46\n\n\n34\n650,000\n1.79\n0.85"
   },
   {
     "objectID": "about.html",
@@ -1041,5 +1286,19 @@
     "title": "FEF3001 Yapay Zekaya Giriş Ders Notları",
     "section": "",
     "text": "Vize yüz yüze mi? Cevap: Evet\nVize konuları nelerdir? Cevap: Yapay sinir ağı konusunun sonuna kadar\nYüklenen sunumlar dışında bir kaynaktan soru sorulacak mıdır? Cevap: Temel olarak sunumlar kullanılacaktır fakat derste anlatılanlardan da sorumluyuz, ders video kaydı ve derste aldığınız notlarınızı da çalışınız\nVize test şeklinde mi ve kaç soru sorulur? Cevap: Test şeklinde 20-30 soru planlanmaktadır\nYorum soruları sorulacak mı? Cevap: Genelde bilgi ölçen sorular tercih edilecektir"
+  },
+  {
+    "objectID": "Hierarchical_Clustering_in_Data_Mining.html",
+    "href": "Hierarchical_Clustering_in_Data_Mining.html",
+    "title": "Hierarchical Clustering in Data Mining",
+    "section": "",
+    "text": "Contents are taken from the Article “Hierarchical Clustering in Data Mining”\nA *Hierarchical clustering* method works via grouping data into a tree of clusters. Hierarchical clustering begins by treating every data point as a separate cluster. Then, it repeatedly executes the subsequent steps:\nIn Hierarchical Clustering, the aim is to produce a hierarchical series of nested clusters. A diagram called *Dendrogram* (A Dendrogram is a tree-like diagram that statistics the sequences of merges or splits) graphically represents this hierarchy and is an inverted tree that describes the order in which factors are merged (bottom-up view) or clusters are broken up (top-down view)."
+  },
+  {
+    "objectID": "Hierarchical_Clustering_in_Data_Mining.html#what-is-hierarchical-clustering",
+    "href": "Hierarchical_Clustering_in_Data_Mining.html#what-is-hierarchical-clustering",
+    "title": "Hierarchical Clustering in Data Mining",
+    "section": "What is Hierarchical Clustering?",
+    "text": "What is Hierarchical Clustering?\nHierarchical clustering is a method of cluster analysis in data mining that creates a hierarchical representation of the clusters in a dataset. The method starts by treating each data point as a separate cluster and then iteratively combines the closest clusters until a stopping criterion is reached. The result of hierarchical clustering is a tree-like structure, called a dendrogram, which illustrates the hierarchical relationships among the clusters.\n\n*Hierarchical clustering has several advantages over other clustering methods*\n\nThe ability to handle non-convex clusters and clusters of different sizes and densities.\nThe ability to handle missing data and noisy data.\nThe ability to reveal the hierarchical structure of the data, which can be useful for understanding the relationships among the clusters.\n\n\n\n*Drawbacks of Hierarchical Clustering*\n\nThe need for a criterion to stop the clustering process and determine the final number of clusters.\nThe computational cost and memory requirements of the method can be high, especially for large datasets.\nThe results can be sensitive to the initial conditions, linkage criterion, and distance metric used. In summary, Hierarchical clustering is a method of data mining that groups similar data points into clusters by creating a hierarchical structure of the clusters.\nThis method can handle different types of data and reveal the relationships among the clusters. However, it can have high computational cost and results can be sensitive to some conditions.\n\n\n\nTypes of Hierarchical Clustering\nBasically, there are two types of hierarchical Clustering:\n\nAgglomerative Clustering\nDivisive clustering\n\n\n\n1. Agglomerative Clustering\nInitially consider every data point as an *individual* Cluster and at every step, merge the nearest pairs of the cluster. (It is a bottom-up method). At first, every dataset is considered an individual entity or cluster. At every iteration, the clusters merge with different clusters until one cluster is formed.\n\nThe algorithm for Agglomerative Hierarchical Clustering is:\n\nCalculate the similarity of one cluster with all the other clusters (calculate proximity matrix)\nConsider every data point as an individual cluster\nMerge the clusters which are highly similar or close to each other.\nRecalculate the proximity matrix for each cluster\nRepeat Steps 3 and 4 until only a single cluster remains.\n\nLet’s see the graphical representation of this algorithm using a dendrogram.\n\n*Note:* This is just a demonstration of how the actual algorithm works no calculation has been performed below all the proximity among the clusters is assumed.\n\nLet’s say we have six data points *A, B, C, D, E, and F*.\n\n\n\nAgglomerative Hierarchical clustering\n\n\nAgglomerative Hierarchical clustering\n\n*Step-1:* Consider each alphabet as a single cluster and calculate the distance of one cluster from all the other clusters.\n*Step-2:* In the second step comparable clusters are merged together to form a single cluster. Let’s say cluster (B) and cluster (C) are very similar to each other therefore we merge them in the second step similarly to cluster (D) and (E) and at last, we get the clusters [(A), (BC), (DE), (F)]\n*Step-3:* We recalculate the proximity according to the algorithm and merge the two nearest clusters([(DE), (F)]) together to form new clusters as [(A), (BC), (DEF)]\n*Step-4:* Repeating the same process; The clusters DEF and BC are comparable and merged together to form a new cluster. We’re now left with clusters [(A), (BCDEF)].\n*Step-5:* At last, the two remaining clusters are merged together to form a single cluster [(ABCDEF)].\n\n\n\n\n2. Divisive Hierarchical clustering\nWe can say that Divisive Hierarchical clustering is precisely the *opposite* of Agglomerative Hierarchical clustering. In Divisive Hierarchical clustering, we take into account all of the data points as a single cluster and in every iteration, we separate the data points from the clusters which aren’t comparable. In the end, we are left with N clusters.\n\n\n\nDivisive Hierarchical clustering\n\n\nDivisive Hierarchical clustering"
   }
 ]
