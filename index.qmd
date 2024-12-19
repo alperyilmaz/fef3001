@@ -69,3 +69,9 @@
 *12 Aralılk Perşembe 16:00*
 
 **İçerik**: Regresyon [Sunum linki](ders10-regression.qmd). 
+
+## Ders11
+
+*19 Aralılk Perşembe 16:00*
+
+**İçerik**: Kümeleme [Sunum linki](ders11-clustering.qmd). 
