@@ -17,6 +17,17 @@ format:
 typora-copy-images-to: images
 ---
 
+
+##  ML types
+
+- Classical ML
+  - Supervised
+    - Classification
+    - **Regression**
+  - Unsupervised
+    - Clustering
+
+
 ## Contents
 
 * Definition of regression
