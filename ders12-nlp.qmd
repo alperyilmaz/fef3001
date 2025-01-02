@@ -1,8 +1,8 @@
 ---
 title: "NLP - Natural Language Processing"
-subtitle: "FEF3001 Yapay zekaya giriş - Ders8"
+subtitle: "FEF3001 Yapay zekaya giriş - Ders12"
 author: "Alper Yılmaz"
-date: 2024-08-01
+date: 2025-01-02
 format:
   revealjs:
     chalkboard: true
@@ -257,7 +257,7 @@ Please visit these links for visual explanation: [link1](https://www.kdnuggets.c
 
 Word embeddings are dense vector representations of words in a continuous vector space, where semantically similar words are mapped to nearby points. Unlike BoW or TF-IDF, which produce sparse, high-dimensional vectors, word embeddings typically have a few hundred dimensions. Models like Word2Vec learn these representations by analyzing word co-occurrences in large corpora, capturing semantic relationships (e.g., "king" - "man" + "woman" ≈ "queen"). FastText extends this idea to subword units, allowing it to generate embeddings for out-of-vocabulary words. These dense representations significantly improve performance on various NLP tasks and allow for interesting word algebra. However, they struggle with polysemy (words with multiple meanings) as each word has a single, fixed representation regardless of context.
 
-Please visit these links for visual explanations: [link1](https://www.scaler.com/topics/nlp/word2vec/) [link2](https://aegis4048.github.io/demystifying_neural_network_in_skip_gram_language_modeling). Please visit [Embedding Projector]() for interactive visualization.
+Please visit these links for visual explanations: [link1](https://www.scaler.com/topics/nlp/word2vec/) [link2](https://aegis4048.github.io/demystifying_neural_network_in_skip_gram_language_modeling). Please visit [Embedding Projector](https://projector.tensorflow.org/) for interactive visualization.
 
 Visual explanation for [FastText](https://kavita-ganesan.com/fasttext-vs-word2vec/)
 
