@@ -75,3 +75,9 @@
 *19 Aralılk Perşembe 16:00*
 
 **İçerik**: Kümeleme [Sunum linki](ders11-clustering.qmd). 
+
+## Ders12
+
+*2 Ocak Perşembe 16:00*
+
+**İçerik**: Doğal Dil İşleme, NLP [Sunum linki](ders12-nlp.qmd). 
