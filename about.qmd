@@ -5,7 +5,8 @@ YTÜ Fen Fakültesinde 2024 Güz döneminde verilen FEF3001 kodlu dersin içerik
 ## Sıkça Sorulan Sorular
 
 1. Vize yüz yüze mi? *Cevap: Evet*
-2. Vize konuları nelerdir? *Cevap: Yapay sinir ağı konusunun sonuna kadar*
+2. Vize konuları nelerdir? *Cevap: Vize tarihi yaklaştığında duyurulacaktır.*
 3. Yüklenen sunumlar dışında bir kaynaktan soru sorulacak mıdır? *Cevap: Temel olarak sunumlar kullanılacaktır fakat derste anlatılanlardan da sorumluyuz, ders video kaydı ve derste aldığınız notlarınızı da çalışınız*
 4. Vize test şeklinde mi ve kaç soru sorulur? *Cevap: Test şeklinde 20-30 soru planlanmaktadır*
-5. Yorum soruları sorulacak mı? *Cevap: Genelde bilgi ölçen sorular tercih edilecektir*
+5. Kaç sınav yapılacaktır? *Cevap: İki vize ve bir final yapılacaktır.*
+6. Yorum soruları sorulacak mı? *Cevap: Genelde bilgi ölçen sorular tercih edilecektir*
