@@ -13,6 +13,9 @@ website:
         text: Ana Sayfa
       - href: about.qmd
         text: Hakkında
+      - href: notlar.qmd
+        text: Notlar
+
 format:
   html:
     theme: cosmo
