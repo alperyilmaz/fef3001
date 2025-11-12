@@ -31,13 +31,15 @@
 
 *24 Ekim 2024 16:00*
 
-**İçerik**: Performans ölçütleri konusuna devam edildi. Optimizasyon konusunda başlandı. [Performans sunum link](ders3.qmd) [Optimizasyon sunum link](files/Hafta_4.pdf)
+**İçerik**: Performans ölçütleri konusuna devam edildi. [Sunum link](ders3.qmd)
 
 ## Ders5
 
 *31 Ekim 2024 16:00*
 
-**İçerik**: Optimizasyon konusuna devam edildi. [Optimizasyon sunum link](files/Hafta_5.pdf)
+**İçerik**: Optimizasyon konusu işlendi [Optimizasyon sunum link](files/Hafta_4.pdf)
+
+<!--Optimizasyon konusuna devam edildi. [Optimizasyon sunum link](files/Hafta_5.pdf) -->
 
 ## Ders6
 
