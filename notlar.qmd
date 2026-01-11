@@ -10,7 +10,7 @@ You can find your quiz grades below:
 #| warning: false
 library(gt)
 
-readr::read_csv("quiz1-2-3-grades.csv") |> 
+readr::read_csv("quiz1-2-3-4-grades.csv") |> 
 gt() |>
 sub_missing(
   columns = everything(),
