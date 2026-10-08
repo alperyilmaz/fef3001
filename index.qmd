@@ -9,80 +9,20 @@
 - *Machine Learning Algorithms*, Giuseppe Bonaccorso, Packt Publishing, 2017.
 - *Optimizasyon Modelleme ve Yapay Zeka Algoritmaları*, Bayram Köse, Bahar Demirtürk, Efe Akademi Yayınları, 2023
 
+**Ders içeriklerimiz YZM4015 ile uyumludur**
+
 ## Ders1
 
-*3 Ekim 2024 16:00*
+*1 Ekim 2026 15:00* 
 
-**İçerik**: İlk derste, ChatGPT ve benzeri büyük dil modelleri tanıtıldı. OpenAI Playground üzerinde "cümle tamamlama" kavramı ve "temparature" ayarı gösterildi. Daha iyi çıktı almak için Prompt ayarları anlatıldı. Dökümandan sorgu/chat yapmak için Gemini ve Claude örnekleri verildi. Yine Claude üzerinden kod yazdırma örneği işlendi. [İngilizce Sunum linki](ders1.ipynb)
+
+**İçerik**: Yapay Zeka Çağında Değişen Dünya ve Meslekler - Temel Kavramlar ve Dönüşüm [Sunum linki](files/YZM4015-Hafta1.pdf)
 
 ## Ders2
 
-*10 Ekim 2024 16:00*
+*8 Ekim 2026 16:30*
 
-**İçerik**: ChatGPT ve ötesi. [İngilizce Sunum linki](ders1.ipynb)
-
-## Ders3
-
-*17 Ekim 2024 16:00*
-
-**İçerik**: Veri türleri ve verilerin işlenmesine dair bilgi verildi. Performans ölçütleri konusuna başlandı. [Sunum linki1](ders3_1.qmd) ve [Sunum link2](ders3.qmd)
-
-## Ders4
-
-*24 Ekim 2024 16:00*
-
-**İçerik**: Performans ölçütleri konusuna devam edildi. [Sunum link](ders3.qmd)
-
-## Ders5
-
-*31 Ekim 2024 16:00*
-
-**İçerik**: Optimizasyon konusu işlendi [Optimizasyon sunum link](files/Hafta_4.pdf)
-
-<!--Optimizasyon konusuna devam edildi. [Optimizasyon sunum link](files/Hafta_5.pdf) -->
-
-## Ders6
-
-*7 Kasım 2024 16:00*
-
-**İçerik**: Genetik algoritmalar [sunum link](files/Hafta_6.pdf)
-
-## Ders7
-
-*14 Kasım Perşembe 16:00*
-
-**İçerik**: Yapay sinir ağları [Sunum linki](ders7.qmd). 
-
-## Ders8
-
-*28 Kasım Perşembe 16:00*
-
-**İçerik**: Sınıflandırma [Sunum linki](ders8-classification.qmd). 
-
-## Ders9
-
-*5 Aralık Perşembe 16:00*
-
-**İçerik**: Sınıflandırma devam [Sunum linki](ders8-classification.qmd). 
-
-
-## Ders10
-
-*12 Aralılk Perşembe 16:00*
-
-**İçerik**: Regresyon [Sunum linki](ders10-regression.qmd). 
-
-## Ders11
-
-*19 Aralılk Perşembe 16:00*
-
-**İçerik**: Kümeleme [Sunum linki](ders11-clustering.qmd). 
-
-## Ders12
-
-*2 Ocak Perşembe 16:00*
-
-**İçerik**: Doğal Dil İşleme, NLP [Sunum linki](ders12-nlp.qmd). 22 Mayıs'ta yapılan dersin toplantı kaydı için [tıklayınız](https://yildiz-edu-tr.zoom.us/rec/play/ZWGyqhHk-URfERAiSx-WXQtAxMdAHXyBoBingLhVMY2F2c68xOOIRqfOcGc6kfUBceNxnkfZmkq_m_o-.fNUW9LJfs_ksoUr4)
+**İçerik**: Günlük YZ Araçları ve Doğru Kullanım Örnekleri Pratik Uygulamalar ve Stratejiler. [Sunum linki](files/YZM4015-Hafta2.pdf)
 
 
 

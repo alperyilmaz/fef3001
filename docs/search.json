@@ -728,195 +728,6 @@
     "text": "Example\nIn the table below, we have two different attributes with unrelated scales. We applied z-score normaliation to Experience and min-max normaliation to savings data.\nNotice that both features are now between (-0.97, 1.79) and (0, 1)\n\n\n\n\n\n\n\n\n\nExperience (Years)\nSavings (TL)\nzscore_experience\nminmax_savings\n\n\n\n\n6\n100,000\n-0.97\n0.00\n\n\n7\n250,000\n-0.87\n0.23\n\n\n15\n750,000\n-0.08\n1.00\n\n\n15\n150,000\n-0.08\n0.08\n\n\n18\n400,000\n0.21\n0.46\n\n\n34\n650,000\n1.79\n0.85"
   },
   {
-    "objectID": "ders3.html#değerlendirme-ölçütleri-performance-metrics",
-    "href": "ders3.html#değerlendirme-ölçütleri-performance-metrics",
-    "title": "Değerlendirme Ölçütleri",
-    "section": "Değerlendirme ölçütleri / Performance Metrics",
-    "text": "Değerlendirme ölçütleri / Performance Metrics\n\nSınıflandırma değerlendirme (Classification)\nRegresyon değerlendirme (Regression)"
-  },
-  {
-    "objectID": "ders3.html#sınıflandırma-ve-regresyon-classification-vs-regression",
-    "href": "ders3.html#sınıflandırma-ve-regresyon-classification-vs-regression",
-    "title": "Değerlendirme Ölçütleri",
-    "section": "Sınıflandırma ve Regresyon (Classification vs regression)",
-    "text": "Sınıflandırma ve Regresyon (Classification vs regression)\n\nSource"
-  },
-  {
-    "objectID": "ders3.html#section",
-    "href": "ders3.html#section",
-    "title": "Değerlendirme Ölçütleri",
-    "section": "",
-    "text": "Source"
-  },
-  {
-    "objectID": "ders3.html#sınıflandırma-ve-regresyon",
-    "href": "ders3.html#sınıflandırma-ve-regresyon",
-    "title": "Değerlendirme Ölçütleri",
-    "section": "Sınıflandırma ve Regresyon",
-    "text": "Sınıflandırma ve Regresyon\n\nSource"
-  },
-  {
-    "objectID": "ders3.html#section-1",
-    "href": "ders3.html#section-1",
-    "title": "Değerlendirme Ölçütleri",
-    "section": "",
-    "text": "Source"
-  },
-  {
-    "objectID": "ders3.html#fit",
-    "href": "ders3.html#fit",
-    "title": "Değerlendirme Ölçütleri",
-    "section": "Fit",
-    "text": "Fit\n\nSource"
-  },
-  {
-    "objectID": "ders3.html#training",
-    "href": "ders3.html#training",
-    "title": "Değerlendirme Ölçütleri",
-    "section": "Training",
-    "text": "Training\n\nSource"
-  },
-  {
-    "objectID": "ders3.html#training-test",
-    "href": "ders3.html#training-test",
-    "title": "Değerlendirme Ölçütleri",
-    "section": "Training / Test",
-    "text": "Training / Test\n\nSource"
-  },
-  {
-    "objectID": "ders3.html#classification-performance-metrics",
-    "href": "ders3.html#classification-performance-metrics",
-    "title": "Değerlendirme Ölçütleri",
-    "section": "Classification Performance Metrics",
-    "text": "Classification Performance Metrics\nBir Sınıflandırma modeli oluşturulduktan sonra bu model ile yapılan tahminlerin ne kadar doğru olduğuna dair değerlendirme yapılması gereklidir.\nAşağıda verilen confusion matrix (karşılaştırma matrisi) bir sınıflandırma modeline dair gerçekleşen durumları ve bu durumlara dair tahminleri verilmiştir.\n\n\n\n\n\nActual (Gerçek)\n\n\n\n\n\n\n\nTrue (Doğru)\nFalse (Yanlış)\n\n\nPrediction (Tahmin)\nPozitif\nTP\nFP\n\n\n\nNegatif\nFN\nTN\n\n\n\nTP : True Positive, FP : False Positive, FN : False Negative, TN : True Negative\nTrue ve false değeri bu modele dair gerçek sonuçları, positive ve negative ise modele dair tahminleri göstermektedir."
-  },
-  {
-    "objectID": "ders3.html#classification-performance-metrics-1",
-    "href": "ders3.html#classification-performance-metrics-1",
-    "title": "Değerlendirme Ölçütleri",
-    "section": "Classification Performance Metrics",
-    "text": "Classification Performance Metrics\nTümör ve Hasta örnekleri ele alırsak, Normal örnekler negatif olarak, Tümör örnekleri de pozitif olarak değerlendirilebilir.\n\nTP : Gerçekte Tümör olan hastayı (true/pozitif) Tümör olarak tahmin etmek (pozitif).\n\nFP : Gerçekte Normal olan örneği (false/negatif) Tümör olarak tahmin etmek (pozitif). — &gt; Type 1 Error\n\nFN : Gerçekte Tümor olan örneği (true/pozitif) Normal olarak tahmin etmek (negatif). — &gt; Type 2 Error\n\nTN : Gerçekte Normal olan örneği (false/negatif) Normal olarak tahmin etmek (negatif)."
-  },
-  {
-    "objectID": "ders3.html#metrics",
-    "href": "ders3.html#metrics",
-    "title": "Değerlendirme Ölçütleri",
-    "section": "Metrics",
-    "text": "Metrics\nAccuracy (Doğruluk) : Doğru tahminlerin toplam veri kümesine oranıdır.\nPrecision (Kesinlik): Pozitif olarak tahmin edilen verilerin kaçının gerçekten pozitif olduğunu gösterir.\nRecall or Sensitivity (Duyarlılık): Geliştirilen modelin pozitif olanların kaçını yakaladığını gösterir.\nF1 Score (F1 Skoru): F1 score, precision ve recall değerlerinin harmonik ortalamasıdır. Sınıf dağılımı benzer olduğunda accuracy kullanılabilirken, dengesiz veri setleri söz konusu olduğunda F1 skor daha iyi bir metriktir.\nROC Curve (ROC Eğrisi): Yanlış pozitif oranı ve gerçek pozitif oranı göz önünde bulundurarak x ekseninde ve y ekseninde 0’dan 100’e kadar olan değerlerin üzerinde bir eğri oluşturulur. Bu eğrinin altında kalan alana Area Under Curve (AUC) adı verilir. Bu alanın büyük olması modelin başarılı olduğunu gösterir. Grafikte yer alan mavi çizgi; ne kadar geniş bir alan kaplıyorsa modelin tahmin başarısı o kadar yüksek, ortadaki kesikli çizgiye ne kadar yakınsa modelin başarı oranı o kadar düşüktür."
-  },
-  {
-    "objectID": "ders3.html#roc-curve",
-    "href": "ders3.html#roc-curve",
-    "title": "Değerlendirme Ölçütleri",
-    "section": "ROC Curve",
-    "text": "ROC Curve"
-  },
-  {
-    "objectID": "ders3.html#why-too-many-metrics",
-    "href": "ders3.html#why-too-many-metrics",
-    "title": "Değerlendirme Ölçütleri",
-    "section": "Why too many metrics?",
-    "text": "Why too many metrics?\n\n\nNeden birden fazla metrik kullanılıyor, bir örnek ile görelim. Yandaki durum için, 8 Normal ve 2 Tümör olan bir durumda, her örnek için Normal diye tahminde bulunursak. True Negatif (TN) sayısı 8 ve False Negatif (FN) sayısı ise 2 olmaktadır.\nBu durumda, doğruluk, accuracy\nACC = (TP + TN) / (TP + FP + TN + FN)\nformülünden dolayı 8 / 10 = 0.8 yani %80 olarak hesaplanmaktadır.\nFakat, Duyarlılık/Sensitivity\nSENS = TP / (TP + FN)\nformülünden 0 çıkmaktadır.\n\n\n\n\nActual Label\nPrediction\n\n\n\n\nTumor\nNormal\n\n\nTumor\nNormal\n\n\nNormal\nNormal\n\n\nNormal\nNormal\n\n\nNormal\nNormal\n\n\nNormal\nNormal\n\n\nNormal\nNormal\n\n\nNormal\nNormal\n\n\nNormal\nNormal\n\n\nNormal\nNormal"
-  },
-  {
-    "objectID": "ders3.html#example",
-    "href": "ders3.html#example",
-    "title": "Değerlendirme Ölçütleri",
-    "section": "Example",
-    "text": "Example\n100 kişilik bir çalışmada, 25 Tümör hastası ve 75 Normal birey bulunmaktadır. Normal (negatif) olan 70 kişi Normal olarak tahmin edilmştir (TN: True Negatif). 5 kişi Normal olduğu halde Tümör olarak tahmin edilmiştir (FP: False pozitif). Gerçekte Tümör olan 15 kişi Tümör olarak tahmin edilmiştir (TP: True pozitif). Son olarak, 10 kişi Tümör olduğu halde Normal olarak tahmin edilmiştir (FN: False negatif). Bu duruma göre Confusion Matrix aşağıdaki gibi hesaplanacaktır.\n\n\n\n\n\nActual\n\n\n\n\n\n\n\nTrue\nFalse\n\n\nTahmin\nPozitif\nTP (15)\nFP (5)\n\n\n\nNegatif\nFN (10)\nTN (70)"
-  },
-  {
-    "objectID": "ders3.html#example-1",
-    "href": "ders3.html#example-1",
-    "title": "Değerlendirme Ölçütleri",
-    "section": "Example",
-    "text": "Example\nBu durumda,\nDoğruluk (Accuracy) ACC = (TP + TN) / (TP + TN + FN + FP) = 0.85\nDuyarlılık (Sensitivity) SENS = TP / (TP + FN) = 0.60\nKesinlik (Precision) PREC = TP / (TP + FP) = 0.75\nF1 Skor = 2 x (PREC x SENS) / (PREC + SENS) = 0.6667"
-  },
-  {
-    "objectID": "ders3.html#summary",
-    "href": "ders3.html#summary",
-    "title": "Değerlendirme Ölçütleri",
-    "section": "Summary",
-    "text": "Summary\n\nSource"
-  },
-  {
-    "objectID": "ders3.html#python-code",
-    "href": "ders3.html#python-code",
-    "title": "Değerlendirme Ölçütleri",
-    "section": "Python code",
-    "text": "Python code\n\nfrom sklearn.metrics import confusion_matrix\n\nactual    = [1, 0, 1, 1, 0, 0, 1, 0, 1, 1]\npredicted = [0, 1, 1, 1, 1, 0, 1, 1, 0, 1]\n\nprint(\"\\nConfusion matrix\")\nconf_mat = confusion_matrix(actual, predicted) \n\nprint(conf_mat)\n\n\nConfusion matrix\n[[1 3]\n [2 4]]"
-  },
-  {
-    "objectID": "ders3.html#regression-performance-metrics",
-    "href": "ders3.html#regression-performance-metrics",
-    "title": "Değerlendirme Ölçütleri",
-    "section": "Regression Performance Metrics",
-    "text": "Regression Performance Metrics\nFollowing metrics can be used to measure the performance of regression model output.\n\nMean Error (ME)\nMean Absolute Error (MAE)\nMean Squared Error (MSE)\nRoot Mean Squared Error (RMSE)\n\nThere are much more advanced metrics but we’ll learn only essental ones"
-  },
-  {
-    "objectID": "ders3.html#mean-error-me",
-    "href": "ders3.html#mean-error-me",
-    "title": "Değerlendirme Ölçütleri",
-    "section": "Mean Error (ME)",
-    "text": "Mean Error (ME)\n\\[ \\text{ME} = \\frac{1}{n} \\sum_{i=1}^{n} (y_i - \\hat{y}_i) \\]\n\\(y_i\\): Actual value, \\(\\hat{y}_i\\): predicted value, n: number of observations"
-  },
-  {
-    "objectID": "ders3.html#mean-absolute-error-mae",
-    "href": "ders3.html#mean-absolute-error-mae",
-    "title": "Değerlendirme Ölçütleri",
-    "section": "Mean Absolute Error (MAE)",
-    "text": "Mean Absolute Error (MAE)\nAdding negative results is not right when using ME. Let’s take care of it.\n\\[ \\text{MAE} = \\frac{1}{n} \\sum_{i=1}^{n} |y_i - \\hat{y}_i| \\]"
-  },
-  {
-    "objectID": "ders3.html#mean-squared-error-mse",
-    "href": "ders3.html#mean-squared-error-mse",
-    "title": "Değerlendirme Ölçütleri",
-    "section": "Mean Squared Error (MSE)",
-    "text": "Mean Squared Error (MSE)\n\\[ \\text{MSE} = \\frac{1}{n} \\sum_{i=1}^{n} (y_i - \\hat{y}_i)^2 \\]\nPlease note that squaring the error with punish the model more. Also, squaring a difference will take care of negative sign."
-  },
-  {
-    "objectID": "ders3.html#root-mean-squared-error-rmse",
-    "href": "ders3.html#root-mean-squared-error-rmse",
-    "title": "Değerlendirme Ölçütleri",
-    "section": "Root Mean Squared Error (RMSE)",
-    "text": "Root Mean Squared Error (RMSE)\n\\[ \\text{RMSE} = \\sqrt{\\frac{1}{n} \\sum_{i=1}^{n} (y_i - \\hat{y}_i)^2} \\]"
-  },
-  {
-    "objectID": "kmeans-r.html",
-    "href": "kmeans-r.html",
-    "title": "K-means clustering with R",
-    "section": "",
-    "text": "taken from Partitional Clustering in R: The Essentials"
-  },
-  {
-    "objectID": "kmeans-r.html#the-data",
-    "href": "kmeans-r.html#the-data",
-    "title": "K-means clustering with R",
-    "section": "The data",
-    "text": "The data\n\nlibrary(factoextra)\ndata(\"USArrests\")\ndf &lt;- scale(USArrests)\n\n\nhead(df)\n\n               Murder   Assault   UrbanPop         Rape\nAlabama    1.24256408 0.7828393 -0.5209066 -0.003416473\nAlaska     0.50786248 1.1068225 -1.2117642  2.484202941\nArizona    0.07163341 1.4788032  0.9989801  1.042878388\nArkansas   0.23234938 0.2308680 -1.0735927 -0.184916602\nCalifornia 0.27826823 1.2628144  1.7589234  2.067820292\nColorado   0.02571456 0.3988593  0.8608085  1.864967207"
-  },
-  {
-    "objectID": "kmeans-r.html#what-should-k-be",
-    "href": "kmeans-r.html#what-should-k-be",
-    "title": "K-means clustering with R",
-    "section": "What should K be?",
-    "text": "What should K be?\n\nfviz_nbclust(df, kmeans, \"wss\")"
-  },
-  {
-    "objectID": "kmeans-r.html#clustering",
-    "href": "kmeans-r.html#clustering",
-    "title": "K-means clustering with R",
-    "section": "Clustering",
-    "text": "Clustering\n\nkm.res &lt;- kmeans(df, 4, nstart=25)\nprint(km.res)\n\nK-means clustering with 4 clusters of sizes 16, 8, 13, 13\n\nCluster means:\n      Murder    Assault   UrbanPop        Rape\n1 -0.4894375 -0.3826001  0.5758298 -0.26165379\n2  1.4118898  0.8743346 -0.8145211  0.01927104\n3 -0.9615407 -1.1066010 -0.9301069 -0.96676331\n4  0.6950701  1.0394414  0.7226370  1.27693964\n\nClustering vector:\n       Alabama         Alaska        Arizona       Arkansas     California \n             2              4              4              2              4 \n      Colorado    Connecticut       Delaware        Florida        Georgia \n             4              1              1              4              2 \n        Hawaii          Idaho       Illinois        Indiana           Iowa \n             1              3              4              1              3 \n        Kansas       Kentucky      Louisiana          Maine       Maryland \n             1              3              2              3              4 \n Massachusetts       Michigan      Minnesota    Mississippi       Missouri \n             1              4              3              2              4 \n       Montana       Nebraska         Nevada  New Hampshire     New Jersey \n             3              3              4              3              1 \n    New Mexico       New York North Carolina   North Dakota           Ohio \n             4              4              2              3              1 \n      Oklahoma         Oregon   Pennsylvania   Rhode Island South Carolina \n             1              1              1              1              2 \n  South Dakota      Tennessee          Texas           Utah        Vermont \n             3              2              4              1              3 \n      Virginia     Washington  West Virginia      Wisconsin        Wyoming \n             1              1              3              3              1 \n\nWithin cluster sum of squares by cluster:\n[1] 16.212213  8.316061 11.952463 19.922437\n (between_SS / total_SS =  71.2 %)\n\nAvailable components:\n\n[1] \"cluster\"      \"centers\"      \"totss\"        \"withinss\"     \"tot.withinss\"\n[6] \"betweenss\"    \"size\"         \"iter\"         \"ifault\""
-  },
-  {
-    "objectID": "kmeans-r.html#visualizing-the-results",
-    "href": "kmeans-r.html#visualizing-the-results",
-    "title": "K-means clustering with R",
-    "section": "Visualizing the results",
-    "text": "Visualizing the results\n\nfviz_cluster(km.res, data=df)"
-  },
-  {
     "objectID": "ders12-nlp.html#contents",
     "href": "ders12-nlp.html#contents",
     "title": "NLP - Natural Language Processing",
@@ -1155,11 +966,193 @@
     "text": "Contextual embeddings (e.g., BERT, GPT):\nContextual embeddings represent a significant advancement over traditional word embeddings by generating different representations for a word based on its context in a sentence. Models like BERT (Bidirectional Encoder Representations from Transformers) and GPT (Generative Pre-trained Transformer) use deep learning architectures to process entire sentences or documents simultaneously, capturing complex, bidirectional relationships between words. These models are pre-trained on vast amounts of text data and can be fine-tuned for specific tasks. Contextual embeddings excel at capturing nuanced meanings, handling polysemy, and understanding long-range dependencies in text. They have set new state-of-the-art benchmarks on various NLP tasks. However, they are computationally intensive and require significant resources to train and deploy, presenting challenges for applications with limited computational power or real-time requirements."
   },
   {
-    "objectID": "ders13-claude-code.html",
-    "href": "ders13-claude-code.html",
-    "title": "FEF3001 Yapay Zekaya Giriş",
+    "objectID": "kmeans-r.html",
+    "href": "kmeans-r.html",
+    "title": "K-means clustering with R",
     "section": "",
-    "text": "Skills as documentation: Well-written skills prevent hallucination\nComposability: Skills combine naturally for complex workflows\nError handling: Skills include edge cases and best practices\nOutput quality: Proper formatting, Excel integration, images"
+    "text": "taken from Partitional Clustering in R: The Essentials"
+  },
+  {
+    "objectID": "kmeans-r.html#the-data",
+    "href": "kmeans-r.html#the-data",
+    "title": "K-means clustering with R",
+    "section": "The data",
+    "text": "The data\n\nlibrary(factoextra)\ndata(\"USArrests\")\ndf &lt;- scale(USArrests)\n\n\nhead(df)\n\n               Murder   Assault   UrbanPop         Rape\nAlabama    1.24256408 0.7828393 -0.5209066 -0.003416473\nAlaska     0.50786248 1.1068225 -1.2117642  2.484202941\nArizona    0.07163341 1.4788032  0.9989801  1.042878388\nArkansas   0.23234938 0.2308680 -1.0735927 -0.184916602\nCalifornia 0.27826823 1.2628144  1.7589234  2.067820292\nColorado   0.02571456 0.3988593  0.8608085  1.864967207"
+  },
+  {
+    "objectID": "kmeans-r.html#what-should-k-be",
+    "href": "kmeans-r.html#what-should-k-be",
+    "title": "K-means clustering with R",
+    "section": "What should K be?",
+    "text": "What should K be?\n\nfviz_nbclust(df, kmeans, \"wss\")"
+  },
+  {
+    "objectID": "kmeans-r.html#clustering",
+    "href": "kmeans-r.html#clustering",
+    "title": "K-means clustering with R",
+    "section": "Clustering",
+    "text": "Clustering\n\nkm.res &lt;- kmeans(df, 4, nstart=25)\nprint(km.res)\n\nK-means clustering with 4 clusters of sizes 16, 8, 13, 13\n\nCluster means:\n      Murder    Assault   UrbanPop        Rape\n1 -0.4894375 -0.3826001  0.5758298 -0.26165379\n2  1.4118898  0.8743346 -0.8145211  0.01927104\n3 -0.9615407 -1.1066010 -0.9301069 -0.96676331\n4  0.6950701  1.0394414  0.7226370  1.27693964\n\nClustering vector:\n       Alabama         Alaska        Arizona       Arkansas     California \n             2              4              4              2              4 \n      Colorado    Connecticut       Delaware        Florida        Georgia \n             4              1              1              4              2 \n        Hawaii          Idaho       Illinois        Indiana           Iowa \n             1              3              4              1              3 \n        Kansas       Kentucky      Louisiana          Maine       Maryland \n             1              3              2              3              4 \n Massachusetts       Michigan      Minnesota    Mississippi       Missouri \n             1              4              3              2              4 \n       Montana       Nebraska         Nevada  New Hampshire     New Jersey \n             3              3              4              3              1 \n    New Mexico       New York North Carolina   North Dakota           Ohio \n             4              4              2              3              1 \n      Oklahoma         Oregon   Pennsylvania   Rhode Island South Carolina \n             1              1              1              1              2 \n  South Dakota      Tennessee          Texas           Utah        Vermont \n             3              2              4              1              3 \n      Virginia     Washington  West Virginia      Wisconsin        Wyoming \n             1              1              3              3              1 \n\nWithin cluster sum of squares by cluster:\n[1] 16.212213  8.316061 11.952463 19.922437\n (between_SS / total_SS =  71.2 %)\n\nAvailable components:\n\n[1] \"cluster\"      \"centers\"      \"totss\"        \"withinss\"     \"tot.withinss\"\n[6] \"betweenss\"    \"size\"         \"iter\"         \"ifault\""
+  },
+  {
+    "objectID": "kmeans-r.html#visualizing-the-results",
+    "href": "kmeans-r.html#visualizing-the-results",
+    "title": "K-means clustering with R",
+    "section": "Visualizing the results",
+    "text": "Visualizing the results\n\nfviz_cluster(km.res, data=df)"
+  },
+  {
+    "objectID": "ders3.html#değerlendirme-ölçütleri-performance-metrics",
+    "href": "ders3.html#değerlendirme-ölçütleri-performance-metrics",
+    "title": "Değerlendirme Ölçütleri",
+    "section": "Değerlendirme ölçütleri / Performance Metrics",
+    "text": "Değerlendirme ölçütleri / Performance Metrics\n\nSınıflandırma değerlendirme (Classification)\nRegresyon değerlendirme (Regression)"
+  },
+  {
+    "objectID": "ders3.html#sınıflandırma-ve-regresyon-classification-vs-regression",
+    "href": "ders3.html#sınıflandırma-ve-regresyon-classification-vs-regression",
+    "title": "Değerlendirme Ölçütleri",
+    "section": "Sınıflandırma ve Regresyon (Classification vs regression)",
+    "text": "Sınıflandırma ve Regresyon (Classification vs regression)\n\nSource"
+  },
+  {
+    "objectID": "ders3.html#section",
+    "href": "ders3.html#section",
+    "title": "Değerlendirme Ölçütleri",
+    "section": "",
+    "text": "Source"
+  },
+  {
+    "objectID": "ders3.html#sınıflandırma-ve-regresyon",
+    "href": "ders3.html#sınıflandırma-ve-regresyon",
+    "title": "Değerlendirme Ölçütleri",
+    "section": "Sınıflandırma ve Regresyon",
+    "text": "Sınıflandırma ve Regresyon\n\nSource"
+  },
+  {
+    "objectID": "ders3.html#section-1",
+    "href": "ders3.html#section-1",
+    "title": "Değerlendirme Ölçütleri",
+    "section": "",
+    "text": "Source"
+  },
+  {
+    "objectID": "ders3.html#fit",
+    "href": "ders3.html#fit",
+    "title": "Değerlendirme Ölçütleri",
+    "section": "Fit",
+    "text": "Fit\n\nSource"
+  },
+  {
+    "objectID": "ders3.html#training",
+    "href": "ders3.html#training",
+    "title": "Değerlendirme Ölçütleri",
+    "section": "Training",
+    "text": "Training\n\nSource"
+  },
+  {
+    "objectID": "ders3.html#training-test",
+    "href": "ders3.html#training-test",
+    "title": "Değerlendirme Ölçütleri",
+    "section": "Training / Test",
+    "text": "Training / Test\n\nSource"
+  },
+  {
+    "objectID": "ders3.html#classification-performance-metrics",
+    "href": "ders3.html#classification-performance-metrics",
+    "title": "Değerlendirme Ölçütleri",
+    "section": "Classification Performance Metrics",
+    "text": "Classification Performance Metrics\nBir Sınıflandırma modeli oluşturulduktan sonra bu model ile yapılan tahminlerin ne kadar doğru olduğuna dair değerlendirme yapılması gereklidir.\nAşağıda verilen confusion matrix (karşılaştırma matrisi) bir sınıflandırma modeline dair gerçekleşen durumları ve bu durumlara dair tahminleri verilmiştir.\n\n\n\n\n\nActual (Gerçek)\n\n\n\n\n\n\n\nTrue (Doğru)\nFalse (Yanlış)\n\n\nPrediction (Tahmin)\nPozitif\nTP\nFP\n\n\n\nNegatif\nFN\nTN\n\n\n\nTP : True Positive, FP : False Positive, FN : False Negative, TN : True Negative\nTrue ve false değeri bu modele dair gerçek sonuçları, positive ve negative ise modele dair tahminleri göstermektedir."
+  },
+  {
+    "objectID": "ders3.html#classification-performance-metrics-1",
+    "href": "ders3.html#classification-performance-metrics-1",
+    "title": "Değerlendirme Ölçütleri",
+    "section": "Classification Performance Metrics",
+    "text": "Classification Performance Metrics\nTümör ve Hasta örnekleri ele alırsak, Normal örnekler negatif olarak, Tümör örnekleri de pozitif olarak değerlendirilebilir.\n\nTP : Gerçekte Tümör olan hastayı (true/pozitif) Tümör olarak tahmin etmek (pozitif).\n\nFP : Gerçekte Normal olan örneği (false/negatif) Tümör olarak tahmin etmek (pozitif). — &gt; Type 1 Error\n\nFN : Gerçekte Tümor olan örneği (true/pozitif) Normal olarak tahmin etmek (negatif). — &gt; Type 2 Error\n\nTN : Gerçekte Normal olan örneği (false/negatif) Normal olarak tahmin etmek (negatif)."
+  },
+  {
+    "objectID": "ders3.html#metrics",
+    "href": "ders3.html#metrics",
+    "title": "Değerlendirme Ölçütleri",
+    "section": "Metrics",
+    "text": "Metrics\nAccuracy (Doğruluk) : Doğru tahminlerin toplam veri kümesine oranıdır.\nPrecision (Kesinlik): Pozitif olarak tahmin edilen verilerin kaçının gerçekten pozitif olduğunu gösterir.\nRecall or Sensitivity (Duyarlılık): Geliştirilen modelin pozitif olanların kaçını yakaladığını gösterir.\nF1 Score (F1 Skoru): F1 score, precision ve recall değerlerinin harmonik ortalamasıdır. Sınıf dağılımı benzer olduğunda accuracy kullanılabilirken, dengesiz veri setleri söz konusu olduğunda F1 skor daha iyi bir metriktir.\nROC Curve (ROC Eğrisi): Yanlış pozitif oranı ve gerçek pozitif oranı göz önünde bulundurarak x ekseninde ve y ekseninde 0’dan 100’e kadar olan değerlerin üzerinde bir eğri oluşturulur. Bu eğrinin altında kalan alana Area Under Curve (AUC) adı verilir. Bu alanın büyük olması modelin başarılı olduğunu gösterir. Grafikte yer alan mavi çizgi; ne kadar geniş bir alan kaplıyorsa modelin tahmin başarısı o kadar yüksek, ortadaki kesikli çizgiye ne kadar yakınsa modelin başarı oranı o kadar düşüktür."
+  },
+  {
+    "objectID": "ders3.html#roc-curve",
+    "href": "ders3.html#roc-curve",
+    "title": "Değerlendirme Ölçütleri",
+    "section": "ROC Curve",
+    "text": "ROC Curve"
+  },
+  {
+    "objectID": "ders3.html#why-too-many-metrics",
+    "href": "ders3.html#why-too-many-metrics",
+    "title": "Değerlendirme Ölçütleri",
+    "section": "Why too many metrics?",
+    "text": "Why too many metrics?\n\n\nNeden birden fazla metrik kullanılıyor, bir örnek ile görelim. Yandaki durum için, 8 Normal ve 2 Tümör olan bir durumda, her örnek için Normal diye tahminde bulunursak. True Negatif (TN) sayısı 8 ve False Negatif (FN) sayısı ise 2 olmaktadır.\nBu durumda, doğruluk, accuracy\nACC = (TP + TN) / (TP + FP + TN + FN)\nformülünden dolayı 8 / 10 = 0.8 yani %80 olarak hesaplanmaktadır.\nFakat, Duyarlılık/Sensitivity\nSENS = TP / (TP + FN)\nformülünden 0 çıkmaktadır.\n\n\n\n\nActual Label\nPrediction\n\n\n\n\nTumor\nNormal\n\n\nTumor\nNormal\n\n\nNormal\nNormal\n\n\nNormal\nNormal\n\n\nNormal\nNormal\n\n\nNormal\nNormal\n\n\nNormal\nNormal\n\n\nNormal\nNormal\n\n\nNormal\nNormal\n\n\nNormal\nNormal"
+  },
+  {
+    "objectID": "ders3.html#example",
+    "href": "ders3.html#example",
+    "title": "Değerlendirme Ölçütleri",
+    "section": "Example",
+    "text": "Example\n100 kişilik bir çalışmada, 25 Tümör hastası ve 75 Normal birey bulunmaktadır. Normal (negatif) olan 70 kişi Normal olarak tahmin edilmştir (TN: True Negatif). 5 kişi Normal olduğu halde Tümör olarak tahmin edilmiştir (FP: False pozitif). Gerçekte Tümör olan 15 kişi Tümör olarak tahmin edilmiştir (TP: True pozitif). Son olarak, 10 kişi Tümör olduğu halde Normal olarak tahmin edilmiştir (FN: False negatif). Bu duruma göre Confusion Matrix aşağıdaki gibi hesaplanacaktır.\n\n\n\n\n\nActual\n\n\n\n\n\n\n\nTrue\nFalse\n\n\nTahmin\nPozitif\nTP (15)\nFP (5)\n\n\n\nNegatif\nFN (10)\nTN (70)"
+  },
+  {
+    "objectID": "ders3.html#example-1",
+    "href": "ders3.html#example-1",
+    "title": "Değerlendirme Ölçütleri",
+    "section": "Example",
+    "text": "Example\nBu durumda,\nDoğruluk (Accuracy) ACC = (TP + TN) / (TP + TN + FN + FP) = 0.85\nDuyarlılık (Sensitivity) SENS = TP / (TP + FN) = 0.60\nKesinlik (Precision) PREC = TP / (TP + FP) = 0.75\nF1 Skor = 2 x (PREC x SENS) / (PREC + SENS) = 0.6667"
+  },
+  {
+    "objectID": "ders3.html#summary",
+    "href": "ders3.html#summary",
+    "title": "Değerlendirme Ölçütleri",
+    "section": "Summary",
+    "text": "Summary\n\nSource"
+  },
+  {
+    "objectID": "ders3.html#python-code",
+    "href": "ders3.html#python-code",
+    "title": "Değerlendirme Ölçütleri",
+    "section": "Python code",
+    "text": "Python code\n\nfrom sklearn.metrics import confusion_matrix\n\nactual    = [1, 0, 1, 1, 0, 0, 1, 0, 1, 1]\npredicted = [0, 1, 1, 1, 1, 0, 1, 1, 0, 1]\n\nprint(\"\\nConfusion matrix\")\nconf_mat = confusion_matrix(actual, predicted) \n\nprint(conf_mat)\n\n\nConfusion matrix\n[[1 3]\n [2 4]]"
+  },
+  {
+    "objectID": "ders3.html#regression-performance-metrics",
+    "href": "ders3.html#regression-performance-metrics",
+    "title": "Değerlendirme Ölçütleri",
+    "section": "Regression Performance Metrics",
+    "text": "Regression Performance Metrics\nFollowing metrics can be used to measure the performance of regression model output.\n\nMean Error (ME)\nMean Absolute Error (MAE)\nMean Squared Error (MSE)\nRoot Mean Squared Error (RMSE)\n\nThere are much more advanced metrics but we’ll learn only essental ones"
+  },
+  {
+    "objectID": "ders3.html#mean-error-me",
+    "href": "ders3.html#mean-error-me",
+    "title": "Değerlendirme Ölçütleri",
+    "section": "Mean Error (ME)",
+    "text": "Mean Error (ME)\n\\[ \\text{ME} = \\frac{1}{n} \\sum_{i=1}^{n} (y_i - \\hat{y}_i) \\]\n\\(y_i\\): Actual value, \\(\\hat{y}_i\\): predicted value, n: number of observations"
+  },
+  {
+    "objectID": "ders3.html#mean-absolute-error-mae",
+    "href": "ders3.html#mean-absolute-error-mae",
+    "title": "Değerlendirme Ölçütleri",
+    "section": "Mean Absolute Error (MAE)",
+    "text": "Mean Absolute Error (MAE)\nAdding negative results is not right when using ME. Let’s take care of it.\n\\[ \\text{MAE} = \\frac{1}{n} \\sum_{i=1}^{n} |y_i - \\hat{y}_i| \\]"
+  },
+  {
+    "objectID": "ders3.html#mean-squared-error-mse",
+    "href": "ders3.html#mean-squared-error-mse",
+    "title": "Değerlendirme Ölçütleri",
+    "section": "Mean Squared Error (MSE)",
+    "text": "Mean Squared Error (MSE)\n\\[ \\text{MSE} = \\frac{1}{n} \\sum_{i=1}^{n} (y_i - \\hat{y}_i)^2 \\]\nPlease note that squaring the error with punish the model more. Also, squaring a difference will take care of negative sign."
+  },
+  {
+    "objectID": "ders3.html#root-mean-squared-error-rmse",
+    "href": "ders3.html#root-mean-squared-error-rmse",
+    "title": "Değerlendirme Ölçütleri",
+    "section": "Root Mean Squared Error (RMSE)",
+    "text": "Root Mean Squared Error (RMSE)\n\\[ \\text{RMSE} = \\sqrt{\\frac{1}{n} \\sum_{i=1}^{n} (y_i - \\hat{y}_i)^2} \\]"
   },
   {
     "objectID": "Hierarchical_Clustering_in_Data_Mining.html",
@@ -1180,98 +1173,28 @@
     "href": "index.html",
     "title": "FEF3001 Yapay Zekaya Giriş",
     "section": "",
-    "text": "Makine Öğrenmesinde Sınıflandırma Yöntemleri ve R Uygulamaları, Ersoy Öz & Selçuk Alp, Nobel Akademik Yayıncılık, 2020.\nVeri Madenciliği ve Makine Öğrenmesi İle Farklı Alanlarda Uygulamalar, Şenol Çelik, Nilay Köleoğlu, & Fatih Çemrek, Holistence Publications, 2022\nSağlık Bilimlerinde Yapay Zeka, Ahmet Rıza Şahin, Kamil Doğan, & Süleyman Sivri, Akademisyen Kitabevi A.Ş., 2020\nYapay Zeka, Atınç Yılmaz, Kodlab Yayın Dağıtım Yazılım Ltd. Şti., 2022\nMachine Learning Algorithms, Giuseppe Bonaccorso, Packt Publishing, 2017.\nOptimizasyon Modelleme ve Yapay Zeka Algoritmaları, Bayram Köse, Bahar Demirtürk, Efe Akademi Yayınları, 2023\n\n\n\n\n3 Ekim 2024 16:00\nİçerik: İlk derste, ChatGPT ve benzeri büyük dil modelleri tanıtıldı. OpenAI Playground üzerinde “cümle tamamlama” kavramı ve “temparature” ayarı gösterildi. Daha iyi çıktı almak için Prompt ayarları anlatıldı. Dökümandan sorgu/chat yapmak için Gemini ve Claude örnekleri verildi. Yine Claude üzerinden kod yazdırma örneği işlendi. İngilizce Sunum linki\n\n\n\n10 Ekim 2024 16:00\nİçerik: ChatGPT ve ötesi. İngilizce Sunum linki\n\n\n\n17 Ekim 2024 16:00\nİçerik: Veri türleri ve verilerin işlenmesine dair bilgi verildi. Performans ölçütleri konusuna başlandı. Sunum linki1 ve Sunum link2\n\n\n\n24 Ekim 2024 16:00\nİçerik: Performans ölçütleri konusuna devam edildi. Sunum link\n\n\n\n31 Ekim 2024 16:00\nİçerik: Optimizasyon konusu işlendi Optimizasyon sunum link\n\n\n\n\n7 Kasım 2024 16:00\nİçerik: Genetik algoritmalar sunum link\n\n\n\n14 Kasım Perşembe 16:00\nİçerik: Yapay sinir ağları Sunum linki.\n\n\n\n28 Kasım Perşembe 16:00\nİçerik: Sınıflandırma Sunum linki.\n\n\n\n5 Aralık Perşembe 16:00\nİçerik: Sınıflandırma devam Sunum linki.\n\n\n\n12 Aralılk Perşembe 16:00\nİçerik: Regresyon Sunum linki.\n\n\n\n19 Aralılk Perşembe 16:00\nİçerik: Kümeleme Sunum linki.\n\n\n\n2 Ocak Perşembe 16:00\nİçerik: Doğal Dil İşleme, NLP Sunum linki. 22 Mayıs’ta yapılan dersin toplantı kaydı için tıklayınız"
+    "text": "Makine Öğrenmesinde Sınıflandırma Yöntemleri ve R Uygulamaları, Ersoy Öz & Selçuk Alp, Nobel Akademik Yayıncılık, 2020.\nVeri Madenciliği ve Makine Öğrenmesi İle Farklı Alanlarda Uygulamalar, Şenol Çelik, Nilay Köleoğlu, & Fatih Çemrek, Holistence Publications, 2022\nSağlık Bilimlerinde Yapay Zeka, Ahmet Rıza Şahin, Kamil Doğan, & Süleyman Sivri, Akademisyen Kitabevi A.Ş., 2020\nYapay Zeka, Atınç Yılmaz, Kodlab Yayın Dağıtım Yazılım Ltd. Şti., 2022\nMachine Learning Algorithms, Giuseppe Bonaccorso, Packt Publishing, 2017.\nOptimizasyon Modelleme ve Yapay Zeka Algoritmaları, Bayram Köse, Bahar Demirtürk, Efe Akademi Yayınları, 2023\n\nDers içeriklerimiz YZM4015 ile uyumludur\n\n\n\n1 Ekim 2026 15:00\nİçerik: Yapay Zeka Çağında Değişen Dünya ve Meslekler - Temel Kavramlar ve Dönüşüm Sunum linki\n\n\n\n8 Ekim 2026 16:30\nİçerik: Günlük YZ Araçları ve Doğru Kullanım Örnekleri Pratik Uygulamalar ve Stratejiler. Sunum linki"
   },
   {
     "objectID": "index.html#kaynaklar",
     "href": "index.html#kaynaklar",
     "title": "FEF3001 Yapay Zekaya Giriş",
     "section": "",
-    "text": "Makine Öğrenmesinde Sınıflandırma Yöntemleri ve R Uygulamaları, Ersoy Öz & Selçuk Alp, Nobel Akademik Yayıncılık, 2020.\nVeri Madenciliği ve Makine Öğrenmesi İle Farklı Alanlarda Uygulamalar, Şenol Çelik, Nilay Köleoğlu, & Fatih Çemrek, Holistence Publications, 2022\nSağlık Bilimlerinde Yapay Zeka, Ahmet Rıza Şahin, Kamil Doğan, & Süleyman Sivri, Akademisyen Kitabevi A.Ş., 2020\nYapay Zeka, Atınç Yılmaz, Kodlab Yayın Dağıtım Yazılım Ltd. Şti., 2022\nMachine Learning Algorithms, Giuseppe Bonaccorso, Packt Publishing, 2017.\nOptimizasyon Modelleme ve Yapay Zeka Algoritmaları, Bayram Köse, Bahar Demirtürk, Efe Akademi Yayınları, 2023"
+    "text": "Makine Öğrenmesinde Sınıflandırma Yöntemleri ve R Uygulamaları, Ersoy Öz & Selçuk Alp, Nobel Akademik Yayıncılık, 2020.\nVeri Madenciliği ve Makine Öğrenmesi İle Farklı Alanlarda Uygulamalar, Şenol Çelik, Nilay Köleoğlu, & Fatih Çemrek, Holistence Publications, 2022\nSağlık Bilimlerinde Yapay Zeka, Ahmet Rıza Şahin, Kamil Doğan, & Süleyman Sivri, Akademisyen Kitabevi A.Ş., 2020\nYapay Zeka, Atınç Yılmaz, Kodlab Yayın Dağıtım Yazılım Ltd. Şti., 2022\nMachine Learning Algorithms, Giuseppe Bonaccorso, Packt Publishing, 2017.\nOptimizasyon Modelleme ve Yapay Zeka Algoritmaları, Bayram Köse, Bahar Demirtürk, Efe Akademi Yayınları, 2023\n\nDers içeriklerimiz YZM4015 ile uyumludur"
   },
   {
     "objectID": "index.html#ders1",
     "href": "index.html#ders1",
     "title": "FEF3001 Yapay Zekaya Giriş",
     "section": "",
-    "text": "3 Ekim 2024 16:00\nİçerik: İlk derste, ChatGPT ve benzeri büyük dil modelleri tanıtıldı. OpenAI Playground üzerinde “cümle tamamlama” kavramı ve “temparature” ayarı gösterildi. Daha iyi çıktı almak için Prompt ayarları anlatıldı. Dökümandan sorgu/chat yapmak için Gemini ve Claude örnekleri verildi. Yine Claude üzerinden kod yazdırma örneği işlendi. İngilizce Sunum linki"
+    "text": "1 Ekim 2026 15:00\nİçerik: Yapay Zeka Çağında Değişen Dünya ve Meslekler - Temel Kavramlar ve Dönüşüm Sunum linki"
   },
   {
     "objectID": "index.html#ders2",
     "href": "index.html#ders2",
     "title": "FEF3001 Yapay Zekaya Giriş",
     "section": "",
-    "text": "10 Ekim 2024 16:00\nİçerik: ChatGPT ve ötesi. İngilizce Sunum linki"
-  },
-  {
-    "objectID": "index.html#ders3",
-    "href": "index.html#ders3",
-    "title": "FEF3001 Yapay Zekaya Giriş",
-    "section": "",
-    "text": "17 Ekim 2024 16:00\nİçerik: Veri türleri ve verilerin işlenmesine dair bilgi verildi. Performans ölçütleri konusuna başlandı. Sunum linki1 ve Sunum link2"
-  },
-  {
-    "objectID": "index.html#ders4",
-    "href": "index.html#ders4",
-    "title": "FEF3001 Yapay Zekaya Giriş",
-    "section": "",
-    "text": "24 Ekim 2024 16:00\nİçerik: Performans ölçütleri konusuna devam edildi. Sunum link"
-  },
-  {
-    "objectID": "index.html#ders5",
-    "href": "index.html#ders5",
-    "title": "FEF3001 Yapay Zekaya Giriş",
-    "section": "",
-    "text": "31 Ekim 2024 16:00\nİçerik: Optimizasyon konusu işlendi Optimizasyon sunum link"
-  },
-  {
-    "objectID": "index.html#ders6",
-    "href": "index.html#ders6",
-    "title": "FEF3001 Yapay Zekaya Giriş",
-    "section": "",
-    "text": "7 Kasım 2024 16:00\nİçerik: Genetik algoritmalar sunum link"
-  },
-  {
-    "objectID": "index.html#ders7",
-    "href": "index.html#ders7",
-    "title": "FEF3001 Yapay Zekaya Giriş",
-    "section": "",
-    "text": "14 Kasım Perşembe 16:00\nİçerik: Yapay sinir ağları Sunum linki."
-  },
-  {
-    "objectID": "index.html#ders8",
-    "href": "index.html#ders8",
-    "title": "FEF3001 Yapay Zekaya Giriş",
-    "section": "",
-    "text": "28 Kasım Perşembe 16:00\nİçerik: Sınıflandırma Sunum linki."
-  },
-  {
-    "objectID": "index.html#ders9",
-    "href": "index.html#ders9",
-    "title": "FEF3001 Yapay Zekaya Giriş",
-    "section": "",
-    "text": "5 Aralık Perşembe 16:00\nİçerik: Sınıflandırma devam Sunum linki."
-  },
-  {
-    "objectID": "index.html#ders10",
-    "href": "index.html#ders10",
-    "title": "FEF3001 Yapay Zekaya Giriş",
-    "section": "",
-    "text": "12 Aralılk Perşembe 16:00\nİçerik: Regresyon Sunum linki."
-  },
-  {
-    "objectID": "index.html#ders11",
-    "href": "index.html#ders11",
-    "title": "FEF3001 Yapay Zekaya Giriş",
-    "section": "",
-    "text": "19 Aralılk Perşembe 16:00\nİçerik: Kümeleme Sunum linki."
-  },
-  {
-    "objectID": "index.html#ders12",
-    "href": "index.html#ders12",
-    "title": "FEF3001 Yapay Zekaya Giriş",
-    "section": "",
-    "text": "2 Ocak Perşembe 16:00\nİçerik: Doğal Dil İşleme, NLP Sunum linki. 22 Mayıs’ta yapılan dersin toplantı kaydı için tıklayınız"
+    "text": "8 Ekim 2026 16:30\nİçerik: Günlük YZ Araçları ve Doğru Kullanım Örnekleri Pratik Uygulamalar ve Stratejiler. Sunum linki"
   },
   {
     "objectID": "ders7.html#artificial-neural-networks",
@@ -1558,13 +1481,13 @@
     "href": "about.html",
     "title": "FEF3001 Yapay Zekaya Giriş Ders Notları",
     "section": "",
-    "text": "YTÜ Fen Fakültesinde 2024-2025 Bahar döneminde verilen FEF3001 kodlu dersin içerikleri sayfasıdır.\n\n\n\nVize yüz yüze mi? Cevap: Evet\nVize konuları nelerdir? Cevap: Ders6-Genetik algoritmalar konusunun sonuna kadar sorumluyuz.\nVize2 konuları nelerdir? Cevap: Vize tarihi yaklaştığında duyurulacaktır.\nYüklenen sunumlar dışında bir kaynaktan soru sorulacak mıdır? Cevap: Temel olarak sunumlar kullanılacaktır fakat derste anlatılanlardan da sorumluyuz, ders video kaydı ve derste aldığınız notlarınızı da çalışınız\nVize test şeklinde mi ve kaç soru sorulur? Cevap: Test şeklinde 20-30 soru planlanmaktadır\nKaç sınav yapılacaktır? Cevap: İki vize ve bir final yapılacaktır.\nYorum soruları sorulacak mı? Cevap: Genelde bilgi ölçen sorular tercih edilecektir"
+    "text": "YTÜ Fen Fakültesinde 2026-2027 Güz döneminde verilen FEF3001 kodlu dersin içerikleri sayfasıdır.\n\n\n\nVize yüz yüze mi? Cevap: Evet\nYüklenen sunumlar dışında bir kaynaktan soru sorulacak mıdır? Cevap: Temel olarak sunumlar kullanılacaktır fakat derste anlatılanlardan da sorumluyuz, ders video kaydı ve derste aldığınız notlarınızı da çalışınız\nVize test şeklinde mi ve kaç soru sorulur? Cevap: Test şeklinde 20-30 soru planlanmaktadır\nYorum soruları sorulacak mı? Cevap: Genelde bilgi ölçen sorular tercih edilecektir"
   },
   {
     "objectID": "about.html#sıkça-sorulan-sorular",
     "href": "about.html#sıkça-sorulan-sorular",
     "title": "FEF3001 Yapay Zekaya Giriş Ders Notları",
     "section": "",
-    "text": "Vize yüz yüze mi? Cevap: Evet\nVize konuları nelerdir? Cevap: Ders6-Genetik algoritmalar konusunun sonuna kadar sorumluyuz.\nVize2 konuları nelerdir? Cevap: Vize tarihi yaklaştığında duyurulacaktır.\nYüklenen sunumlar dışında bir kaynaktan soru sorulacak mıdır? Cevap: Temel olarak sunumlar kullanılacaktır fakat derste anlatılanlardan da sorumluyuz, ders video kaydı ve derste aldığınız notlarınızı da çalışınız\nVize test şeklinde mi ve kaç soru sorulur? Cevap: Test şeklinde 20-30 soru planlanmaktadır\nKaç sınav yapılacaktır? Cevap: İki vize ve bir final yapılacaktır.\nYorum soruları sorulacak mı? Cevap: Genelde bilgi ölçen sorular tercih edilecektir"
+    "text": "Vize yüz yüze mi? Cevap: Evet\nYüklenen sunumlar dışında bir kaynaktan soru sorulacak mıdır? Cevap: Temel olarak sunumlar kullanılacaktır fakat derste anlatılanlardan da sorumluyuz, ders video kaydı ve derste aldığınız notlarınızı da çalışınız\nVize test şeklinde mi ve kaç soru sorulur? Cevap: Test şeklinde 20-30 soru planlanmaktadır\nYorum soruları sorulacak mı? Cevap: Genelde bilgi ölçen sorular tercih edilecektir"
   }
 ]
