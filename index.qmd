@@ -18,11 +18,11 @@
 
 **İçerik**: Yapay Zeka Çağında Değişen Dünya ve Meslekler - Temel Kavramlar ve Dönüşüm [Sunum linki](files/YZM4015-Hafta1.pdf)
 
-## Ders2
+## Ders3
 
-*8 Ekim 2026 16:30*
+*15 Ekim 2026 16:30* **Çevrim-içi**
 
-**İçerik**: Günlük YZ Araçları ve Doğru Kullanım Örnekleri Pratik Uygulamalar ve Stratejiler. [Sunum linki](files/YZM4015-Hafta2.pdf)
+**İçerik**: YZ Çıktılarını Değerlendirme ve Doğrulama Teknikleri [Sunum linki](files/YZM4015-Hafta3.pdf)
 
 
 
